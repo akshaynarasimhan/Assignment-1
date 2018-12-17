@@ -1,0 +1,1421 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://github.githubassets.com">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-lLo2nlsdl+bHLu6PGvC2j3wfP45RnK4wKQLiPnCDcuXfU38AiD+JCdMywnF3WbJC1jaxe3lAI6AM4uJuMFBLEw==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-08fc49d3bd2694c870ea23d0906f3610.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-e6nGau96UN1peD2RzhQO751wvGlQxTD/9AcKmazYzW+60oOktOIpzo3+aNAytUQRLd8+Lt9tQx6eceASpOyyoQ==" rel="stylesheet" href="https://github.githubassets.com/assets/github-0524f09e371b3158fdf36c563063809a.css" />
+  
+  
+  
+  
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>DAM-Class/Nokia_Lumia_reviews.txt at master · muzeeb1408/DAM-Class</title>
+    <meta name="description" content="Data Analytics for Markerting Class by Sudhir Voleti - muzeeb1408/DAM-Class">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta property="og:image" content="https://avatars0.githubusercontent.com/u/12211126?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="muzeeb1408/DAM-Class" /><meta property="og:url" content="https://github.com/muzeeb1408/DAM-Class" /><meta property="og:description" content="Data Analytics for Markerting Class by Sudhir Voleti - muzeeb1408/DAM-Class" />
+
+  <link rel="assets" href="https://github.githubassets.com/">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzUxNzkzODgzOjBkM2JhZGUxOGZjZmZiYmI3N2I3YjdjYWYxYmM3Y2Y3NmU1M2E4YjcyODYwZGQxYWY1YWM0YjY4OTc1YjdmNWE=--65e229bd81fdbc04b79bef5e698843db1208d02a">
+  <meta name="pjax-timeout" content="1000">
+  <link rel="sudo-modal" href="/sessions/sudo_modal">
+  <meta name="request-id" content="C3BA:1FB0:25F7874:47EC37A:5C17DC09" data-pjax-transient>
+
+
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="C3BA:1FB0:25F7874:47EC37A:5C17DC09" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="43821896" /><meta name="octolytics-actor-login" content="akshaynarasimhan" /><meta name="octolytics-actor-hash" content="b870abc525ac3aa78a39c2b98d8116e9e12176b0becb4bcf9db23351fa8d54e8" />
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+  <meta class="js-ga-set" name="userId" content="7480767224b718eb9dbcbdd8b1ba0893" %>
+
+<meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="akshaynarasimhan">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="MmIzNzMyYjlhODM1MTAyNjU1NzU3MzRjMjgzMDQ0NWVmYjMwNTFiMDE4ZmM5NWE3OTM5MzZjNzIwNDYxYWUwNnx7InJlbW90ZV9hZGRyZXNzIjoiMTgyLjc3LjExNi4xNjQiLCJyZXF1ZXN0X2lkIjoiQzNCQToxRkIwOjI1Rjc4NzQ6NDdFQzM3QTo1QzE3REMwOSIsInRpbWVzdGFtcCI6MTU0NTA2NzUzMywiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+
+    <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR,NOTIFY_ON_BLOCK,TIMELINE_COMMENT_UPDATES,RELATED_ISSUES,MARKETPLACE_INSIGHTS_V2">
+
+  <meta name="html-safe-nonce" content="3462fe1ad146cd7997c8dcc8d7670ed362a6663c">
+
+  <meta http-equiv="x-pjax-version" content="c9ffc7328301d25e5f4c98eb07495291">
+  
+
+      <link href="https://github.com/muzeeb1408/DAM-Class/commits/master.atom" rel="alternate" title="Recent Commits to DAM-Class:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/muzeeb1408/DAM-Class git https://github.com/muzeeb1408/DAM-Class.git">
+
+  <meta name="octolytics-dimension-user_id" content="12211126" /><meta name="octolytics-dimension-user_login" content="muzeeb1408" /><meta name="octolytics-dimension-repository_id" content="118423828" /><meta name="octolytics-dimension-repository_nwo" content="muzeeb1408/DAM-Class" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="118423828" /><meta name="octolytics-dimension-repository_network_root_nwo" content="muzeeb1408/DAM-Class" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
+
+
+    <link rel="canonical" href="https://github.com/muzeeb1408/DAM-Class/blob/master/Nokia_Lumia_reviews.txt" data-pjax-transient>
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+  <meta name="u2f-support" content="true">
+
+  <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-in env-production page-blob">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="p-3 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+        
+<header class="Header  f5" role="banner">
+  <div class="d-flex flex-justify-between px-3 ">
+    <div class="d-flex flex-justify-between ">
+      <div class="">
+        <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+
+      </div>
+
+    </div>
+
+    <div class="HeaderMenu d-flex flex-justify-between flex-auto">
+      <nav class="d-flex" aria-label="Global">
+            <div class="">
+              <div class="header-search scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+  role="combobox"
+  aria-owns="jump-to-results"
+  aria-label="Search or jump to"
+  aria-haspopup="listbox"
+  aria-expanded="false"
+>
+  <div class="position-relative">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" data-scope-type="Repository" data-scope-id="118423828" data-scoped-search-url="/muzeeb1408/DAM-Class/search" data-unscoped-search-url="/search" action="/muzeeb1408/DAM-Class/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <label class="form-control header-search-wrapper header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
+        <input type="text"
+          class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+          data-hotkey="s,/"
+          name="q"
+          value=""
+          placeholder="Search or jump to…"
+          data-unscoped-placeholder="Search or jump to…"
+          data-scoped-placeholder="Search or jump to…"
+          autocapitalize="off"
+          aria-autocomplete="list"
+          aria-controls="jump-to-results"
+          aria-label="Search or jump to…"
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=wxk3MCM1oImFZ/9noKnlMDs/juoQ7I87uDzjE5Yso8qcL06Vxzm4OnEi6n/FWznZUKKa4ENilHmcVX9fS+VYrw=="
+          spellcheck="false"
+          autocomplete="off"
+          >
+          <input type="hidden" class="js-site-search-type-field" name="type" >
+            <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
+
+            <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
+              
+<ul class="d-none js-jump-to-suggestions-template-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-suggestion" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+</ul>
+
+<ul class="d-none js-jump-to-no-results-template-container">
+  <li class="d-flex flex-justify-center flex-items-center f5 d-none js-jump-to-suggestion p-2">
+    <span class="text-gray">No suggested jump to results</span>
+  </li>
+</ul>
+
+<ul id="jump-to-results" role="listbox" class="p-0 m-0 js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-global-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+
+    <li class="d-flex flex-justify-center flex-items-center p-0 f5 js-jump-to-suggestion">
+      <img src="https://github.githubassets.com/images/spinners/octocat-spinner-128.gif" alt="Octocat Spinner Icon" class="m-2" width="28">
+    </li>
+</ul>
+
+            </div>
+      </label>
+</form>  </div>
+</div>
+
+            </div>
+
+          <ul class="d-flex pl-2 flex-items-center text-bold list-style-none">
+            <li>
+              <a class="js-selected-navigation-item HeaderNavlink px-2" data-hotkey="g p" data-ga-click="Header, click, Nav menu - item:pulls context:user" aria-label="Pull requests you created" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls" href="/pulls">
+                Pull requests
+</a>            </li>
+            <li>
+              <a class="js-selected-navigation-item HeaderNavlink px-2" data-hotkey="g i" data-ga-click="Header, click, Nav menu - item:issues context:user" aria-label="Issues you created" data-selected-links="/issues /issues/assigned /issues/mentioned /issues" href="/issues">
+                Issues
+</a>            </li>
+              <li class="position-relative">
+                <a class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:marketplace context:user" data-octo-click="marketplace_click" data-octo-dimensions="location:nav_bar" data-selected-links=" /marketplace" href="/marketplace">
+                   Marketplace
+</a>                  
+              </li>
+            <li>
+              <a class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship showcases showcases_search showcases_landing /explore" href="/explore">
+                Explore
+</a>            </li>
+          </ul>
+      </nav>
+
+      <div class="d-flex">
+        
+<ul class="user-nav d-flex flex-items-center list-style-none" id="user-links">
+  <li class="dropdown">
+    <span class="d-inline-block  px-2">
+      
+    <a aria-label="You have no unread notifications" class="notification-indicator tooltipped tooltipped-s  js-socket-channel js-notification-indicator" data-hotkey="g n" data-ga-click="Header, go to notifications, icon:read" data-channel="notification-changed:43821896" href="/notifications">
+        <span class="mail-status "></span>
+        <svg class="octicon octicon-bell" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5 .38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z"/></svg>
+</a>
+    </span>
+  </li>
+
+  <li class="dropdown">
+    <details class="details-overlay details-reset d-flex px-2 flex-items-center">
+      <summary class="HeaderNavlink"
+         aria-label="Create new…"
+         data-ga-click="Header, create new, icon:add">
+        <svg class="octicon octicon-plus float-left mr-1 mt-1" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"/></svg>
+        <span class="dropdown-caret mt-1"></span>
+      </summary>
+      <details-menu class="dropdown-menu dropdown-menu-sw">
+        
+<a role="menuitem" class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+  <a role="menuitem" class="dropdown-item" href="/new/import" data-ga-click="Header, import a repository">
+    Import repository
+  </a>
+
+<a role="menuitem" class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, create new gist">
+  New gist
+</a>
+
+  <a role="menuitem" class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="muzeeb1408/DAM-Class">This repository</span>
+  </div>
+    <a role="menuitem" class="dropdown-item" href="/muzeeb1408/DAM-Class/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+
+
+      </details-menu>
+    </details>
+  </li>
+
+  <li class="dropdown">
+
+    <details class="details-overlay details-reset d-flex pl-2 flex-items-center">
+      <summary class="HeaderNavlink name mt-1"
+        aria-label="View profile and more"
+        data-ga-click="Header, show menu, icon:avatar">
+        <img alt="@akshaynarasimhan" class="avatar float-left mr-1" src="https://avatars3.githubusercontent.com/u/43821896?s=40&amp;v=4" height="20" width="20">
+        <span class="dropdown-caret"></span>
+      </summary>
+      <details-menu class="dropdown-menu dropdown-menu-sw">
+        <ul>
+          <li class="header-nav-current-user css-truncate"><a role="menuitem" class="no-underline user-profile-link px-3 pt-2 pb-2 mb-n2 mt-n1 d-block" href="/akshaynarasimhan" data-ga-click="Header, go to profile, text:Signed in as">Signed in as <strong class="css-truncate-target">akshaynarasimhan</strong></a></li>
+          <li class="dropdown-divider"></li>
+
+
+          <li><a role="menuitem" class="dropdown-item" href="/akshaynarasimhan" data-ga-click="Header, go to profile, text:your profile">Your profile</a></li>
+          <li><a role="menuitem" class="dropdown-item" href="/akshaynarasimhan?tab=repositories" data-ga-click="Header, go to repositories, text:your repositories">Your repositories</a></li>
+
+
+          <li><a role="menuitem" class="dropdown-item" href="/akshaynarasimhan?tab=stars" data-ga-click="Header, go to starred repos, text:your stars">Your stars</a></li>
+            <li><a role="menuitem" class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, your gists, text:your gists">Your gists</a></li>
+          <li class="dropdown-divider"></li>
+          <li><a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a></li>
+          <li><a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a></li>
+          <li>
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="bjtqZzDJcJ30sBIcSlPuc2QmetfSTuHd50wMFY2+TOK8Saox4GnPEdOuBARVCdZAt22S3taH9kLbKhEC0czLkw==" />
+              <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
+                Sign out
+              </button>
+</form>          </li>
+        </ul>
+      </details-menu>
+    </details>
+  </li>
+</ul>
+
+
+
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="q2lAireK3PtnukzJlFSiMtRiFOgbh5hcHXvu1GaPm4F5G4DcZypjd0CkWtGLDpoBByn84R9Oj8MhHfPDOv0c8A==" />
+          <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+            Sign out
+          </button>
+</form>      </div>
+    </div>
+  </div>
+</header>
+
+      
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+
+</div>
+
+
+
+  <div role="main" class="application-main " data-commit-hovercards-enabled>
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <div id="js-repo-pjax-container" data-pjax-container >
+      
+
+
+  
+
+
+
+
+  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav  ">
+    <div class="repohead-details-container clearfix container">
+
+      <ul class="pagehead-actions">
+  <li>
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="te8VlH7XtdvjQwvrRHfXKo6hfMbf1+Y3Ate3MYUyRUOvdj3ex/kjk4PDOMxK1JvMO7x4OU5coGgT0P8ZzpvZUg==" />      <input type="hidden" name="repository_id" id="repository_id" value="118423828" class="form-control" />
+
+      <details class="details-reset details-overlay select-menu float-left">
+        <summary class="btn btn-sm btn-with-count select-menu-button" data-ga-click="Repository, click Watch settings, action:blob#show">
+          <span data-menu-button>
+              <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+              Watch
+          </span>
+        </summary>
+        <details-menu class="select-menu-modal position-absolute mt-5" style="z-index: 99;">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notifications</span>
+          </div>
+          <div class="select-menu-list">
+            <button type="submit" name="do" value="included" class="select-menu-item width-full" aria-checked="true" role="menuitemradio">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <div class="select-menu-item-text">
+                <span class="select-menu-item-heading">Not watching</span>
+                <span class="description">Be notified only when participating or @mentioned.</span>
+                <span class="hidden-select-button-text" data-menu-button-contents>
+                  <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                  Watch
+                </span>
+              </div>
+            </button>
+
+            <button type="submit" name="do" value="release_only" class="select-menu-item width-full" aria-checked="false" role="menuitemradio">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <div class="select-menu-item-text">
+                <span class="select-menu-item-heading">Releases only</span>
+                <span class="description">Be notified of new releases, and when participating or @mentioned.</span>
+                <span class="hidden-select-button-text" data-menu-button-contents>
+                  <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                  Unwatch releases
+                </span>
+              </div>
+            </button>
+
+            <button type="submit" name="do" value="subscribed" class="select-menu-item width-full" aria-checked="false" role="menuitemradio">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <div class="select-menu-item-text">
+                <span class="select-menu-item-heading">Watching</span>
+                <span class="description">Be notified of all conversations.</span>
+                <span class="hidden-select-button-text" data-menu-button-contents>
+                  <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                  Unwatch
+                </span>
+              </div>
+            </button>
+
+            <button type="submit" name="do" value="ignore" class="select-menu-item width-full" aria-checked="false" role="menuitemradio">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <div class="select-menu-item-text">
+                <span class="select-menu-item-heading">Ignoring</span>
+                <span class="description">Never be notified.</span>
+                <span class="hidden-select-button-text" data-menu-button-contents>
+                  <svg class="octicon octicon-mute v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 2.81v10.38c0 .67-.81 1-1.28.53L3 10H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h2l3.72-3.72C7.19 1.81 8 2.14 8 2.81zm7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06L11.44 8 9.47 9.97l1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06L13.56 8l1.97-1.97z"/></svg>
+                  Stop ignoring
+                </span>
+              </div>
+            </button>
+          </div>
+        </details-menu>
+      </details>
+      <a class="social-count js-social-count"
+        href="/muzeeb1408/DAM-Class/watchers"
+        aria-label="2 users are watching this repository">
+        2
+      </a>
+</form>
+  </li>
+
+  <li>
+      <div class="js-toggler-container js-social-container starring-container ">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/muzeeb1408/DAM-Class/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="MMHvUueDrddyKQxnTq+LISmYm9p9ldMM811II1uZXGIjUVWThWrWHUJ8ahiPmV56QSkqULNtQ8ILJ0nSPQh3Ig==" />
+      <input type="hidden" name="context" value="repository"></input>
+      <button
+        type="submit"
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Unstar this repository" title="Unstar muzeeb1408/DAM-Class"
+        data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">
+        <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="/muzeeb1408/DAM-Class/stargazers"
+           aria-label="1 user starred this repository">
+          1
+        </a>
+</form>
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/muzeeb1408/DAM-Class/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="w9FOBZ40sI8EIBuS6XXU0QGuzNHIboWHVErHMf8ddc+i9OMyJdbqooPGvKAqWyML80XdFklxcPXhCmPyrq9++A==" />
+      <input type="hidden" name="context" value="repository"></input>
+      <button
+        type="submit"
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Star this repository" title="Star muzeeb1408/DAM-Class"
+        data-ga-click="Repository, click star button, action:blob#show; text:Star">
+        <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/muzeeb1408/DAM-Class/stargazers"
+           aria-label="1 user starred this repository">
+          1
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/muzeeb1408/DAM-Class/fork" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="uBxJs4nNWDwgMPCI6ZXEwFr/S9e7JtQDRYQmB9dFmRObVk5CmVgvtWSLbKFrF63yVYFChp1owTbK3KGzDN+Y2A==" />
+            <button
+                type="submit"
+                class="btn btn-sm btn-with-count"
+                data-ga-click="Repository, show fork modal, action:blob#show; text:Fork"
+                title="Fork your own copy of muzeeb1408/DAM-Class to your account"
+                aria-label="Fork your own copy of muzeeb1408/DAM-Class to your account">
+              <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+              Fork
+            </button>
+</form>
+    <a href="/muzeeb1408/DAM-Class/network/members" class="social-count"
+       aria-label="1 user forked this repository">
+      1
+    </a>
+  </li>
+</ul>
+
+      <h1 class="public ">
+  <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+  <span class="author" itemprop="author"><a class="url fn" rel="author" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=12211126" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/muzeeb1408">muzeeb1408</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="/muzeeb1408/DAM-Class">DAM-Class</a></strong>
+
+</h1>
+
+    </div>
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+    aria-label="Repository"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" aria-current="page" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /muzeeb1408/DAM-Class" href="/muzeeb1408/DAM-Class">
+      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a itemprop="url" data-hotkey="g i" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /muzeeb1408/DAM-Class/issues" href="/muzeeb1408/DAM-Class/issues">
+        <svg class="octicon octicon-issue-opened" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+        <span itemprop="name">Issues</span>
+        <span class="Counter">0</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a data-hotkey="g p" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /muzeeb1408/DAM-Class/pulls" href="/muzeeb1408/DAM-Class/pulls">
+      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">0</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+
+    <a data-hotkey="g b" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /muzeeb1408/DAM-Class/projects" href="/muzeeb1408/DAM-Class/projects">
+      <svg class="octicon octicon-project" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      Projects
+      <span class="Counter" >0</span>
+</a>
+
+    <a class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /muzeeb1408/DAM-Class/wiki" href="/muzeeb1408/DAM-Class/wiki">
+      <svg class="octicon octicon-book" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"/></svg>
+      Wiki
+</a>
+    <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse alerts security /muzeeb1408/DAM-Class/pulse" href="/muzeeb1408/DAM-Class/pulse">
+      <svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
+      Insights
+</a>
+
+</nav>
+
+
+  </div>
+
+<div class="container new-discussion-timeline experiment-repo-nav  ">
+  <div class="repository-content ">
+
+    
+    
+
+
+
+  
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/muzeeb1408/DAM-Class/blob/e0402c424e43b45bcb8426cdaf5b5416a664a539/Nokia_Lumia_reviews.txt">Permalink</a>
+
+    <!-- blob contrib key: blob_contributors:v21:43ec2eefa242dbf195aab4022ab175f2 -->
+
+    
+
+    <div class="file-navigation">
+      
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
+  <button class=" btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    
+    type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
+      <i>Branch:</i>
+      <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg class="octicon octicon-x js-menu-close" role="img" aria-label="Close" viewBox="0 0 12 16" version="1.1" width="12" height="16"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <tab-container>
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs" role="tablist">
+          <ul>
+            <li class="select-menu-tab">
+              <button type="button" class="select-menu-tab-nav" data-filter-placeholder="Filter branches/tags" role="tab" aria-selected="true">Branches</button>
+            </li>
+            <li class="select-menu-tab">
+              <button type="button" class="select-menu-tab-nav" data-filter-placeholder="Find a tag…" role="tab">Tags</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list" role="tabpanel">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/muzeeb1408/DAM-Class/blob/master/Nokia_Lumia_reviews.txt"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                master
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list" role="tabpanel" hidden>
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+      </tab-container>
+    </div>
+  </div>
+</div>
+
+      <div class="BtnGroup float-right">
+        <a href="/muzeeb1408/DAM-Class/find/master"
+              class="js-pjax-capture-input btn btn-sm BtnGroup-item"
+              data-pjax
+              data-hotkey="t">
+          Find file
+        </a>
+        <clipboard-copy for="blob-path" class="btn btn-sm BtnGroup-item">
+          Copy path
+        </clipboard-copy>
+      </div>
+      <div id="blob-path" class="breadcrumb">
+        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/muzeeb1408/DAM-Class"><span>DAM-Class</span></a></span></span><span class="separator">/</span><strong class="final-path">Nokia_Lumia_reviews.txt</strong>
+      </div>
+    </div>
+
+
+    
+  <div class="commit-tease">
+      <span class="float-right">
+        <a class="commit-tease-sha" href="/muzeeb1408/DAM-Class/commit/23ac01b80f744df9a9d98e1ca4a36c854cbfd6d1" data-pjax>
+          23ac01b
+        </a>
+        <relative-time datetime="2018-01-22T07:51:24Z">Jan 22, 2018</relative-time>
+      </span>
+      <div>
+        <a rel="author" data-skip-pjax="true" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=12211126" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/muzeeb1408"><img class="avatar" src="https://avatars2.githubusercontent.com/u/12211126?s=40&amp;v=4" width="20" height="20" alt="@muzeeb1408" /></a>
+        <a class="user-mention" rel="author" data-hovercard-type="user" data-hovercard-url="/hovercards?user_id=12211126" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/muzeeb1408">muzeeb1408</a>
+          <a data-pjax="true" title="Add files via upload" class="message" href="/muzeeb1408/DAM-Class/commit/23ac01b80f744df9a9d98e1ca4a36c854cbfd6d1">Add files via upload</a>
+      </div>
+
+    <div class="commit-tease-contributors">
+      
+<details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark float-left mr-2" id="blob_contributors_box">
+  <summary class="btn-link" aria-haspopup="dialog"  >
+    
+    <span><strong>1</strong> contributor</span>
+  </summary>
+  <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast " aria-label="Users who have contributed to this file">
+    <div class="Box-header">
+      <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <h3 class="Box-title">Users who have contributed to this file</h3>
+    </div>
+    
+        <ul class="list-style-none overflow-auto">
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="/muzeeb1408">
+                <img class="avatar mr-2" alt="" src="https://avatars2.githubusercontent.com/u/12211126?s=40&amp;v=4" width="20" height="20" />
+                muzeeb1408
+</a>            </li>
+        </ul>
+
+  </details-dialog>
+</details>
+      
+    </div>
+  </div>
+
+
+
+    <div class="file ">
+      
+<div class="file-header">
+
+  <div class="file-actions">
+
+
+    <div class="BtnGroup">
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/muzeeb1408/DAM-Class/raw/master/Nokia_Lumia_reviews.txt">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/muzeeb1408/DAM-Class/blame/master/Nokia_Lumia_reviews.txt">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/muzeeb1408/DAM-Class/commits/master/Nokia_Lumia_reviews.txt">History</a>
+    </div>
+
+        <a class="btn-octicon tooltipped tooltipped-nw"
+           href="https://desktop.github.com"
+           aria-label="Open this file in GitHub Desktop"
+           data-ga-click="Repository, open with desktop, type:windows">
+            <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
+        </a>
+
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/muzeeb1408/DAM-Class/edit/master/Nokia_Lumia_reviews.txt" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="lp5R6w7fJs7yx3x6LBEvAu98F6Sgv173qE2pakIAsUMPB6ItYNq0siQhylEObXgGfDXmQkt/SMm4eWrlSf/LMQ==" />
+            <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
+              aria-label="Fork this project and edit the file" data-hotkey="e" data-disable-with>
+              <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
+            </button>
+</form>
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/muzeeb1408/DAM-Class/delete/master/Nokia_Lumia_reviews.txt" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="3VaNUBv4JRxN/xgWyszo/sZZRhOt2RYQeZnO4NtUEaUqk90GVJbnkIRLm5Y9zypvHb1mp1SPIgQPmo9qpSGJTA==" />
+          <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
+            aria-label="Fork this project and delete the file" data-disable-with>
+            <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
+          </button>
+</form>  </div>
+
+  <div class="file-info">
+      121 lines (120 sloc)
+      <span class="file-info-divider"></span>
+    82.5 KB
+  </div>
+</div>
+
+      
+
+  <div itemprop="text" class="blob-wrapper data type-text ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tr>
+        <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line">I have had Samsung phones, where the screens are nice, but the plastic bodies come apart all of the time and feel flimsy. I have had iPhones, where the user interface is just so boring, even with all those apps that cost you money.&lt;br /&gt;&lt;br /&gt;The Nokia has wonderful Nokia apps already installed, such as Nokia Drive, which gives you directions while you are driving with a talking attendant, it is super accurate and fun to use.  You get Nokia Music, which is a free music service with 1500 playlists put together by expert music people, very good and it&#39;s free!  You get ESPN, Nokia City Lens, which is where you hold your camera up while you are walking a city street and it will give you information about the area and what you are pointing at, it is really cool.  And there are other free Nokia apps as well, like Camera Extras, that let you do things like take action shots and panorama photos. There&#39;s a Six Flags app, PGA Tour, Contacts Transfer, The Caddie +, Univision, Groupon, Soundtracker that connects you to Internet Radio for free, let&#39;s you get concert tickets, look at lyrics, share comments with your friends on their music, et.  There&#39;s Counters, that keeps track of calls and data usuage, Creative Studio, which is a photo editing app, and so much more!&lt;br /&gt;&lt;br /&gt;As a Windows Phone, you will have 7GB of Free Cloud Storage (which is the most for any Cloud Storage offered) for all your files and music and apps on Sky Drive, with the option to upgrade at a cost.&lt;br /&gt;&lt;br /&gt;The camera takes great pictures with the Carl Zeiss lense and there are ways to adjust you settings. The phone takes great 720p videos, which is a whole lot better than 1080p in a lesser camera.&lt;br /&gt;&lt;br /&gt;The Windows 7.5 user interface is super easy to use, and it is very pretty to look at.  There are a ton of apps in the MarketPlace, and the most popular ones are there, many of them are free.&lt;br /&gt;&lt;br /&gt;The beutiful cyan body on this phone is a matte finish, so it doesn&#39;t show fingerprints, it is made of polycarbonate, which is the same hard plastic that eye glass frames are made.  If you were to get a deep scratch the color goes all the way through, so it won&#39;t show.  Even the USB Charger has a modern style, with it&#39;s round geometric shape outlet plug.  All in all this is one hot phone.</td>
+      </tr>
+      <tr>
+        <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line">This phone is great! It&#39;s the best phone I&#39;ve ever owned. I have been a dedicated high end Android user, but I found this phone to be a much more satisfying experience than either the iPhone or the Android phones. I want an OS that will meet my current needs and have a great user interface with a good amount of apps available for me to manage my daily mobile cell phone use, and not have to make expensive phone upgrades all the time. The Nokia Lumia 900 is a very well constructed phone.The aesthetics are pleasing, it&#39;s modern and function goes well beyond my expectations. It operates very fast and smooth even though it has a single core processor and only 512MB on RAM. If you are not aware of these specs, you might think it has a multi-core processor and more RAM on board. Nokia has come up with a phone that is both pleasing in design and very efficient when it comes to performance. The screen is bright with beautiful color saturated screen, and seems to have less glare outside when it&#39;s sunny. I can actually read the screen in such conditions. This is a big plus for me! It has 16GB of ROM, which is plenty by itself, but pared with the 7GB of frees cloud storage, it&#39;s more than enough for me. I really don&#39;t know what the fuss is about concerning the number of apps available for Windows Phones. Unless you are some kind of developer or techy person, there are plenty of apps available for this phone (both from MS, Nokia and third party) for the everyday cell phone user, even business user. The game apps seems so much more refined (probably because there are a lot of Xbox games available for this phone) and they run beautifully on this phone. I travel a lot and I&#39;m really looking forward to  using this phone on my trips. I have always liked Nokia phones because of the quality build and support. When I started using a smartphone I got away from Nokia phones and started my Android experience. Now that Nokia has chosen to team up with MS to re-enter the smartphone market, I wanted to try their phones again. What a lovely surprise! I&#39;m crazy for the Lumia 900 and look forward to future offerings from Nokia, if and when I get tired of this phone or need to upgrade. I recommend this phone, it&#39;s quality at affordable prices. Great design, sturdy, fast and very easy to use, especially if you run Windows 8 on your computer. Try it! You won&#39;t be sorry. By it from Amazon, the best place to shop and that&#39;s coming from a person that doesn&#39;t or ever has worked for them. I forgot to tell you that there is an upgrade of the operating system to 7.8, which is very similar to Windows 8, available for this phone. It&#39;s very easy to install, just install Zune on your Windows computer, connect your phone to USB,  and it will find the upgrade and instruct you how to install.</td>
+      </tr>
+      <tr>
+        <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line">I just bought this phone a few weeks ago and it is gorgeous. The screen just blew me away and the OS is very fast and user friendly. This is the first time I try a Windows phone and I have to say that it&#39;s been a wonderful experience. From now on I&#39;ll just use Windows phone for my daily use. My next gadget will be Nokia Lumia 920. I just can&#39;t look foward for this phone to hit the market. Nokia designs the best and most beautiful phones and now they work with the best OS on the market. Well done, Nokia and Microsoft!&lt;br /&gt;&lt;br /&gt;Now, let&#39;s talk about Apps. I&#39;ve read many comments of people talking about the &#39;&#39;lack of app&#39;&#39; on the Marketplace. I can tell my own experience. I come from Android and also I had a Apple iPhone 4S and the only App missing on the Marketplace (talking about me and the apps I use the most) are Instagram and OVO (and I&#39;ve heard Instagram is comming soon to Windows Phones before this year ends). I have Facebook, Twitter, LinkedIn, Foursquare, MSN, KiK, Viber, Badoo, SkyDrive, Tango, Skype,Youtube,Shazam, SoundHound, Netflix, IMDb, Evernote, ESPN, CNN, Univision,SkyMap, TuneIn Radio, WhatsApp, Wikipedia and Weather much more... Also the Nokia App (Nokia Maps, Drive, City Lens, Music, Trailers, Creative Studio, Counters, Soundtracker, Transit, Contacts Transfer, Camera Extras and much more). The Marketplace keeps growing. The integration of Facebook, twitter, MSN, LinkedIn and Foursquare in my Windows Phone is AMAZING! I can put comments and give &#39;&#39;likes&#39;&#39; directly from my phone due to the AMAZING integretion between those Apps and my phone. and I don&#39;t have to go to the Facebook or Twitter App to do that.&lt;br /&gt;&lt;br /&gt;I&#39;m totally in love with my Nokia Lumia 900 and its amazing OS! I 100% recommend it! If you wanna be different, switch and go for it! Nokia Lumia phones the amazing experience!</td>
+      </tr>
+      <tr>
+        <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line">Hi,&lt;br /&gt;&lt;br /&gt;I bought a cell phone by Amazon with the following description: &quot;Nokia 900 Lumia Blue (Cyan) Factory Unlocked&quot;, Sold by: BLUTEKUSA.&lt;br /&gt;&lt;br /&gt;When I got the phone I was surprised that box and cell phone were &quot;at&amp;t&quot;, since the main reason why buy the cell phone was because it was factory unlocked. Also when I insert the SIM, the phone displays a message requesting an unlock code.&lt;br /&gt;&lt;br /&gt;I wrote to the company and I received excellent advice to unlock the phone.&lt;br /&gt;&lt;br /&gt;I am very happy with my phone. It&#39;s great&lt;br /&gt;&lt;br /&gt;Thanks.</td>
+      </tr>
+      <tr>
+        <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line">The Nokia Lumia 900 was my first smartphone. Im a programmer, so I really appreciate how easy it is to write software for it. That being said, the phoen itself is what I&#39;m rating so lets get to it.&lt;br /&gt;&lt;br /&gt;The Good:&lt;br /&gt;I love the feature-rich experience and the battery life is quite good. Despite what I have read from other websites it seems fairly light to me (then again, I don&#39;t like owning a smartphone that feels like its gonna float away). The speaker is one of the loudest I have ever heard on a smartphone, and it outputs really good quality audio too! The camera takes excelent quality photos and I feel that it is quite feature-rich. The flash is extremely bright, and makes a good flashlight in a pinch. the case is so tough that I dare someone to try and break it. I have yet to scratch the phone case itself and I have had this phone for about 6 months now (I tend to drop my phone, so this is impressive).&lt;br /&gt;&lt;br /&gt;The Bad:&lt;br /&gt;Let me first say that I DO NOT have a problem with the hardware. I have a few compaints about the software though. If you know about WP already then the rest of this section won&#39;t help you. That being said, I would dearly like to be able to make playlists on the go without the need to sync with zune software. I will also be excited when more developers get apps into the store (although all the ones I need are already there). My biggest issue right now is the OS upgrade, or rather the lack of one. WP8 came out and lumia 900 users kinda got the shaft.&lt;br /&gt;&lt;br /&gt;Bottom Line:&lt;br /&gt;This phone is an excelent choice! The price is excelent, the calls are clear, the interface is sleek, and the phone is near indestructable. I would like to see some love from microsoft in regaurds to software upgrades, but other than that I would (and do) recomend this phone to anyone who wants a good, dependable phone.</td>
+      </tr>
+      <tr>
+        <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line">I am a tmobile customer and with an unlocked Nokia 900 Lumia from ATT .Let me simply say it has to be one of the best kept secrets in smartphones. Though I knew the phone was unlocked, I had no clue it took a micros sim card, which I was not aware of and meant I had to go to a carrier and switch my sim card. Problem was solved in no time. Anyway back to this review.&lt;br /&gt; I was contemplating an Iphone purchase but I could not stand to spend upwards of 450 plus buckaroos on a phone. This cost me under 300 bucks give or take plus  a few quality accessories. SO in the budget department alone, this phone gets a gold star.&lt;br /&gt;&lt;br /&gt;I have read reviews there is a lack of apps....I dispute that HOWEVER, do not expect an array of exactly what you see on android play store.  There are a lot of apps for everything you need, some just not as popular. There are financial apps(Citibank, capitalone etc)missing but thats about it. With that in mind, the internet explorer is really smooth(way better than my old phone, my touch 4g slide). It has microsoft word and excel also. The interface is smooth, unbelievable this is a cool phone! One feature that is really different, the GPS navigator. Setting things up did not take long at all. You will be seduced  by the sleek look. I am not done playing around with it, but i know now I made a good choice here. I dont know where Nokia has been(I had one in the early 2000s) but I have since had a blackberry and a couple of tmobile high end phones. Nokia has made a giant leap.&lt;br /&gt;&lt;br /&gt;4/27/13&lt;br /&gt;After a few more days of use I feel real proud about not caving to buy the iphone. The battery life, which with mytouch 4g was ALWAYS an issue, is really impressive. You get at least a good 10 hours if you leave it on,probably longer if you leave the battery saver option on. I discovered the sky drive(similar to icloud) on Marketplace which gives you additional 7Gigs or so free, plus available upgrades for a fee and you get to store for music or other files. I really do think the only thing that will stop this phone from blowing out the competition unfortunately, are the lack of the &#39;mainstream&#39; apps. Also some apps free on Google play store(android) might not be on Marketplace(if available) But believe me unless you are one for the bandwagon, this change is worth a try, especially if the iphone or high end androids are a little above your budget.</td>
+      </tr>
+      <tr>
+        <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line">I bought this phone because I wanted to use it on TMobile. I&#39;ve only been frustrated thus far. Because it was originally an AT&amp;T phone, the picture messaging is all screwed up. I actually regret not waiting the extra month or so for the Lumia 820... at least that Nokia was released on TMobile... Overall, the phone os great; I do LOVE Windows phones.</td>
+      </tr>
+      <tr>
+        <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="LC8" class="blob-code blob-code-inner js-file-line">I received my phone before the expected arrival date and in excellent condition - New, and the color cyan blue is beautiful. The phone is simply great. It is easy to use, with lots of features, and well built. Good Nokia quality as expected. I have always been a fan of Nokia phones and the Nokia /Microsoft combination is perfect. The touch screen is becoming easier each time. The phone is indeed unlocked and I did take it to my initial cell provider. However,I was not pleased with the speed offered by them and had to switch to another provider - Digicel in the Caribbean is now my new cell provider. What a difference and the 4G LTE speed is simply amazing. Very pleased in all areas, and the phone did not let me down. Additional update to follow if necessary as I use the phone.&lt;br /&gt;&lt;br /&gt;UPDATE 20 Dec 12:&lt;br /&gt;Please note that the seller of my Nokia Lumia 900 unlocked cell phone was Masterdeals. My cell was indeed unlocked and I was able to communicate with them. Still very pleased with the Nokia Lumia 900 !&lt;br /&gt;&lt;br /&gt;UPDATE 14 SEPT 13:&lt;br /&gt;This phone is still working very well. I have never had an issue with it, and I will say over and over again, &quot;I really like my phone&quot;. Its fast ( good provider ), and I even read books on my phone. Its like my mini PC with easy use of the Microsoft office. I have also dropped it many times, but fortunately it was well protected. Lots of apps, and I am able to track my morning run/walk without a glitch. Unfortunately windows phones are missing the app for Magic Jack, and that is the only important app that I am lacking. Waiting on Magic jack to create an app for Windows phones ! Love the live tiles, and like that I can organize them how I want them - reminds me of my desktop. As you use the phone, you will learn the features. Still a great phone !!!</td>
+      </tr>
+      <tr>
+        <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="LC9" class="blob-code blob-code-inner js-file-line">I bought the phone and it was nice but has one problem that my husband did not like. It did turned off and didn&#39;t wanna turn on when somebody was calling. So I ruterned the phone. I did ask the seller to send me a new one and they did - but it was the same phone - it even had my baby&#39;s picture which we took the first time we used the phone to see the quality of camera - and charger was folded the same way I did it and did not have plastic covers and black cover from front and back of the phone were put there for the second time for sure. But they stil keep telling me it was a new phone. So please buy the phone but NOT from this seller - because the phone is good but service is awfull. And they refunded money but took 10% off the price I paid originaly because they say it was a new phone!!!!</td>
+      </tr>
+      <tr>
+        <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line">I purchased the Nokia Lumina 900 in black from BLUTECUSA and was really thrilled with all the new WP features. I really loved the new interface and its one smooth operator. The only issue I had was that it was locked to AT&amp;T Wireless. Since I needed an unlocked phone (as advertised) I had to return it.</td>
+      </tr>
+      <tr>
+        <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line">I have been using a Blackberry Curve for the last 3 1/2 years and avoiding a smartphone because of the additional costs associated with new activations. However, I decided that it may be time to upgrade since I would like to be able to use this phone overseas on travel. I did some research - thought about going with the new Blackberry Q10 - but the outright unlocked purchase price is high and I wanted to test out an unlocked GSM phone before I went hog wild on the phone of my dreams.&lt;br /&gt;I went with the 900 because it is affordable but not too outdated yet (although the 925 AT&amp;T and 928 Verizon are already out). I read great reviews on the design and wanted to go with something other than the iPhone.&lt;br /&gt;I was not disappointed.&lt;br /&gt;Kudos to Feel Good Sales - the product was unlocked and worked right out of the box when I took it down to T-Mobile for a SIM card. It was just as advertised - new (AT&amp;T), unlocked.&lt;br /&gt;Please keep in mind that there are many different vendors that sell under the same item number so you don&#39;t really know who the seller is. I chose to go with an Amazon Fulfilled seller, believing that there is a bit more consumer protection if they are responsible for the processing of the transaction. Also believing that if a seller uses Amazon to fulfill, they are probably selling what they&#39;re advertising since returns seem to be processed through Amazon also. In any case, be careful which vendor you choose and check their ratings. I read some of the reviews for other vendors (especially direct sales) that would lead me to believe that not all sellers are created equal.&lt;br /&gt;So, it&#39;s super easy to set up the Lumia 900 and I found lots of forum hints on it. The one thing that I had a problem with to start was sending and receiving MMS (pics through text). But I found a topic online that told me I needed to download the Network Setup app from Nokia and select my provider - it worked perfectly.&lt;br /&gt;Marketplace is really easy for downloading apps because I already have an Microsoft e-mail account. I am not a heavy user of apps so I don&#39;t really have much to say about them but they&#39;re there and I will probably look into them more.&lt;br /&gt;I have read lots of reviews saying the battery life is short but then so it is for the iPhone. Do your research but I think the Lumia 900 is a good choices - especially for me, as a starter smartphone that I wouldn&#39;t be afraid to take overseas. I think at some point, I might want to get a newer, international model - hopefully after they improve battery life (according to the critics).&lt;br /&gt;But in the meantime, I&#39;m thrilled!</td>
+      </tr>
+      <tr>
+        <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line">I purchased the Nokia Lumia 900 from Cell-Source on July 5, 2013.  The phone is sold by various sellers with orders fulfilled by Amazon. Therefore, product reviews for this phone appear on each individual seller&#39;s product page.  If you have comments for the seller, you may or may not be able to leave the seller feedback.&lt;br /&gt;&lt;br /&gt;Although Cell-Source did advertise the Nokia Lumia 900 as a &quot;Brand New&quot; unlocked GSM phone and the phone had no noticeable defects, the product packaging needs to be improved.  The seal on the box was broken, the screen protector didn&#39;t adhere very well, the USB cable wasn&#39;t secured and the manual appeared to be used. What Cell-Source didn&#39;t advertise is that the Nokia Lumia 900 is  AT&amp;T unlocked (versus factory unlocked) with some AT&amp;T apps.&lt;br /&gt;&lt;br /&gt;While you can uninstall the apps, the AT&amp;T logo is permanent.  When I turn on the phone, I see the swirl plus &quot;Rethink Possible&quot;.  However since it&#39;s unlocked, it can be used with GSM carriers other than AT&amp;T.  I use a T-Mobile SIM card and it works fine.  It&#39;s a neat phone and I&#39;m looking forward to perusing the tutorials available on the Internet to learn more.  However, I do wish I could remove all of the AT&amp;T stuff.&lt;br /&gt;&lt;br /&gt;In addition to the product and seller reviews, I suggest taking a look at the &quot;Customer Questions &amp; Answers&quot; section on this product page to find out more about the Nokia Lumia 900 prior to purchasing.</td>
+      </tr>
+      <tr>
+        <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line">A friend showed me his 900 and I was so impressed I went out and bought a used one (locked to AT&amp;T) to try out.&lt;br /&gt;I tested it  on the NET10 network, (which uses AT&amp;T) with the impression that Nokia phones were good, but the Windows software was not....it turned out the Nokia phone is the best I have ever owned, the Windows 7.8 is also very good. The phone is very attractive and has caught a lot of attention, it is extremely well built, very clear screen, with scratch free gorilla glass and a rigid case made of some kind of resin.&lt;br /&gt;&lt;br /&gt;Pluses...&lt;br /&gt;Calls are very clear,&lt;br /&gt;Both cameras are amazing, the flash is also very good. The camera button is very conveniently located.&lt;br /&gt;The charge lasts all day better than previous phones.&lt;br /&gt;The speaker is excellent for a tiny device like this...I am very impressed.&lt;br /&gt;Skype is just phenomenal on this phone! best quality sound and video I have ever seen on a phone!&lt;br /&gt;All the APPS I need are there!&lt;br /&gt;Nokia Maps...BRILLIANT!&lt;br /&gt;Bing Translater....BRILLIANT!&lt;br /&gt;I also use Skype, Google voice, Watsapp, Amazon Mobile/Kindle, Netflix, Facebook, Twitter, Tune In Radio &amp; Tango on this phone!&lt;br /&gt;Has yet to freeze or crash after two weeks. A first!&lt;br /&gt;&lt;br /&gt;Minuses&lt;br /&gt;There is no external memory slot (though it does have a built in 16GB memory, more than enough for my needs)&lt;br /&gt;Battery is non-removable (shame)&lt;br /&gt;&lt;br /&gt;Conclusion.&lt;br /&gt;&lt;br /&gt;This phone has really impressed me and I would recommended it to anyone who needs a well built phone that is reliable, with clear calls and decent battery life!&lt;br /&gt;Is it better than an I phone? No idea, never owned one! It is better, way better than some Android phones I have owned but I am sure as good as the current  higher end Android, it just depends on your personal preferences.&lt;br /&gt;As regards &quot;APPS&quot; I found all the apps I needed, Nokia Maps is an impressive stand in for Google Maps, Bing Translater is really very impressive too!&lt;br /&gt;&lt;br /&gt;I have had no regrets at all about switching to this phone and if you are willing to try it, I think you will like it!</td>
+      </tr>
+      <tr>
+        <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line">I got my phone on Saturday after reviewing the customer reviews on here, and youtubing the phone demonstrations I couldn&#39;t find any issues, of course until after I got it.. I went to tmobile and had my SIM card cut down for free so that was easy. I played with it all weekend and it worked great until I left my house and tried to use my data plan for internet and send pictures.. I went back to tmobile to see if they could set it up for me and they couldn&#39;t. the guy said, &quot;oh didn&#39;t anyone tell you our 4G data plans don&#39;t work on unlocked phones.&quot; And handed me back the phone. I of course found out from the tmobile website that they have a code or a series of APN and MMS codes to use, but I tried that and it still didn&#39;t work.. So now I&#39;m waiting for my job&#39;s IT guy to come back from vacation to figure this out for me.. Other wise I love the phone and I&#39;m just sending pictures if I want to by email. The camera features are great and my wifi connection is pretty fast. I can&#39;t think of anything else I&#39;ve come across other than that.. It&#39;s not the end of the world that I can&#39;t use my data plan while out and about or get any MMS messages.. I&#39;ll survive.. Hopefully my work guy can figure it out and then I&#39;ll be completely happy.</td>
+      </tr>
+      <tr>
+        <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line">this is totally a unlocked phone. You can use it anywhere. This is a great phone for anyone who is interested in windows phone.  It is much better than iPhone</td>
+      </tr>
+      <tr>
+        <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line">Great phone. Used an iPhone before and I am much happier now with the Lumia.&lt;br /&gt;&lt;br /&gt;I did not had a tousand apps in my iPhone so the transition was nice and easy.</td>
+      </tr>
+      <tr>
+        <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line">This is my first windows phone and so far, I am enjoying it. The price point here is better than if I had bought it in the store I checked (you know, that US carrier that advertises it does not &quot;lock you into contracts&quot;). The phone does everything I need it to do and the features are exactly as advertised. No unpleasant surprises. My only disappointment is that this particular phone is not &quot;factory&quot; unlocked (and the sellers do not claim it is). So ATT branding is on the phone and on some of the apps. Since I use this phone overseas and am not an ATT customer, I would prefer not to have these ATT demarcations on my phone. In the past, I have been more careful to select a factory unlocked phone but overlooked that detail this time. Otherwise, the phone is easy to use and performs well, consistent with Nokia standards.</td>
+      </tr>
+      <tr>
+        <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line">not happy with the limited apps for this phone. I guess I will try it for a few more months.</td>
+      </tr>
+      <tr>
+        <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="LC19" class="blob-code blob-code-inner js-file-line">UPDATE: MMS function is broken. The phone can neither receive nor send images and videos via text. I&#39;ve tried troubleshooting it using every trick I could find on the internet including the official forums of Microsoft, Nokia and my career, with no result other than wasting almost an entire morning. And I am very tech-savvy (seriously, I&#39;ve hacked all my kindles so far. I use Linux. If I can&#39;t solve the problem, not many can.)&lt;br /&gt;&lt;br /&gt;I deduct 2 stars from my 3-star review because this is kind of a big deal for most users. Come on MS and Nokia, how do you expect to survive against Apple and Android with a problem like this?&lt;br /&gt;&lt;br /&gt;UPDATE: Zune constantly causes trouble. Every time I need to connect my phone to my Win 7 pro pc, I need to troubleshoot manually from the device manager to get the PC recognize the phone. If this happened in 2004, I would understand. Back then, our standards of plug-n-play were much lower. Now, they are high and especially because THIS IS A WINDOWS PHONE CONNECTING TO A WINDOWS PC. How would the people who buy iphones feel if they connect it to their macbooks and it fails to even recognize the device? Dumb right? So, I take a star off. Still good phone for the price, but if you can afford a good android, go for it I say.&lt;br /&gt;&lt;br /&gt;ORIGINAL REVIEW:&lt;br /&gt;&lt;br /&gt;I bought this phone new on another website (woot.com, affiliate of amazon) for 199.99, it was a great bargain for the price. I would consider buying at Amazon.com&#39;s price too.&lt;br /&gt;&lt;br /&gt;Pros:&lt;br /&gt;&lt;br /&gt;1- Very responsive touchscreen. I can&#39;t tell the difference between the latest iphone and Lumia 900 in this regard.&lt;br /&gt;2- Light.&lt;br /&gt;3- Sleek look.&lt;br /&gt;4- Unlocked. (T-mobile doesn&#39;t list 900 on their compatible phones list but everything works including 4g)&lt;br /&gt;5- Great price.&lt;br /&gt;&lt;br /&gt;Cons:&lt;br /&gt;&lt;br /&gt;1- Zune. To connect it to a computer you have to install Zune. Windows 7 doesn&#39;t even recognize the phone without Zune (which is ironic, because it is after all a windows phone), I don&#39;t like producers shoving down clinger-ware down my throat just because they can. The device has 16 GB memory (12 available after OS and updates). So, why the hell not install the communication protocol on it and don&#39;t make me use Zune as interface.&lt;br /&gt;2- The landscape mode is a bit glitchy. It keeps going back to the portrait mode when you enter a new contact to your phone book. You have to turn and twist it a bit to get it back to landscape.&lt;br /&gt;3- Not as many apps. Most app developers consider windows platform a dead-duck. So, if you want to use the newest apps, stick to apple or android.&lt;br /&gt;&lt;br /&gt;In-betweens:&lt;br /&gt;&lt;br /&gt;1- Camera. It works well for a phone camera but nothing to write home about.&lt;br /&gt;2- Sound quality. Works well. Again nothing special. The speakers can get very loud, do you really want to use your phone speakers to listen to music?&lt;br /&gt;&lt;br /&gt;Verdict: Solid smart phone for the price. It is near unjustifiable to pay triple for the newest Iphone or Android machine unless you are crazy about the apps.</td>
+      </tr>
+      <tr>
+        <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line">Pros: Intuitive, easy-to-use interface. Many tasks can be completed in less time than on Apple and Android devices. Boots fast, decent battery life (always lasts through the day). Stable and reliable. Exclusive Nokia apps like &amp;#34;Music&amp;#34; and &amp;#34;Drive&amp;#34; give the device an edge over other manufacturer&#39;s windows phones.&lt;br /&gt;&lt;br /&gt;As for design, the sleek, uni-body device really stands out. The dedicated camera button can wake the phone, unlock it, and have the user snapping photos immediately.&lt;br /&gt;&lt;br /&gt;Integration with Skydrive works very well.&lt;br /&gt;&lt;br /&gt;Cons: Windows app store is kind of limited, but only if you&#39;re looking for a few specific apps. There are third-party workarounds for most popular apps. Not compatible with Windows Phone 8 apps unless the developer ports it over.&lt;br /&gt;&lt;br /&gt;Camera quality is not as great as it should be. Some photos have a yellowish tint to them. This can be fixed with an auto-fix feature that&#39;s built-in to the device, but it&#39;s an extra step that seems unnecessary.</td>
+      </tr>
+      <tr>
+        <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line">it as good as its description and worth keeping it! Everything is amazing when I got this item, but window 7.5 system is truly not as smooth as windows 8 system, the buyer need to consider this!</td>
+      </tr>
+      <tr>
+        <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="LC22" class="blob-code blob-code-inner js-file-line">Love this phone! WP OS, is just extremely fast, fluid, and very smooth. The amount of apps Nokia continue to push out, along with their support, make this phone a no brainer to purchase. I&#39;ve used Android as well as iOS, and yes WP OS is really a breath of fresh air and a joy to use. I can honestly say the &amp;#34;Live Tiles&amp;#34; are addictive and you won&#39;t just put your phone up in your pocket. It(OS) makes you continue using your phone for everything possible. Anyway, enough about the OS, more about the phone. This is one of the best built phones ever! Of course you will have fans of the 800, 900 &amp; N9, all are pretty much the same with small differences(screen build and size). The color is sort of hard to explain, cause depending on where and the lighting it can look several different shades of blue, but every shade looks beautiful. When I&#39;m out and have the phone on the table or bar, never fails, a couple of people will ask about it and are simply amazed at the beautiful of the phone. Well, this was only a quick little review, I will be getting the new Lumia 920, HTC 8X, and also the HTC One X+, in the near future.</td>
+      </tr>
+      <tr>
+        <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="LC23" class="blob-code blob-code-inner js-file-line">Phone is designed for At&amp;T only, does not take other providers Sim. , don&#39;t know why it&#39;s called unlocked GSM phone, if you can only use it with AT&amp;T</td>
+      </tr>
+      <tr>
+        <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="LC24" class="blob-code blob-code-inner js-file-line">This phone is not unlocked as was advertised on the web. You will  have to find someone to unlock it for you and it can cost about $40(and some places will not touch it ). This phone was not knew as was advertised, the box was open and the device has been used. This phone does not properly work. It can&#39;t reliably connect  to the T-mobile network, it will connect and drop connections soon after. I searched the Web and found out that  this is a known design issue which is driving a lot  of people crazy trying to configure the phone APN to work properly. The network will work for few minutes and then disappear if the phone goes to sleep or gets turned off. You will have to play with it for long time, tuning it On-Off-On , reset etc. before it comes back- BAD, BAD, BAD please avoid the headache and stay away from this model.&lt;br /&gt;&lt;br /&gt;I like the window interface, it is easy to use, but the phone network connection issue drove me crazy, and I have to return it. Now I am waiting to see if the seller will honor the return policy.</td>
+      </tr>
+      <tr>
+        <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="LC25" class="blob-code blob-code-inner js-file-line">Nokia Lumia 900 wp7, a set back in evolution&lt;br /&gt;&lt;br /&gt;Base on price and moment in cellular evolution I would expect this expensive beautiful designed smart phone to work at least as easy and practical as any basic cell... Well this is not the case with this toy..&lt;br /&gt;&lt;br /&gt;THIS IS A VERY COMPLICATED PHONE!! - FORGET PRACTICAL USE WITH THIS GADGET&lt;br /&gt;&lt;br /&gt;Simple, practical and easy is not part of the philosophy in this phone..&lt;br /&gt;&lt;br /&gt;Things you might be used to do on a couple of clicks, here they take 5 to 6 actions away (or more) and time consuming and frustrating results in many cases..&lt;br /&gt;&lt;br /&gt; Understanding and finding your way around with Nokia Lumia 900 wp7 is a very high time consuming effort .. So if you are a busy person and like technology to improve your timing working routing, this is not a phone I would recommend..&lt;br /&gt;&lt;br /&gt; Because many &quot;Basic&quot; cell functions are missing in the software wp7, and the only option you&#39;ll find is to search endlessly the &quot;market place&quot; to find app that may or may not suit your needs, download them, install them and use them for a while to see if they really work for you.. (mean while consuming the phone memory capacity) And in my case, I don&#39;t want to pay for apps that I have no proven knowledge how they work... So you&#39;ll end up searching the &quot;free&quot; category (which have advertising on them)&lt;br /&gt;&lt;br /&gt;-No smart dialing (while you type a number does not display contacts that match the number)&lt;br /&gt;-No possibility to customize font size&lt;br /&gt;-No &quot;select or select all&quot; option when typing&lt;br /&gt;-No &quot;one space back/forward&quot; buttons option when typing and/or correcting, editing any text&lt;br /&gt;-No undo&lt;br /&gt;-No cut&lt;br /&gt;-No possibility to see or view the date when typing a note, message or document&lt;br /&gt;-No return or back to previous task&lt;br /&gt;-No easy friendly connection, transfer of data through USB and PC&lt;br /&gt;-No contacts transfer, share, backup, update, save, import, export through USB or Bluetooth to your PC or other services&lt;br /&gt;-No Bluetooth connection to other phones or PC for picture, music or file transfer&lt;br /&gt;-&lt;br /&gt;-Forget about Bluetooth services with this device (only a handful services incorporated) e.i. hands free and speakers, it&#39;s about it..&lt;br /&gt;-No message (SMS) save or export to PC..&lt;br /&gt;-SMS threads font very small size&lt;br /&gt;-For a pretty big screen, contact&#39;s info (phone numbers, address, e-mail, notes, etc) are ridiculously small font size!!! (can&#39;t change it)&lt;br /&gt;-What happened to font selection &quot;Small, Medium, Large&quot;?&lt;br /&gt;-No compatibility to PC Suite  (Nokia&#39;s software)&lt;br /&gt;-No ringtone selection as desire by user from own music files&lt;br /&gt;-No volume set up by user for default ringtones&lt;br /&gt;-Volume adjust same for every sound (lets say I just want to set up SMS sound louder but only that, it can&#39;t it won&#39;t let you)&lt;br /&gt;-No sound selection as desire for &quot;new sms&quot; or &quot;new email&quot; or &quot;reminder&quot; you are obliged to use its small library of boring sounds&lt;br /&gt;-the sounds options for &quot;new sms&quot;, &quot;new email&quot; or &quot;reminder&quot; doesn&#39;t let you customize its loudness or volume independently.&lt;br /&gt;-No option in selecting any song from your library as ringtone, message, sms, alarms sounds&lt;br /&gt;-When playing a song from my Lumia&#39;s phone library, it doesn&#39;t have a possible way for moving ahead or scroll through the song (forward or rewind)&lt;br /&gt;-No phone book option on &quot;people&quot; (only internet accounts or all mixed)&lt;br /&gt;-Contacts have a Fixed platform that does not let you customize the Titles for Phone numbers&lt;br /&gt;-On Contacts the list of options for labeling Phone Numbers is short!! or limited.&lt;br /&gt;-If a Contact&#39;s name is longer than the space on screen, it wont let you see the complete name, it won&#39;t show it even if you place it horizontal view..&lt;br /&gt;-The Export/Import option (that you have to locate and download) for getting my Phone contacts from my older Nokia or iPhone to my Lumia, works mediocrely and poor, many details were left out...&lt;br /&gt;-No &quot;draft&quot; folder for SMS&lt;br /&gt;-No &quot;recent&quot; option for choosing contacts on sending SMS&lt;br /&gt;-No multiple selection of contacts on one step procedure for sending sms (as on &quot;Android&quot;)&lt;br /&gt;-No possibility to create custom SMS folders, i.e. saving moms sms&lt;br /&gt;-Calendar &quot;Month&quot; view too small, unreasonable unreadable, no visible marks, tags, color or water marker for events&lt;br /&gt;-No scrolling day by day on calendar &quot;month view&quot;, neither on &quot;calendar day view&quot;.&lt;br /&gt;-Confusing calendar day view (looks like an endless list)&lt;br /&gt;-Only hourly settings on calendar day view (No minutes settings i.e. 2:30, 4:45, 10:15 or whatever) it is set up by default as a unnecessary long list even if empty..&lt;br /&gt;-No summary  view of daily set events when day selected on &quot;calendar month view&quot; (without having to go or redirected to day view)&lt;br /&gt;-let&#39;s say you enter a specific reminder on the calendar, and this repeats let&#39;s us say 4 days in a row.. Well there is no way to copy the whole thing and paste it, you got to re-write it all on each day independently on the calendar.&lt;br /&gt;-No tile color and/or size customize by user (a Tile is like a icon for shortcuts to a desired function or application)&lt;br /&gt;-What happened to saving contacts on the phone?? Only on a E-mail account??&lt;br /&gt;-if you are entering a phone number that already exists on your contacts (but you don&#39;t know) it won&#39;t tell you it already exists.&lt;br /&gt;-No adding feature of related apps to a single &quot;tile&quot; to group them (as on iPhone)&lt;br /&gt;-Sometimes people can get dizzy scrolling all the way down (or through) the endless &quot;tile&quot; collection  set up you might end up having, trying to make short cuts to phone functions.&lt;br /&gt;-They claim Zune (the connection app for PC and Lumia phones win7) is the ultimate software, but then again a set back in evolution.. Is quite a drag having to connect and disconnect your device in order to see or check if the file has been transferred.. (I get &quot;envy&quot; my wife transferring, music, pictures, etc from her computer to her cell phone ;-) and vise versa)&lt;br /&gt;-Many times when &quot;editing&quot; the info of a song (artist, album, etc) this info would appear on your PC but not updated on the phone..&lt;br /&gt;-Many albums from my collection do not appear on my Lumia &quot;album list&quot;&lt;br /&gt;-Many artists from my collection do not appear on my Lumia &quot;artist list&quot;&lt;br /&gt;-If you have a long list of music files as I do, with this software &quot;Zune&quot; I have to scroll all the way to find an specific music file (no &quot;find&quot; or &quot;search&quot;)&lt;br /&gt;-arranges pictures by date.. which is fine, but what about trying to arrange by folder.. quite tricky&lt;br /&gt;-No lock/unlock gravity (when leaning to one side on the coach the view changes to horizontal, and that is not necessary what I want)&lt;br /&gt;-When I need to write a contact&#39;s number in different formats for dialing purpose (i.e. +country code, city, number  vs city code, number, the software will hide one or the other&lt;br /&gt;-Only one option for labeling a cell number, many times a contact will have more than 2 cell numbers, but here we have only one option to label a cell number, &quot;CELL PHONE&quot; (but only once) How do you label the second cell number? Home? Work? Ridiculous!!&lt;br /&gt;-Same thing for work numbers, there&#39;s only two &quot;work&quot; labels available (what if there are more than 2 work numbers as usually happens?)&lt;br /&gt;-No &quot;main&quot; and no &quot;general&quot; labeling for a contact&#39;s number&lt;br /&gt;-Only three (3) email addresses can be saved for a contact, and have a fixed label&lt;br /&gt;-No phone search, if want to search any thing from one place like most devices (phone search), this does not have it...&lt;br /&gt;-When you choose to forward an email, there isn&#39;t possible way to edit the content being forwarded.&lt;br /&gt;-And so on...&lt;br /&gt;&lt;br /&gt;*I have found that many users report that Nokia Lumia 900 w7 phone or device SHUTDOWN UNEXPECTEDLY VERY FREQUENTLY having to check constantly if the phone is on.. And find out that has been OFF for who knows for how long.. Can you imaging this? Expecting an important call or text message and find out that the phone has been OFF for who knows how long...  Well, mine is not the exception !!! it shuts down very frequently and unexpectedly, very annoying !!&lt;br /&gt;&lt;br /&gt;IN THE OTHER HAND&lt;br /&gt; If your life is lacking emotions and adventure.. You&#39;ll find this phone very amusing and entertaining... And time consuming..&lt;br /&gt;&lt;br /&gt;-Nice connectivity to the internet, this is more of a internet, social networking device and software... But not a phone!!&lt;br /&gt;-Nice prediction help while typing, but needs an UNDO and back/forth cursor option, and improve finger selection&lt;br /&gt;-Many things can be &quot;Pin to start&quot; (but size and color can&#39;t be customized) but then again, you&#39;ll end with a long selection of tiles and therefore scrolling endlessly through them to find the one you need to click&lt;br /&gt;&lt;br /&gt;-&quot;forward&quot; is hidden under reply button for sync email accounts&lt;br /&gt;&lt;br /&gt;..and you better have a 20 20 sight&lt;br /&gt;&lt;br /&gt;NOTE: I bought this phone because I used to be a Nokia fan.. I have tried to love this device but has disappointed me in a way I didn&#39;t expect.. for a &quot;smart phone&quot; no so smart..&lt;br /&gt;&lt;br /&gt;NOTE: Never the less, I see potential in this device, with an update (or Updates, that I doubt would happen) this would be one of the best and complete smartphones! If they ever care to make the necessary updates..&lt;br /&gt;&lt;br /&gt;Next time I&#39;LL get a different one, but not a windows phone.</td>
+      </tr>
+      <tr>
+        <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="LC26" class="blob-code blob-code-inner js-file-line">If you are looking to purchase an unlocked phone do not buy!!  The phone it self is great but if you are looking to activate with any company other than at&amp;t buying this phone serves no purpose.  It cost me 100 bucks to activate the phone with another service (t-mobile) only to find out that this phone was not unlocked. I have been a week without a phone and it is really nerve racking.&lt;br /&gt;It will be at least another 50 bucks to get it unlocked in which I will be waiting 3-5 buisness days to get my phone back. Me personally, cannot wait that long. I will be asking for a refund!!</td>
+      </tr>
+      <tr>
+        <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="LC27" class="blob-code blob-code-inner js-file-line">I&#39;ve logged four trips and more than six hours at the ATT store trying to get my new Windows phone to be able to receive email from my Apple iCloud account. I thought it must be me simply being dense. And nobody at the store knew that it couldn&#39;t be done. But that&#39;s the case!&lt;br /&gt;&lt;br /&gt;My bad. I bought a Windows phone made by Nokia: the Lumia 900. Really ELEGANT. Very affordable. Sweet, except I can&#39;t read my email thru Apple on this device. It&#39;s like asking somebody for directions and being told &quot;you can&#39;t get there from here.&quot; Seriously, in this modern era, for three computer giants (Microsoft, Nokia, Apple) and a major communications company (ATT) to sell a phone which can&#39;t (won&#39;t!) receive email from a competitor is dumbfounding. There oughta be a law!&lt;br /&gt;&lt;br /&gt;After being told the situation by the very patient, intelligent, lovely people who persistently tried to help me at the store, I came home and called ATT just to verify that this disconnect was fact. The kind lady in phone support put me on hold and soon came back to tell me that, indeed, this was a definitive finding. And it holds for the 920, 925 and 1020 models, as well.&lt;br /&gt;&lt;br /&gt;Further research would seem to suggest that Apple is the fly in the ointment. So I&#39;ve hit upon a solution. I will become my own email host. As I already own a domain name for my WordPress blog, thru Godaddy, I will begin using it as my primary email account, phasing out Apple. Hey, buying a Windows phone was a step away from being monopolized, and now Apple has pushed me one more down the path. NB: I revised this review from one star to five after some deep reflection, pain, and clarity. I had bailed on gmail a year and a half ago; and now I&#39;m bailing on iCloud. Don&#39;t do evil. And don&#39;t be a chump.</td>
+      </tr>
+      <tr>
+        <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="LC28" class="blob-code blob-code-inner js-file-line">I bought this phone because i heard so many great things about it however, it does NOT allow many apps at all quite disappointing since I love instagram this really broke my heart its a great phone but not if your an app person</td>
+      </tr>
+      <tr>
+        <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="LC29" class="blob-code blob-code-inner js-file-line">A very good phone, connection fast, an excellent size, especially for viewing websites. Allows sharing of a simple, fast and fluid.&lt;br /&gt;&lt;br /&gt;The downside of this device is that suddenly goes off, to turn it back on you have to perform a soft reset.</td>
+      </tr>
+      <tr>
+        <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="LC30" class="blob-code blob-code-inner js-file-line">We have a walmart family mobile account that works with any phone that takes a sim card. We were skeptical on this phone because right off the bat the picture messaging didn&#39;t work.  Turns out it was just a configuration detail that was fixed after some online searching.  Phone works great.  The color is very different.  Gets compliments.  Being able to hear in noisy and quiet environments is good.  Texting, signal and email all good.  Was a great price for a good phone.</td>
+      </tr>
+      <tr>
+        <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="LC31" class="blob-code blob-code-inner js-file-line">This was my first smartphone. I am mildly impressed.  When it works it is great but boy is this is a Windows phone!! :[&lt;br /&gt;# Great I can carry my word document with me!&lt;br /&gt;# Wait one minute did my phone just freeze up?&lt;br /&gt;My sister and I had a head to head battle over who&#39;s smart phone was coolest she has an Iphone 5.  In the middle of the text battle my phone screen froze.  I had to turn off the phone and reboot. As a devote PC user we are all used to that. She laughed but I had a slighted chuckle as we discussed the bills. I have greater freedom and control of cost because I can switch carriers since my affordable smartphone is not tethered to one carrier she can not.  Isn&#39;t this the classic PC vs Apple debate do you want a usable gadget that you afford or a perfect gadget that cost a mint?&lt;br /&gt;Things that Nokia can improve:&lt;br /&gt;No I am not getting a Microsoft account are you serious? Another account for me to forget the password to and spend money for app that are last week before I master them?No!!!&lt;br /&gt;Still have not got the radio app to work.&lt;br /&gt;Please how do you remove all that AT &amp; T stuff?&lt;br /&gt;Other than that no complaints.&lt;br /&gt;Update, I have had this phone for four months and I can not receive picture that are texted to me and this phone does not work with Family Mobile data plan.  I have downloaded updated and turn myself inside out trying to figure out what am I doing wrong.  This phone although stating unlock can not be used to almost any but talk text and music storage without AT&amp;T.  I left AT&amp;T because they are so expensive and in Chicago calls are dropped constantly I did not want to go back but here I am crawling back to AT&amp;T buying a more expensive and limited data plan just to make this stupid phone work.  This is not unlocked as stated and will not work well with other wireless plans with web and pictures don&#39;t waste your money.</td>
+      </tr>
+      <tr>
+        <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
+        <td id="LC32" class="blob-code blob-code-inner js-file-line">The Windows platform is a nice change from the traditional Android or Apple phones.  I am a TMobile subscriber so bought the unlocked phone.  Didn&#39;t like that it has AT&amp;T printed on the screen in the upper right hand corner, but LOVE that I can remove all of the pre-installed AT&amp;T apps!!  Most phones, you are stuck with whatever apps they load for you and you can&#39;t get rid of them. Not a problem on this phone. Also, this was my first experience with an on-screen keyboard.  I have always stuck with phones with a full QWERTY keyboard for texting because I hated how small the keys are on-screen, but this one is perfectly spaced and large enough so I dont make typos!  Oh, and when I do make a typo (especially in texting) it has spell-check AND auto-corrects some of the words for me!!  Phone is very easy to navigate and works great!! I love it!!</td>
+      </tr>
+      <tr>
+        <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
+        <td id="LC33" class="blob-code blob-code-inner js-file-line">I want to love this phone because there is a lot to love.  But, two things have me very frustrated.  The first is that in the picture it did not indicate a carrier- but when I got the phone it is for AT&amp;T and it has a ton of their stuff on there (I am a T-Mobile customer).  I cannot send pictures via text and  think this is an incompatibility issue with T-Mobile and the phone being programmed for AT&amp;T.  As you can probably tell, I&#39;m not a techie.  I get nervous when I want to use the navigation app, for example, and it comes up talking about AT&amp;T&#39;s data plan.  If I use it, am I going to get charged for something even though I have a data plan with T-Mobile since it&#39;s an AT&amp;T app?  I also have trouble getting my emails, at times, but not always.  Don&#39;t know what that&#39;s about.  It will frequently say it is having difficulty getting a Wi-Fi connection- never had this problem with my last cheap (but T-Mobile) phone.&lt;br /&gt;&lt;br /&gt;I have googled the texting pictures issue and clearly I am not the only one having this issue.  However, the &quot;fixes&quot; some techies identified have not worked for me- or some others who were having the same problem.  My son also got an unlocked Lumia (710 vs. my 900) and he can&#39;t text pics either.  He spent hours on the phone with Nokia but they couldn&#39;t figure it out.  The T-Mobile people gave him a new sim card but said if that didn&#39;t work, it&#39;s a phone (Nokia) issue not a service issue.  His new phone also doesn&#39;t get incoming calls (they go straight to v/m) although he gets regular texts and can make calls.  Nokia couldn&#39;t figure that one out either.  My other son, however, got an unlocked Nokia (also a 710) but it has the T-Mobile logo on it- he doesn&#39;t have any of these problems.&lt;br /&gt;&lt;br /&gt;So, now, I don&#39;t know if I should return it or keep it.  I know I will end up costing me to return it.  And it&#39;s a beautiful phone in every other way.  I really love a lot of it&#39;s features.  But, I would never buy another unlocked phone unless it has the T-Mobile logo on it (and they seem to be hard to come by.  Probably will get harder now that they don&#39;t have contract any more).  Just be wary...</td>
+      </tr>
+      <tr>
+        <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
+        <td id="LC34" class="blob-code blob-code-inner js-file-line">First of all please make sure you don&#39;t buy the product from the seller &amp;#34;BREED&amp;#34;...&lt;br /&gt;One of the worst seller.&lt;br /&gt;Phone was damaged..Charger was malfunctioned...&lt;br /&gt;For the product point of view, aesthetically it looks really cool.&lt;br /&gt; Very nice battery life...&lt;br /&gt;But as it is windows phone not many apps.&lt;br /&gt;Even Whatsapp n that kind of famous apps also has a bit lesser facilities than they provide in Android phones.&lt;br /&gt;I liked the phone(Hardware) but please make sure of the seller....&lt;br /&gt;The seller &amp;#34;Breed&amp;#34; is horrible....</td>
+      </tr>
+      <tr>
+        <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="LC35" class="blob-code blob-code-inner js-file-line">This phone really made me happy. I wanted to save money so I went with an unlocked on a pay as you go plan. The WP7.8 is great. It does take a little setting up to get the best results. I am getting a lot more out of it than I got from my Iphone. The screen is a great size the candy bar shape Is great in your hand. The weight is perfect for me does not feel like a piece of plastic. The speaker on the phone is better quality than the Iphone. The music quality is good and the nokia specific windows phone apps are really good particularly the Nokia Music and the City Lens. I will mention although this is no reflection on the phone itself that the number of apps available did not match the iphone but I can still use my browser to access some of the missing banking apps. The accessories are resnobly priced also.</td>
+      </tr>
+      <tr>
+        <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
+        <td id="LC36" class="blob-code blob-code-inner js-file-line">I got the phone and was surprised that it uses a micro-sim card, so I went on-line to buy one and came across  a site that showed how to cut down regular sim card. I followed the instructions and it worked. The battery time is not that great. It&#39;ll go two days if I use the music player on bluetooth all  work day since I don&#39;t use the phone for calls that much and not into social media. The things I&#39;ve used it for works great on internet and lots of apps available.</td>
+      </tr>
+      <tr>
+        <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
+        <td id="LC37" class="blob-code blob-code-inner js-file-line">I got this phone to do the bring your own phone thing with straighttalk at first I didn&#39;t think it was unlocked but come to find out it was a mistake I made... I missed one letter with the info straighttalk gave me lol but I have internet and I can receive and send pictures and I absolutely love the phone</td>
+      </tr>
+      <tr>
+        <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
+        <td id="LC38" class="blob-code blob-code-inner js-file-line">I finally convinced my husband to ditch the blackberry and get a Nokia. We searched and searched and he really liked this phone, According to him this phone is more user friendly and easier to operate. &amp;#34;I love my new phone&amp;#34; are his exact words.</td>
+      </tr>
+      <tr>
+        <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
+        <td id="LC39" class="blob-code blob-code-inner js-file-line">love the phone but its not new first phone the screen was gouged and could tell instantly it was a used phone. second phone screen scratched not gouged like first phone but still scratched being offered as new don&#39;t fall for it. as far as the phone itself great phone played with the windows with my Wi-Fi debating if I wanna keep it or not if its takes as long to receive a refund as it did my second phone from tablet distributors I might as well keep it as my current provider service is failing fast in my area</td>
+      </tr>
+      <tr>
+        <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
+        <td id="LC40" class="blob-code blob-code-inner js-file-line">beautiful color, very nice keys. wish it had removable mem card. but is very fluent, hasnt&#39; hung up yet.&lt;br /&gt;have the tuxedo and screen protectors on it.</td>
+      </tr>
+      <tr>
+        <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
+        <td id="LC41" class="blob-code blob-code-inner js-file-line">It is amazing just wish had more apps but otherwise its prefect it is alot faster then my old apple iPhone 4</td>
+      </tr>
+      <tr>
+        <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
+        <td id="LC42" class="blob-code blob-code-inner js-file-line">The ability to transfer the existing contacts from the old SIM to the new phone should work, but for some odd reason that feature is turned off on this phone. Is it a Windows 7 limitation or a phone defect, it was good enough reason for me to return the phone back.</td>
+      </tr>
+      <tr>
+        <td id="L43" class="blob-num js-line-number" data-line-number="43"></td>
+        <td id="LC43" class="blob-code blob-code-inner js-file-line">I have this phone for two weeks. Its great phone with 4g speed and good call qaulity. Only problem is that it freezed up twice during two weeks of usage. I have to turn off and on for phone to work Again.&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;http://www.amazon.com/gp/product/B007XVOXG6/ref=cm_cr_asin_lnk&quot;&gt;Nokia Lumia 900 16GB Unlocked GSM Phone with Windows 7.5 OS, AMOLED Touchscreen, 8MP Camera, GPS, Wi-Fi, Bluetooth, FM Radio - Cyan Blue&lt;/a&gt;</td>
+      </tr>
+      <tr>
+        <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
+        <td id="LC44" class="blob-code blob-code-inner js-file-line">It&#39;s the best phone I&#39;ve ever bought so far. I recommend to anyone who is looking for a good phone for a affordable price.</td>
+      </tr>
+      <tr>
+        <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
+        <td id="LC45" class="blob-code blob-code-inner js-file-line">I am so happy with my new phone, I would recomend this cell phone to anybody. the price was really good</td>
+      </tr>
+      <tr>
+        <td id="L46" class="blob-num js-line-number" data-line-number="46"></td>
+        <td id="LC46" class="blob-code blob-code-inner js-file-line">In general I think that this cell phone is completely  awesome the only think that I don&#39;t love at all is that the windows system needs to have more opportunity to be costume</td>
+      </tr>
+      <tr>
+        <td id="L47" class="blob-num js-line-number" data-line-number="47"></td>
+        <td id="LC47" class="blob-code blob-code-inner js-file-line">I really like the phones and I think I will be getting my own soon, though I don&#39;t know if my parents will find them easy to for they were a gift to my parents . The only thing I was ever happy about is the confusion that occurred when I placed this items , but I hope it doesn&#39;t happen more often with some of your customers.&lt;br /&gt;Thanks for the discount though from the shipping fee.</td>
+      </tr>
+      <tr>
+        <td id="L48" class="blob-num js-line-number" data-line-number="48"></td>
+        <td id="LC48" class="blob-code blob-code-inner js-file-line">The Nokia Lumia 900 smartphone features a large and vibrant 4.3&amp;#34; AMOLED ClearBlack Display. The AMOLED (active-matrix organic light-emitting diode) technology increases the refresh rate of the screen and enhances the contrast ratio while reducing energy consumption to increase battery life. The ClearBlack Display (CBD) feature blocks incoming light reflections through a polarized layer to improve screen visibility under direct sunlight. This smartphone does not shy away from technology to enrich the user experience.</td>
+      </tr>
+      <tr>
+        <td id="L49" class="blob-num js-line-number" data-line-number="49"></td>
+        <td id="LC49" class="blob-code blob-code-inner js-file-line">Supposed to be an unlocked gsm phone,but after activating it with straight talk just says requires code to use on service.! used code I setup I presume I either need the right code from ATT,Nokia or strtaight talk(I have 4 try left :()</td>
+      </tr>
+      <tr>
+        <td id="L50" class="blob-num js-line-number" data-line-number="50"></td>
+        <td id="LC50" class="blob-code blob-code-inner js-file-line">If only all phones were Nokia, then the world would be a happier place!  No other phone for me! Great!</td>
+      </tr>
+      <tr>
+        <td id="L51" class="blob-num js-line-number" data-line-number="51"></td>
+        <td id="LC51" class="blob-code blob-code-inner js-file-line">Received this last month and and only problem i have encountered is that the person on the other end of the line barely hears me</td>
+      </tr>
+      <tr>
+        <td id="L52" class="blob-num js-line-number" data-line-number="52"></td>
+        <td id="LC52" class="blob-code blob-code-inner js-file-line">excelente, dinamico, muy versatil , la camara es de alta resolucion ,las dimensiones son modernas y funcionales me gusta mucho</td>
+      </tr>
+      <tr>
+        <td id="L53" class="blob-num js-line-number" data-line-number="53"></td>
+        <td id="LC53" class="blob-code blob-code-inner js-file-line">I love my Nokia Lumia. It was a bit tough to get used to at first but luckily my brother had the same phone for a while so he helped me. My mom also has this phone and she loves it too. It&#39;s a great phone! A bit pricey but worth it!</td>
+      </tr>
+      <tr>
+        <td id="L54" class="blob-num js-line-number" data-line-number="54"></td>
+        <td id="LC54" class="blob-code blob-code-inner js-file-line">Beautiful device, works fine, and boy, it has great audio quality and video! Its dial is easy to read. I am happy with it!</td>
+      </tr>
+      <tr>
+        <td id="L55" class="blob-num js-line-number" data-line-number="55"></td>
+        <td id="LC55" class="blob-code blob-code-inner js-file-line">very easy to use..  good cam.. fast downloading app.. and is cute 100% recommended .. I&#39;ll be waiting for lumia 920 and windows 8</td>
+      </tr>
+      <tr>
+        <td id="L56" class="blob-num js-line-number" data-line-number="56"></td>
+        <td id="LC56" class="blob-code blob-code-inner js-file-line">The phone is awesome. I have this phone now since one month and I have no problem with it. It is big, it looks great, it is perfect.&lt;br /&gt;Also I am really happy, that I choosed Windows Phone this time. To everyone: Windows Phone is really different, so you have to get used to it, but it is now in my eyes the best of all the OS for me!&lt;br /&gt;&lt;br /&gt;The service had no problems. I ordered the phone and it arrived after 7 days, it was new, everything was top!</td>
+      </tr>
+      <tr>
+        <td id="L57" class="blob-num js-line-number" data-line-number="57"></td>
+        <td id="LC57" class="blob-code blob-code-inner js-file-line">I am really not very happy with this phone...Windows and Bill Gates have gotten a little too cute with all the &amp;#34;features&amp;#34; this phone has to offer!  Too complicated to add contacts; to complicated to bluetooth contacts from old phone to new one. Does not accept certain apps and features; ie, Yahoo Messenger; Amazon MP3 player; ... Also, got T-Mobile for my service (another &amp;#34;recommendation&amp;#34;)  and phone stays in &amp;#34;emergency&amp;#34; mode most of the time!  Will need to change my service!  Not good!&lt;br /&gt;Love Nokia, great camera; good phone and phone features; spent too much money to not use it now; but, truly disappointed!  Wish I had purchased a Nokia WITHOUT  Windows platform!  Frustrated!</td>
+      </tr>
+      <tr>
+        <td id="L58" class="blob-num js-line-number" data-line-number="58"></td>
+        <td id="LC58" class="blob-code blob-code-inner js-file-line">I used to love Nokia phones because I consider them user friendly, so I bought this phone with the same expectations,&lt;br /&gt;however I was disappointed to find out so many faults with the phone, firstly, the battery life is nothing to write home, the touch screen  freezes at will and 6 months after purchase, the phone finally stop working, I took it to Nokia care center where I was informed that the warranty on it has lapsed, and the phone could not be repaired, anyway that sounded the death knoll on the phone that I barely used for 6 months.</td>
+      </tr>
+      <tr>
+        <td id="L59" class="blob-num js-line-number" data-line-number="59"></td>
+        <td id="LC59" class="blob-code blob-code-inner js-file-line">Windows 8 apps are a welcome change from iOS. Among the three ecosystems, I prefer Android, Windows 8, and iOS in that order. Blackberry, what ?! For ease of use, Windows phone is really easy to use. Lumia 900 has been succeeded by Nokia Lumia 920.  For someone interested in a first smartphone which doesn&#39;t break the purse, Lumia 900 is an excellent choice. User interface in Windows 8 is very pleasing and this is one of best phones with awesome user experience. If you prefer great user experience over infinite hackability, aka Android, then Windows 8 phones are great choice.&lt;br /&gt;&lt;br /&gt;Lumia 900 has 4.3&quot; (109 mm) 800x480 resolution 217 ppi 16m compared to the Lumia 920 which has a 4.5&quot; IPS LCD, 1280x768 resolution, 332 ppi display. This phone has up to 16 GB storage and 512 MB RAM compared to Lumia 920 which has 32 GB storage and 1 GB RAM.  Lumia 900 has 8 MP camera and 720 p video compared to Lumia 920 which has a 8.7 MP camera and a 1080p HD Video.  1.4 GHz Qualcomm Scorpion processor compared to Lumia 920 which has a 1.5 GHz dual core processor. I have extensively used in the past HTC Titan I and II which is pre Windows 8 (7.5) and I was surprised it has become more buttery smooth now. This phone has Gorilla Glass  compared to Lumia 920 which has Gorilla Glass 2. Glass 3 is in the making and supposed to be even better. Stating following because this is highly underrated in reviews. From Corning&#39;s Gorilla Glass specs; WHAT MAKES GORILLA GLASS SO DAMAGE RESISTANT? The unique composition of Gorilla Glass allows for a deep layer of high compressive stress (created through an ion-exchange process). This compression acts as a sort of &quot;armor,&quot; making the glass exceptionally tough and damage resistant. Ion exchange is a chemical strengthening process where large ions are &quot;stuffed&quot; into the glass surface, creating a state of compression. Gorilla Glass is specially designed to maximize this behavior.&lt;br /&gt;&lt;br /&gt;As you can see Lumia 920 has, what I would say incremental upgrades over 900 but nothing earth shattering. Lumia 900  as well as 920 does not support microSD expansion. I always feel this is a bummer. But with 32GB it is plenty with current app ecosystem.  These phones seem to be copying iPhone philosophy.  Battery 1830 mAh Lithium polymer battery (Compared to a high end Android Galaxy Note II, which has a battery of 3100 mAh Battery.) Unlike the Nokia Lumia 820, the Lumia 900 as well as 920 doesn&#39;t have a removable battery cover, which means you can&#39;t access or replace your battery. __Not having a storage expansion slot is a bummer for lot of people! Not being able to remove battery is a double bummer.__  For me, storage expansion and removal of battery is very important, so I was disappointed. This is the downside the unibody design.&lt;br /&gt;&lt;br /&gt;Phone quality was excellent and speakerphone was awesome. Nice to see built in active noise cancellation with a dedicated mic.  Lumia 900 has Bluetooth 2.1, whereas  Lumia 920 has Bluetooth 4.0. I was able to get excellent reception with Bluetooth headset, &lt;a href=&quot;http://www.amazon.com/gp/product/B003TO52A2/ref=cm_cr_asin_lnk&quot;&gt;Jaybird Sportsband Stereo Bluetooth Headphone - Bulk Packaging - Midnight Black&lt;/a&gt; and &lt;a href=&quot;http://www.amazon.com/gp/product/B00AIRUOI8/ref=cm_cr_asin_lnk&quot;&gt;JayBird BlueBuds X Sport Bluetooth Headphones - Midnight Black&lt;/a&gt;  All the usual smartphone stuff, facebook, twitter, music, emails etc are all excellent. It is only the third party apps that are lacking in some arenas. If you are Microsoft heavy like Office suites, Lumia phone are awesome!&lt;br /&gt;&lt;br /&gt;Lumia 900 has the diagnostic tool. It can be obtained by pressing ##634# on the dial keypad, which should initiate the download after the last # is pressed. The diagnostic tool should appear on the app list under Diagnostics.On this diagnostic tool one can run tests on the following: Accelerometer, ALS, audio loopback, camera, battery status, DTMF, gyroscope, hardware buttons, headset detection, LCD white, lights, life timer, magnetometer, power source, proximity, speaker, touch and vibration. It&#39;s also possible to perform all the tests in one run. This is really cool to have this power at the user&#39;s hand!&lt;br /&gt;&lt;br /&gt;Apps are limited in Windows 8 marketplace. Yes, we have heard this a gazillion times. Lumia has GPS receiver with A-GPS and GLONASS support. I tried with Garmin Navigon app which turned out to be great in giving voice directions. App ecosystem is a chicken and egg situation. Unless more phones are sold, developers don&#39;t have incentives to write apps. Apps are less now, because people are not buying in big droves. Windows Phone is now (early-mid 2013) the third-leading mobile phone platform, more than tripling its market share year-over-year. One recent report I read Android and iOS are ahead in games with 162.1 and 37.4 million shipments in 1Q13 and Windows phone came in 7 million. This is more than double from previous year. I really hope for Windows 8 platform to surge ahead because having a 3 way competition with iOS and Android is good for the ecosystem.&lt;br /&gt;&lt;br /&gt;ONE LINE SUMMARY: The Nokia Lumia 900 is certainly the best and cheapest Windows Phone 8 smartphone on the market, it was really the best in 2012, but if you don&#39;t mind the budget get the 920 or 820 (for microSD card slot).</td>
+      </tr>
+      <tr>
+        <td id="L60" class="blob-num js-line-number" data-line-number="60"></td>
+        <td id="LC60" class="blob-code blob-code-inner js-file-line">It&#39;s not unlocked!&lt;br /&gt;I am very dissatisfied with this product the main reason to buy it is that was unlocked.</td>
+      </tr>
+      <tr>
+        <td id="L61" class="blob-num js-line-number" data-line-number="61"></td>
+        <td id="LC61" class="blob-code blob-code-inner js-file-line">The Phone came in a fake package. The Att sign was just a swirl, and when you open the box its just the phone and when you open it up it has a charger a only one manual.&lt;br /&gt;&lt;br /&gt;The phone also had major bumbs on the bottom, but I orderd a case so it didnt really matter. The software is great. The marketplace had almost every app I needed and more. It had whatsupp, viber, facebook, kik. The x-box live feature was good. Maden 12 was like $2.&lt;br /&gt;&lt;br /&gt;Overall the phone is great and for the price whoo. Better than my moms iphone 5.</td>
+      </tr>
+      <tr>
+        <td id="L62" class="blob-num js-line-number" data-line-number="62"></td>
+        <td id="LC62" class="blob-code blob-code-inner js-file-line">I got my Nokia Lumia 920 from AT&amp;T 1 month ago exactly, and today it turned itself off. I&#39;ve been unable to get it to turn back on. The folks at AT&amp;T were also unable to help me turn it back on, so they&#39;re mailing me a new one. But if I could have my way, I would trade it in for an Android. The camera on this thing is excellent, no doubt about that, but most apps are developed only for Android or iPhone. I can&#39;t get many of my favorite apps on this, so it definitely left me wanting. Games that were free on my Samsung cost $1.99 on a Nokia.&lt;br /&gt;&lt;br /&gt;AND THERE IS NO POSSIBLE WAY TO REPLACE THE BATTERY ON THIS THING. I want everyone to be aware of that. Though I hear that most of the newer phones are heading in that direction. Manufacturers are starting to get greedy. Now when the battery dies, we can&#39;t just go out and buy a new battery. The entire phone will have to be replaced.&lt;br /&gt;&lt;br /&gt;It&#39;s big and clumsy. I miss my Samsung. The call clarity is great, the OS is good, and it links up very well with hotmail (all of my camera pics were on my SkyDrive, even though I didn&#39;t put them there). I just feel like all these perks would also have come with a Samsung. That&#39;s it.</td>
+      </tr>
+      <tr>
+        <td id="L63" class="blob-num js-line-number" data-line-number="63"></td>
+        <td id="LC63" class="blob-code blob-code-inner js-file-line">LLEGO EN BUENAS CONDICIONES Y FUNCIONA BIEN ADEMAS LLEGO BIEN EMBALADO, EL TIEMPO DE ENTREGA , FUE UN POCO LARGO DEBIDO  TRAMITES EN VENEZUELA</td>
+      </tr>
+      <tr>
+        <td id="L64" class="blob-num js-line-number" data-line-number="64"></td>
+        <td id="LC64" class="blob-code blob-code-inner js-file-line">I chose 1 day shipping and it did actually come the next day, so it shipped fast. First, I do not think it is new because it was not in original packaging. It was in a Lumia 900 box, but the phone was not secure in it, just kind of banging around inside. It did not come with headphones, and the manual looked photocopied, so that was not original either. So if you think you will get something like if you bought it at the store, you won&#39;t. Anyway, I&#39;ve been using the phone for about 2 weeks now, and it seems to be fine. It actually is unlocked. I am using it with Straight Talk. The description is wrong in that it does NOT have a microSD slot. It has 16GB internal memory ONLY. There is no slot for a microSD. The phone itself is working fine though, and I am happy with it. I was a little worried after reading some of the reviews, but I really wanted a Lumia 900 so I took the chance. So far, so good. My seller was DealInABox, I think it was. I gave 4 stars instead of 5, because it did not come with headphones and it seems to be used or refurbished and it had already been unboxed, as indicated by the phone just banging around inside the box and not being secure, as well as the photocopied manual, and missing headphones. I would rather have had a new one like the description said, but for only 300 dollars AND unlocked, I won&#39;t complain too much about it. So far, I am happy with my purchase.</td>
+      </tr>
+      <tr>
+        <td id="L65" class="blob-num js-line-number" data-line-number="65"></td>
+        <td id="LC65" class="blob-code blob-code-inner js-file-line">I bought this phone on November/2012. About one week ago, its touchscreen simply stopped working. I&#39;ve turned it off and on several times but to no success. Searched the net for an explanation and a solution with no success. The only solution was to take it to an authorized repair office. I&#39;m still waiting for their answer about what happened to my phone.</td>
+      </tr>
+      <tr>
+        <td id="L66" class="blob-num js-line-number" data-line-number="66"></td>
+        <td id="LC66" class="blob-code blob-code-inner js-file-line">Got this phone last week and really like it, although they unboxed it&lt;br /&gt;now i&#39;m waiting for WP version 7.8</td>
+      </tr>
+      <tr>
+        <td id="L67" class="blob-num js-line-number" data-line-number="67"></td>
+        <td id="LC67" class="blob-code blob-code-inner js-file-line">The seller I purchased from, had my phone to me within 24 hours. Great service. It then took me two days to find APN settings that worked. Make certain you upgrade your new Windows Phone through Zune. Takes a little time but it is worth it. Beyond that, my provider&#39;s customer service was useless. It took far too long but I eventually got the right settings and the phone works like a charm. Crystal clear voice, and most of my familiar apps. Still working on finding some settings and details, but I am very pleased.</td>
+      </tr>
+      <tr>
+        <td id="L68" class="blob-num js-line-number" data-line-number="68"></td>
+        <td id="LC68" class="blob-code blob-code-inner js-file-line">I ordered this phone about a week ago. And its been really great since.&lt;br /&gt;&lt;br /&gt;Positives&lt;br /&gt;- The colour display is amazing on this phone&lt;br /&gt;-It has a single-core 1.4GHz, that works GREAT!&lt;br /&gt;&lt;br /&gt;_&lt;br /&gt;&lt;br /&gt;- Even though it is a Windows 7.5 (up gradable to 7.8), it still offers so much.&lt;br /&gt;Youtube HD, facebook, twitter, skype, whatsapp, tango .. a bunch of apps that satisfied me.&lt;br /&gt;&lt;br /&gt;-The camera is great! Both back and front.&lt;br /&gt;&lt;br /&gt;- ZUNE!: Some people complained about the fact that they needed a software to put music, videos and photos on their phone, but it turned out GREAT! If you know how to use the software effectively, you can put music and videos, onto the collection you want and it can sync wirelessly!&lt;br /&gt;&lt;br /&gt;-The phone feels strong and well built; I mean it should for the size and weight, I guess.&lt;br /&gt;&lt;br /&gt;-From watching screen reviews on youtube, the screen can be used as a hammer to pound in nails to wood! So the screen is really good and apparently doesn&#39;t scratch easily although, I haven&#39;t able to test it.&lt;br /&gt;&lt;br /&gt;-The games are great, but the really good ones you got to pay for .. lol .. buts thats the case for everything.&lt;br /&gt;&lt;br /&gt;-Having Microsoft Office on your phone is great for students and people who need to write, edit and read docs on the go.&lt;br /&gt;&lt;br /&gt;The photo-editing capabilities are great!&lt;br /&gt;&lt;br /&gt;Negatives&lt;br /&gt;-even though I knew it was this big (dimension wise) I didn&#39;t get a feel for the phone, so when it came, it felt a little too big to be comfortable in your hand. So I&#39;ll suggest to anyone, to ensure that you are comfortable with a phone this big.(And Heavy)&lt;br /&gt;&lt;br /&gt;-Some of the apps for windows phone 7.8, to me, were poorly designed. E.G facebook: you are limited to what you can do from your phone compared to what you can do on the computer, to me, that shouldn&#39;t be.&lt;br /&gt;&lt;br /&gt;- I wish there was a longer battery life. I more or less have to charge it everyday. Not sure what other phones offer on the market. But I don&#39;t like it. lol</td>
+      </tr>
+      <tr>
+        <td id="L69" class="blob-num js-line-number" data-line-number="69"></td>
+        <td id="LC69" class="blob-code blob-code-inner js-file-line">My order was fulfilled by TABLET DISTRIBUTORS without incident. This is an AT&amp;T phone it has their logo on the front and on the boot up screen. I am using it with no problems on prepaid T-Mobile no data service. This phone is a little heavier than I expected from a plastic phone. It can be updated to WP 7.8 but not any further. The update process wasn&#39;t exactly easy, but it&#39;s doable.&lt;br /&gt;&lt;br /&gt;For my purposes the battery makes it through about 10 hours, between recharges.&lt;br /&gt;On the downside since it can&#39;t be upgraded to WP 8.0 there is no way for you to transfer music to it without a cable and the Zune software, which isn&#39;t as bad as I feared, but still annoying. The Bluetooth pairing works well with my 2013 Subaru and my Panasonic home phone.&lt;br /&gt;&lt;br /&gt;It syncs with your google account for contacts ok, but numbers with a custom label are not synced, unfortunately.</td>
+      </tr>
+      <tr>
+        <td id="L70" class="blob-num js-line-number" data-line-number="70"></td>
+        <td id="LC70" class="blob-code blob-code-inner js-file-line">since I received the phone I have not been able to use because it asks me for a code to unlock. And in Venezuela I have sought someone that knows how to unlock it and nobody knows. Now I do not know what to do with the phone. I feel very cheated</td>
+      </tr>
+      <tr>
+        <td id="L71" class="blob-num js-line-number" data-line-number="71"></td>
+        <td id="LC71" class="blob-code blob-code-inner js-file-line">I was very disappointed. When I purchased the phone it said new, but it wasn&#39;t. The phone had a couple scratches and it was repackaged. It did not come in a Nokia lumia box and the only thing I got was a charger. The phone itself works fine but the seller failed.</td>
+      </tr>
+      <tr>
+        <td id="L72" class="blob-num js-line-number" data-line-number="72"></td>
+        <td id="LC72" class="blob-code blob-code-inner js-file-line">I bought this phone for my daughter&#39;s birthday. It was all good when we received it even though the seal was broken.&lt;br /&gt;I thought that was due to our customs checking to ensere. It appears now that the back arrow is not going back all the time and the dpone is sticking at times.&lt;br /&gt;I am so disappointed with this phone.&lt;br /&gt;I do not think that a phone for this price should be giving any trouble at all.....:(  :(</td>
+      </tr>
+      <tr>
+        <td id="L73" class="blob-num js-line-number" data-line-number="73"></td>
+        <td id="LC73" class="blob-code blob-code-inner js-file-line">I bought this phone in white a few months ago. my boyfriend liked it so much that I gave it to him. I ordered the blue one for me. we love them.</td>
+      </tr>
+      <tr>
+        <td id="L74" class="blob-num js-line-number" data-line-number="74"></td>
+        <td id="LC74" class="blob-code blob-code-inner js-file-line">It surpassed all my expectations and the features are really cool. I would recommend purchase to all. Enjoy! i am sure enjoying mine</td>
+      </tr>
+      <tr>
+        <td id="L75" class="blob-num js-line-number" data-line-number="75"></td>
+        <td id="LC75" class="blob-code blob-code-inner js-file-line">The phone is everything that I expected it would be and it&#39;s easy to use for even the inexperienced cell phone user.</td>
+      </tr>
+      <tr>
+        <td id="L76" class="blob-num js-line-number" data-line-number="76"></td>
+        <td id="LC76" class="blob-code blob-code-inner js-file-line">This product have an ATT app. in my country dont have ATT services,, How can change this? or delete this?</td>
+      </tr>
+      <tr>
+        <td id="L77" class="blob-num js-line-number" data-line-number="77"></td>
+        <td id="LC77" class="blob-code blob-code-inner js-file-line">very nice excellent cell phone access is highly recommended fast internet has many applications to download and it works very well the truth is excellent buy!</td>
+      </tr>
+      <tr>
+        <td id="L78" class="blob-num js-line-number" data-line-number="78"></td>
+        <td id="LC78" class="blob-code blob-code-inner js-file-line">Only thing I don&#39;t like about this one is camera.  Other than that, after going through two updates via pc (no over the air update available), it&#39;s smooth, fast, and awesome.  However, I don&#39;t know why Zune music is displayed instead of Xbox music even after updating the phone.  Because of this , I can&#39;t use xbox music pass.  Other than that, 16gb is plenty, (I had problems with LG L9 because it came with only 4GB, hard to install apps).  No microSD though.  I refuse to pay $700 for a phone. This is perfect.  THere are many windows apps.  I only use navigation, yelp, kindle, flixter, and audible so it&#39;s great.  Oh and the GMail is not accessible, there is no app for it, you have to go to the browser.  Bluetooth works great with my car.  I canceled Rhapsody because Rhapsody on windows phone, at least this one, is slow and lagging.  So I uploaded music tracks and the navigation for music is better than android apps I used before.  Battery life is descent too.  Phone is a lot heavier than say, LG Optimus L9 but have a stronger built feel than Lumia 521.  I returned 521 due to volume button defect and freezing. It&#39;s funny because 521 had microSD and xbox music.  Too bad button stopped working, 521 is cheaper too.  But anyway I like this phone.&lt;br /&gt;&lt;br /&gt;PS: It came in AT&amp;T packaging even though it advertised as Unlocked GSM.  Phone also has AT&amp;T logo on it.  I am under TMobile.  Anyway it works and I like windows better than android in terms of getting rid of default network provider&#39;s apps easily since I am on T Mobile.  With an android phone, this would be impossible, at least the android phones I&#39;ve used.  For example, I tried hard to get rid of at&amp;t apps on my Motorola phone when I switched to TMobile but I couldn&#39;t.</td>
+      </tr>
+      <tr>
+        <td id="L79" class="blob-num js-line-number" data-line-number="79"></td>
+        <td id="LC79" class="blob-code blob-code-inner js-file-line">Awesome phone and you can update it to windows 7.8 through Zune, but you can get it for $150 plus tax directly from amazon.com I ended up paying $163 total.</td>
+      </tr>
+      <tr>
+        <td id="L80" class="blob-num js-line-number" data-line-number="80"></td>
+        <td id="LC80" class="blob-code blob-code-inner js-file-line">I&#39;ve had the Nokia Lumina 900 for about a year and have not had a positive experience.  I initially purchased it through Best Buy for a two year AT&amp;T contract.  I had multiple Nokia phones in the past (the awesome indestructible Meme ones) and was really excited about this phone because it was my first smart phone and I did not want an iPhone.  Long story short, this phone looks nice, but it has given me nothing but problems.  About two weeks ago I woke up one morning to it being worse than ever.  I have not dropped it or done anything to break it.  There is no visible external damage but the issues that it has are significant (detailed below).  I went into Best Buy and they told me to contact Nokia.  I contacted Nokia and kept asking for help to get it fixed (even for a fee) and they said that there was nothing they could do - that I would need to take it to a third party repair vendor.  Right now I&#39;m looking at other phones and having to pay outside of contract.&lt;br /&gt;&lt;br /&gt;The Pros:&lt;br /&gt;- Looks sleek.  I do like the Windows UI with the tiles.  People do like it and comment on it.  Because I&#39;ve had good luck with Nokia in the past and I did like this phone initially before the issues started, I will give it two stars.&lt;br /&gt;- Size.  I&#39;ve seen many different phones and after using this phone and getting used to it, the iPhones seems to small and the Galaxys seem too big.  This one feels just right.&lt;br /&gt;&lt;br /&gt;The Cons:&lt;br /&gt;- Camera: I&#39;ve compared the camera to my friend&#39;s iPhones and Galaxy pictures and I have to say I prefer their pictures more.  The Lumina 900&#39;s pictures offer less brightness and contrast and end up being darker and blurrier in my experience.&lt;br /&gt;- Battery life currently ~ 2 hrs (I&#39;ve had it about a year and expected the battery to still be going strong).&lt;br /&gt;- Messaging and internet does not work (this is broken for me, so my experience may be atypical)&lt;br /&gt;- Windows OS.  It has some good points and some bad.  I do not like how they require MS Zune for updates.  Added account flexibility would also help instead of forcing Windows Live.  It comes across as Windows forcing people to use their peripheral products when I don&#39;t need it.  I don&#39;t know too many people who have a Windows Live accounts as their primary email.  I know this is the OS and not the hardware, but it does make a difference.&lt;br /&gt;- Initially group texts would just be seen as a single text from one person, and if you replied it would only go to him or her and not the group.  That was frustrating for planning.&lt;br /&gt;- The Customer Support.  I emailed them with my problems and they sent canned replies each time until by the third time they just said they could not help.  I know this lack of support is common through the industry, but I still don&#39;t like it.&lt;br /&gt;- I&#39;ve had common issues of it just shutting down and glitching and sometimes missing calls since about a few months after getting it.  It got a lot worse about two weeks ago and I&#39;m not sure what happened.&lt;br /&gt;&lt;br /&gt;Overall I may have just received a lemon phone, so take my review for what it is.  If you get one that works, then I&#39;d be a fine phone.  Didn&#39;t work for me and I&#39;ll probably try another manufacturer out next.</td>
+      </tr>
+      <tr>
+        <td id="L81" class="blob-num js-line-number" data-line-number="81"></td>
+        <td id="LC81" class="blob-code blob-code-inner js-file-line">Thanks for all the Nokia lumia 900 I arrived on time and in my house I like it is a excellent condition and as a customer I&#39;m happy thank you very much</td>
+      </tr>
+      <tr>
+        <td id="L82" class="blob-num js-line-number" data-line-number="82"></td>
+        <td id="LC82" class="blob-code blob-code-inner js-file-line">This was a great smartphone for its time.  Got this as a replacement phone for my mother.  It is disappoint it doesn&#39;t support all of the new apps coming out that only support Windows Phone 8 (Lumia 900 is running 7.8).  The app selection is really what cripples this phone.</td>
+      </tr>
+      <tr>
+        <td id="L83" class="blob-num js-line-number" data-line-number="83"></td>
+        <td id="LC83" class="blob-code blob-code-inner js-file-line">I bought this for my bro who&#39;s studying in the States and he loves it so far, he said. Makes me wanna get one for me.</td>
+      </tr>
+      <tr>
+        <td id="L84" class="blob-num js-line-number" data-line-number="84"></td>
+        <td id="LC84" class="blob-code blob-code-inner js-file-line">THE ONLY THING I RECEIVED IN MY PHONE IS THE PHONE AND A HOUSE CHARGER. I DON&#39;T KNOW HOW TO OPEN THE PHONE OR HOW TO OPERATE THE PHONE. CAN YOU SEND ME THE REST OF THE STUFF TO GO ALONG WITH THE PHONE PLEASE.</td>
+      </tr>
+      <tr>
+        <td id="L85" class="blob-num js-line-number" data-line-number="85"></td>
+        <td id="LC85" class="blob-code blob-code-inner js-file-line">I was so excited to get this phone. I loved it! Until I realized the same day I got it that the charger it came with didn&#39;t work on the phone. But it worked on my other phone. Therefore there was something wrong with the phone. The phone couldn&#39;t charge. I would constantly turn on and off on it&#39;s own. I sent it back three days later. Such a bummer</td>
+      </tr>
+      <tr>
+        <td id="L86" class="blob-num js-line-number" data-line-number="86"></td>
+        <td id="LC86" class="blob-code blob-code-inner js-file-line">everything is perfect, good job Nokia,  low price and great product. I will recommend everyone to buy this phone .</td>
+      </tr>
+      <tr>
+        <td id="L87" class="blob-num js-line-number" data-line-number="87"></td>
+        <td id="LC87" class="blob-code blob-code-inner js-file-line">great phone best phone ever thank you&lt;br /&gt; the phone works great and helpful recommend to everyone thank you its great</td>
+      </tr>
+      <tr>
+        <td id="L88" class="blob-num js-line-number" data-line-number="88"></td>
+        <td id="LC88" class="blob-code blob-code-inner js-file-line">I bought one phone and it was good. So that, I ordered another one for my wife. The second one was very bad. It did not come in a original box. The charger was not for that phone and looks very cheap and low quality. The USB cable to connect to computer was missing. The sim door key was missing either. So that I have just returned it today. Can not understand why they could sell that product. I really hate to return things as I waste my time for searching, ordering, returning, and shopping again.&lt;br /&gt;&lt;br /&gt;Amazon must select providers more carefully!</td>
+      </tr>
+      <tr>
+        <td id="L89" class="blob-num js-line-number" data-line-number="89"></td>
+        <td id="LC89" class="blob-code blob-code-inner js-file-line">I received this phone a day sooner than what was estimated, so that was awesome.  The phone was in perfect shape, and I have had no issues w service or anything (the phone is an unlocked AT&amp;T phone and I have T-Mobile service). The only unexpected thing was that the phone takes a micro SIM, and I honestly had no idea what that was.  I called the seller, and he was very nice and explained to me what to do.  The Windows format takes some getting used to (I was used to Android) and there aren&#39;t a whole lot of the normal apps available yet on the Windows Market...but I still love it.</td>
+      </tr>
+      <tr>
+        <td id="L90" class="blob-num js-line-number" data-line-number="90"></td>
+        <td id="LC90" class="blob-code blob-code-inner js-file-line">The phone is great,a mini computer,only one fault battery dies quick,but I understand that&#39;s the fault with these smartphones.great phone</td>
+      </tr>
+      <tr>
+        <td id="L91" class="blob-num js-line-number" data-line-number="91"></td>
+        <td id="LC91" class="blob-code blob-code-inner js-file-line">Overall a good phone, not a big fan of the app/game collection though. Have to press the back button a hundred times to &#39;close&#39; out of pages I&#39;ve opened or they keep running. Its got Zune instead of iTunes.</td>
+      </tr>
+      <tr>
+        <td id="L92" class="blob-num js-line-number" data-line-number="92"></td>
+        <td id="LC92" class="blob-code blob-code-inner js-file-line">The phone works well and is pretty light, which is greatly appreciated. Having previously owned an Android phone, I was disappointed by the lack of some apps I had gotten used too, but everything else is pretty great.</td>
+      </tr>
+      <tr>
+        <td id="L93" class="blob-num js-line-number" data-line-number="93"></td>
+        <td id="LC93" class="blob-code blob-code-inner js-file-line">I bought this phone for my dad because he needs to check emails and make phonecalls ( basic user overall).&lt;br /&gt;&lt;br /&gt;W8 interface is pretty solid for mature people ( big icons, big fonts and easy navigation )&lt;br /&gt;&lt;br /&gt;Regarding hardware the Lumia 900 is a solid phone. The battery lasts in standby for at lease a day.&lt;br /&gt;&lt;br /&gt;Great purchase IMO</td>
+      </tr>
+      <tr>
+        <td id="L94" class="blob-num js-line-number" data-line-number="94"></td>
+        <td id="LC94" class="blob-code blob-code-inner js-file-line">It connected me with my family .i am using it without any problem.the best is the camera which is 8mega pixels.</td>
+      </tr>
+      <tr>
+        <td id="L95" class="blob-num js-line-number" data-line-number="95"></td>
+        <td id="LC95" class="blob-code blob-code-inner js-file-line">So ii Bought This Phone For My Mother And Well ii Was Kiinda Scared Cause ii Saw Other Reviews That It Isn&#39;t Unlocked But It Is! :) The Only Problem ii Had Which Was My Fault Is That ii Didn&#39;t Had A Mirco SimCard But ii Cut It For Myself And It Works Perfect ii Would Suggest ANYONE To Buy This (Y)</td>
+      </tr>
+      <tr>
+        <td id="L96" class="blob-num js-line-number" data-line-number="96"></td>
+        <td id="LC96" class="blob-code blob-code-inner js-file-line">Costumers realy have to like windows phone os, and this phone its a good way of have everithing synchronyze with your computer</td>
+      </tr>
+      <tr>
+        <td id="L97" class="blob-num js-line-number" data-line-number="97"></td>
+        <td id="LC97" class="blob-code blob-code-inner js-file-line">Excellent brand, I have to adapt myself to this kind of technology, and this is a good way to start</td>
+      </tr>
+      <tr>
+        <td id="L98" class="blob-num js-line-number" data-line-number="98"></td>
+        <td id="LC98" class="blob-code blob-code-inner js-file-line">Cons: Cannot receive picture messages, cannot do screen capture, sometimes when talking on the phone mute button will press onscreen, if I am in a area where there is no signal and move to area with signal it takes a while for it to catch signal again sometimes have to restart the phone&lt;br /&gt;Pros: Good battery life, easy to use, tiles on home screen easy to use, multiple windows open at same time</td>
+      </tr>
+      <tr>
+        <td id="L99" class="blob-num js-line-number" data-line-number="99"></td>
+        <td id="LC99" class="blob-code blob-code-inner js-file-line">Great phone, I went with this phone to replace my HTC Trophy as my windows phone. Just to let you all know I am using this phone over an Iphone 4s and a Nexus 4. This is a rock-solid phone and love it. Windows Phone 7.8 is still a great OS, no need for WP8</td>
+      </tr>
+      <tr>
+        <td id="L100" class="blob-num js-line-number" data-line-number="100"></td>
+        <td id="LC100" class="blob-code blob-code-inner js-file-line">I want to download songs on the phone . How to do so when there is no spacwe for a memory card and when the phone is hooked up to my PC the PC is not recognizing the phone.</td>
+      </tr>
+      <tr>
+        <td id="L101" class="blob-num js-line-number" data-line-number="101"></td>
+        <td id="LC101" class="blob-code blob-code-inner js-file-line">The product came on time with good package, excellent conditions, no problems at all, my uncle is so happy with his new phone and the price is the best thing.:)</td>
+      </tr>
+      <tr>
+        <td id="L102" class="blob-num js-line-number" data-line-number="102"></td>
+        <td id="LC102" class="blob-code blob-code-inner js-file-line">Because it has the same camera as Iphone has, I bought. But when I take the pictures or videos, it can not beat Iphone at all, especially at night. I am a little bit disappointed. I used to use a HTC, and my data worked well. By this phone, I always lost my data connection. I don&#39;t know why it happens.</td>
+      </tr>
+      <tr>
+        <td id="L103" class="blob-num js-line-number" data-line-number="103"></td>
+        <td id="LC103" class="blob-code blob-code-inner js-file-line">Overall I really like this phone. Only negative is the shortfall of apps compared to iPhone and android. Battery life is good enough and the speed is very good. Like the windows environment and live tiles. I have not been able to find a good clock app, would like a live tile clock.</td>
+      </tr>
+      <tr>
+        <td id="L104" class="blob-num js-line-number" data-line-number="104"></td>
+        <td id="LC104" class="blob-code blob-code-inner js-file-line">I like all nokia products and this is awasome. Besides, my son bought for a gift and it works perfectly.</td>
+      </tr>
+      <tr>
+        <td id="L105" class="blob-num js-line-number" data-line-number="105"></td>
+        <td id="LC105" class="blob-code blob-code-inner js-file-line">My husband loves this phone, is unlock but need Micro Sim card ,which you can get for free with T Mobile!</td>
+      </tr>
+      <tr>
+        <td id="L106" class="blob-num js-line-number" data-line-number="106"></td>
+        <td id="LC106" class="blob-code blob-code-inner js-file-line">Unlocked, I can use it for text and call. And I do have data plan but it&#39;sd not working...&lt;br /&gt;Was I doing something wrong?</td>
+      </tr>
+      <tr>
+        <td id="L107" class="blob-num js-line-number" data-line-number="107"></td>
+        <td id="LC107" class="blob-code blob-code-inner js-file-line">great peice easy to handle and i like it very mcuh this is my third gift to my friend pefect</td>
+      </tr>
+      <tr>
+        <td id="L108" class="blob-num js-line-number" data-line-number="108"></td>
+        <td id="LC108" class="blob-code blob-code-inner js-file-line">I chose this phone because I like the features. The problem is when I send multiple text it come back UNSEND. I had to resend it individually. Also some incoming text I am unable to open because it shows a link to download media contact, but when I click on the link it doesn&#39;t download.HELP</td>
+      </tr>
+      <tr>
+        <td id="L109" class="blob-num js-line-number" data-line-number="109"></td>
+        <td id="LC109" class="blob-code blob-code-inner js-file-line">As you promise, the item arrive on time, thanks. I have to say that I was able to open the box a few days later because a wasn&#39;t at home the day o arrival.</td>
+      </tr>
+      <tr>
+        <td id="L110" class="blob-num js-line-number" data-line-number="110"></td>
+        <td id="LC110" class="blob-code blob-code-inner js-file-line">Battery isn&#39;t as good as I expected from Nokia, if not left alone would go flat in 12 hours. But overall really good. Impressed</td>
+      </tr>
+      <tr>
+        <td id="L111" class="blob-num js-line-number" data-line-number="111"></td>
+        <td id="LC111" class="blob-code blob-code-inner js-file-line">Product arrived on time. So far I have had no problems with the product. Seems robust like I expected from Nokia. I have never owned another brand and this hasn&#39;t changed my preference yet.</td>
+      </tr>
+      <tr>
+        <td id="L112" class="blob-num js-line-number" data-line-number="112"></td>
+        <td id="LC112" class="blob-code blob-code-inner js-file-line">I ordered 2 of these phones (1 for me and 1 for my hubby).  They are both perfect and work well with our carrier!  Thank you so much!!</td>
+      </tr>
+      <tr>
+        <td id="L113" class="blob-num js-line-number" data-line-number="113"></td>
+        <td id="LC113" class="blob-code blob-code-inner js-file-line">Windows Phone is awesome. It has a fresh interface than those of Android or Apple and great phones.Great Buy. AWESOME.</td>
+      </tr>
+      <tr>
+        <td id="L114" class="blob-num js-line-number" data-line-number="114"></td>
+        <td id="LC114" class="blob-code blob-code-inner js-file-line">I love this phone,it works great, it&#39;s fast,and the sleek look is awesome! I love the color. Windows phones are awesome!</td>
+      </tr>
+      <tr>
+        <td id="L115" class="blob-num js-line-number" data-line-number="115"></td>
+        <td id="LC115" class="blob-code blob-code-inner js-file-line">i love this phone. it is good for a starter windows phone i would have to say. and no the power button isn&#39;t hard to push.you do how ever have to fully push in the camera button but that&#39;s ok. and i ordered a net10 sim card for the phone and i cant w8 till it gets here so i can use the phone properly. and i love the no network no wifi working gps it is cool. only bad thing i see with it and it isnt that big of a deal but there is no actual contacts list which will be confusing at first.&lt;br /&gt;but all in all i love this phone</td>
+      </tr>
+      <tr>
+        <td id="L116" class="blob-num js-line-number" data-line-number="116"></td>
+        <td id="LC116" class="blob-code blob-code-inner js-file-line">First off, the phone is gorgeous. Love the rectangular shape and sharp edges. Everything&#39;s good except for a few things. The microphone is on the bottom of the phone so sometimes people tell me they have a hard time hearing me and that I sound muffled. Another thing is that you can&#39;t personalize the phone too much. For example, you cannot use a song from your own music collection to be your alarm tone. If there is a way, I don&#39;t know it.</td>
+      </tr>
+      <tr>
+        <td id="L117" class="blob-num js-line-number" data-line-number="117"></td>
+        <td id="LC117" class="blob-code blob-code-inner js-file-line">Great Phone, Full of Features and Visually Appealing Menus.&lt;br /&gt;&lt;br /&gt;Although GSM Unlocked, unable to get Data Across Straight Talk APN and WiFi.&lt;br /&gt;&lt;br /&gt;Suspect Data would work across AT&amp;T Network.</td>
+      </tr>
+      <tr>
+        <td id="L118" class="blob-num js-line-number" data-line-number="118"></td>
+        <td id="LC118" class="blob-code blob-code-inner js-file-line">Very nice and bright display. Running very smoothly. Unfortunately still I have not connect it to internet, due to the fact it requires mini sim card. Still I am waiting for it, from my European mobile operator.</td>
+      </tr>
+      <tr>
+        <td id="L119" class="blob-num js-line-number" data-line-number="119"></td>
+        <td id="LC119" class="blob-code blob-code-inner js-file-line">Good looking phone, sturdy, gorgeous screen and unlimited music (Nokia music), free updated GPS maps from most of the world, the apps I need and a clean interface. I don&#39;t like spending time customizing the appearance of a phone, with this you have to be productive, it does the job. I can say it is really a steal for the (recent) price.&lt;br /&gt; Last week it got just better with the upgraded to 7.8</td>
+      </tr>
+      <tr>
+        <td id="L120" class="blob-num js-line-number" data-line-number="120"></td>
+        <td id="LC120" class="blob-code blob-code-inner js-file-line">I totally loved the phone, but unfortunately it was locked, but. I was looking for an unlocked phone. i am very disappointed by this situation.</td>
+      </tr>
+</table>
+
+  <details class="details-reset details-overlay BlobToolbar position-absolute js-file-line-actions dropdown d-none" aria-hidden="true">
+    <summary class="btn-octicon ml-0 px-2 p-0 bg-white border border-gray-dark rounded-1" aria-label="Inline file action toolbar">
+      <svg class="octicon octicon-kebab-horizontal" viewBox="0 0 13 16" version="1.1" width="13" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM13 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>
+    </summary>
+    <details-menu>
+      <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2">
+        <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" data-original-text="Copy lines">Copy lines</clipboard-copy></li>
+        <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" data-original-text="Copy permalink">Copy permalink</clipboard-copy></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/muzeeb1408/DAM-Class/blame/e0402c424e43b45bcb8426cdaf5b5416a664a539/Nokia_Lumia_reviews.txt">View git blame</a></li>
+          <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/muzeeb1408/DAM-Class/issues/new">Open new issue</a></li>
+      </ul>
+    </details-menu>
+  </details>
+
+  </div>
+
+    </div>
+
+  
+
+  <details class="details-reset details-overlay details-overlay-dark">
+    <summary data-hotkey="l" aria-label="Jump to line"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast linejump" aria-label="Jump to line">
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-jump-to-line-form Box-body d-flex" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <input class="form-control flex-auto mr-3 linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+        <button type="submit" class="btn" data-close-dialog>Go</button>
+</form>    </details-dialog>
+  </details>
+
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+        
+<div class="footer container-lg px-3" role="contentinfo">
+  <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap ">
+      <li class="mr-3">&copy; 2018 <span title="0.35357s from unicorn-8c9b98b54-kdhjv">GitHub</span>, Inc.</li>
+        <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+        <li class="mr-3"><a href="/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li class="mr-3"><a href="https://githubstatus.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com">Help</a></li>
+    </ul>
+
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon mr-lg-4" href="https://github.com">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+   <ul class="list-style-none d-flex flex-wrap ">
+        <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+        <li class="mr-3"><a href="https://github.com/pricing" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
+      <li class="mr-3"><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+        <li class="mr-3"><a href="https://blog.github.com" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
+
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+
+    
+    <script crossorigin="anonymous" integrity="sha512-qj1Z4g+YDVWKElb6FC42CcUWNq8P0W9aiU0CtKWjzuEMO9tb8sbbJ48dWUkmaOIe7WlLJXkI4YsUCKMxRMxT5A==" type="application/javascript" src="https://github.githubassets.com/assets/frameworks-9ee26246cce2c45ef24accded28cdabe.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-V5RaA8zaaJT2F1f3A6gKbY/EiNf1dfFj/MMstbMhIFMSx3mxQQIIedeF3phS69mF/WXTLTuI/7h7bkGatuFSyg==" type="application/javascript" src="https://github.githubassets.com/assets/github-e09fe12c8511fbf6cccd8bec051a8907.js"></script>
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+  </div>
+</div>
+
+  <template id="site-details-dialog">
+  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark" open>
+    <summary aria-haspopup="dialog" aria-label="Close dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast">
+      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+    </details-dialog>
+  </details>
+</template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+<div id="hovercard-aria-description" class="sr-only">
+  Press h to open a hovercard with more details.
+</div>
+
+  <div aria-live="polite" class="js-global-screen-reader-notice sr-only"></div>
+
+  </body>
+</html>
+
