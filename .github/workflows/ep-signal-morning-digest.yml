@@ -1,0 +1,40 @@
+name: EP Signal Morning Digest
+
+on:
+  # 08:00 AM IST = 02:30 UTC
+  schedule:
+    - cron: '30 2 * * *'
+
+  # Allow manual trigger from GitHub Actions UI
+  workflow_dispatch:
+
+jobs:
+  run-ep-engine:
+    name: Fetch News, Detect Signals & Send Email
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ep-signal-engine/backend
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: ep-signal-engine/backend/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run EP Signal Engine + Send Morning Digest
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+        run: python run_digest.py
