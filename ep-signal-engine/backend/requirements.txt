@@ -3,7 +3,9 @@ supabase==2.15.1
 openai==1.75.0
 resend==2.10.0
 python-dotenv==1.1.0
-schedule==1.2.2
+feedparser==6.0.12
+apscheduler==3.11.2
+pytz==2025.2
 fastapi==0.115.12
 uvicorn[standard]==0.34.0
 pydantic==2.11.2

@@ -16,4 +16,6 @@ export const getAllNews = (limit = 100) =>
   api.get('/news', { params: { limit } }).then(r => r.data);
 
 export const runEngine = () => api.post('/run').then(r => r.data);
+export const sendDigest = () => api.post('/send-digest').then(r => r.data);
+export const getTodaySignals = () => api.get('/signals/today').then(r => r.data);
 export const getStats = () => api.get('/stats').then(r => r.data);

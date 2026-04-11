@@ -10,9 +10,11 @@ from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+from datetime import datetime, timezone, timedelta
+
 import db
 from engine import run_engine
-from mailer import send_signal_email
+from mailer import send_signal_email, send_morning_digest
 
 logging.basicConfig(level=logging.INFO)
 
@@ -101,6 +103,24 @@ def get_stats():
     }
 
 
+@app.get("/signals/today")
+def get_today_signals():
+    """Return all EP signals from the last 24 hours."""
+    since = datetime.now(tz=timezone.utc) - timedelta(hours=24)
+    return db.get_signals_since(since)
+
+
+@app.post("/send-digest")
+def trigger_morning_digest(background_tasks: BackgroundTasks):
+    """Manually trigger the morning digest email."""
+    background_tasks.add_task(send_morning_digest)
+    return {"message": "Morning digest email queued."}
+
+
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    return {
+        "status": "ok",
+        "sources": ["Economic Times", "Moneycontrol", "Yahoo Finance", "Google News India"],
+        "schedule": "Daily digest at 08:00 AM IST, engine runs every 30 minutes",
+    }

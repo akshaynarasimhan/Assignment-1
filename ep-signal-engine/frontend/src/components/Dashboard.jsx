@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
-import { getStats, runEngine } from '../api';
+import { getStats, runEngine, sendDigest } from '../api';
 import StatCard from './StatCard';
-import { Play, Mail, Activity, TrendingUp, Zap, Database } from 'lucide-react';
+import { Play, Mail, Activity, TrendingUp, Zap, Database, Clock } from 'lucide-react';
 
 export default function Dashboard() {
   const [stats, setStats] = useState(null);
   const [running, setRunning] = useState(false);
+  const [sending, setSending] = useState(false);
   const [runResult, setRunResult] = useState(null);
+  const [digestResult, setDigestResult] = useState(null);
   const [error, setError] = useState('');
 
   const loadStats = async () => {
@@ -32,6 +34,19 @@ export default function Dashboard() {
       setError('Engine run failed. Check that the backend API is running.');
     } finally {
       setRunning(false);
+    }
+  };
+
+  const handleSendDigest = async () => {
+    setSending(true);
+    setDigestResult(null);
+    try {
+      await sendDigest();
+      setDigestResult('Morning digest queued — email will arrive at lakshaynarasimhan@gmail.com shortly.');
+    } catch {
+      setDigestResult('Failed to send digest. Check RESEND_API_KEY.');
+    } finally {
+      setSending(false);
     }
   };
 
@@ -102,7 +117,15 @@ export default function Dashboard() {
               <div className="mt-4 grid grid-cols-3 gap-3 text-sm">
                 <div className="flex items-center gap-2 text-slate-500">
                   <TrendingUp size={14} className="text-amber-400/70" />
-                  <span>yfinance news fetch</span>
+                  <span>Economic Times RSS</span>
+                </div>
+                <div className="flex items-center gap-2 text-slate-500">
+                  <TrendingUp size={14} className="text-amber-400/70" />
+                  <span>Moneycontrol RSS</span>
+                </div>
+                <div className="flex items-center gap-2 text-slate-500">
+                  <TrendingUp size={14} className="text-amber-400/70" />
+                  <span>Yahoo Finance + Google News</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-500">
                   <Zap size={14} className="text-amber-400/70" />
@@ -113,13 +136,13 @@ export default function Dashboard() {
                   <span>Supabase dedup</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-500">
-                  <Mail size={14} className="text-amber-400/70" />
-                  <span>Resend email digest</span>
+                  <Clock size={14} className="text-amber-400/70" />
+                  <span>Daily 8:00 AM IST digest</span>
                 </div>
               </div>
             </div>
 
-            <div className="shrink-0">
+            <div className="shrink-0 flex flex-col gap-2">
               <button
                 onClick={handleRun}
                 disabled={running}
@@ -127,6 +150,14 @@ export default function Dashboard() {
               >
                 <Play size={16} className={running ? 'animate-pulse' : ''} />
                 {running ? 'Running Engine...' : 'Run Engine Now'}
+              </button>
+              <button
+                onClick={handleSendDigest}
+                disabled={sending}
+                className="flex items-center gap-2.5 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-slate-200 font-semibold rounded-xl text-sm transition-all disabled:opacity-60 disabled:cursor-not-allowed border border-slate-600"
+              >
+                <Mail size={16} />
+                {sending ? 'Sending...' : 'Send Morning Digest'}
               </button>
             </div>
           </div>
@@ -145,6 +176,13 @@ export default function Dashboard() {
             </div>
           )}
 
+          {digestResult && (
+            <div className="mt-5 p-4 bg-blue-900/20 border border-blue-500/30 rounded-lg text-blue-300 text-sm flex items-center gap-2">
+              <Mail size={15} />
+              {digestResult}
+            </div>
+          )}
+
           {error && (
             <div className="mt-5 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-red-400 text-sm">
               {error}
@@ -157,19 +195,29 @@ export default function Dashboard() {
       <div>
         <h2 className="text-xl font-bold text-white mb-4">Automation</h2>
         <div className="bg-slate-800/60 border border-slate-700/50 rounded-xl p-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <div className="text-sm font-semibold text-slate-300 mb-2">Automatic Schedule</div>
+              <div className="text-sm font-semibold text-slate-300 mb-2 flex items-center gap-2">
+                <Clock size={14} className="text-amber-400" /> Daily 8:00 AM IST Digest
+              </div>
               <p className="text-sm text-slate-500">
-                Run <code className="text-amber-400 bg-slate-900 px-1.5 py-0.5 rounded text-xs">python scheduler.py</code> to 
-                start the engine automatically every 30 minutes.
+                Automatically sends a full digest of all EP signals from the last 24 hours to <span className="text-slate-300">lakshaynarasimhan@gmail.com</span>. Always sends — even if no signals (shows "markets are calm").
               </p>
             </div>
             <div>
-              <div className="text-sm font-semibold text-slate-300 mb-2">Manual Email</div>
+              <div className="text-sm font-semibold text-slate-300 mb-2 flex items-center gap-2">
+                <Activity size={14} className="text-amber-400" /> 30-Min Engine Runs
+              </div>
               <p className="text-sm text-slate-500">
-                Run <code className="text-amber-400 bg-slate-900 px-1.5 py-0.5 rounded text-xs">python mailer.py</code> to 
-                send a digest of the most recent 50 signals immediately.
+                Engine fetches fresh news from <span className="text-amber-400/80">ET</span>, <span className="text-amber-400/80">MC</span>, <span className="text-amber-400/80">Yahoo</span> every 30 minutes. Start with: <code className="text-amber-400 bg-slate-900 px-1.5 py-0.5 rounded text-xs">python scheduler.py</code>
+              </p>
+            </div>
+            <div>
+              <div className="text-sm font-semibold text-slate-300 mb-2 flex items-center gap-2">
+                <Mail size={14} className="text-amber-400" /> News Sources
+              </div>
+              <p className="text-sm text-slate-500">
+                Economic Times (4 feeds) · Moneycontrol (3 feeds) · Yahoo Finance · Google News India — 300+ articles scanned per run across 115 Indian stocks.
               </p>
             </div>
           </div>

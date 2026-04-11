@@ -1,3 +1,4 @@
+from datetime import datetime, timezone
 from supabase import create_client, Client
 from config import SUPABASE_URL, SUPABASE_KEY
 
@@ -85,6 +86,22 @@ def get_all_recent_news(limit: int = 100) -> list[dict]:
         .select("*")
         .order("processed_at", desc=True)
         .limit(limit)
+        .execute()
+    )
+    return result.data or []
+
+
+def get_signals_since(since: datetime) -> list[dict]:
+    """Return all EP signals processed after `since` (UTC datetime)."""
+    client = get_client()
+    since_str = since.astimezone(timezone.utc).isoformat()
+    result = (
+        client.table("processed_news")
+        .select("*")
+        .eq("is_ep_signal", True)
+        .gte("processed_at", since_str)
+        .order("relevance_score", desc=False)   # High < Low alphabetically, we re-sort in mailer
+        .order("ticker", desc=False)
         .execute()
     )
     return result.data or []
