@@ -45,19 +45,19 @@ def run_engine() -> list[dict]:
 
         analysis = analyze_headline(ticker, item["headline"])
 
-            record = {
-                "ticker": ticker,
-                "headline": item["headline"],
-                "headline_hash": headline_hash,
-                "source": item.get("source"),
-                "source_url": item.get("source_url"),
-                "published_at": item.get("published_at"),
-                "is_ep_signal": analysis["is_ep_signal"],
-                "relevance_score": analysis["relevance_score"],
-                "signal_category": analysis["signal_category"],
-                "ai_reasoning": analysis["ai_reasoning"],
-                "processed_at": datetime.now(tz=timezone.utc).isoformat(),
-            }
+        record = {
+            "ticker": ticker,
+            "headline": item["headline"],
+            "headline_hash": headline_hash,
+            "source": item.get("source"),
+            "source_url": item.get("source_url"),
+            "published_at": item.get("published_at"),
+            "is_ep_signal": analysis["is_ep_signal"],
+            "relevance_score": analysis["relevance_score"],
+            "signal_category": analysis["signal_category"],
+            "ai_reasoning": analysis["ai_reasoning"],
+            "processed_at": datetime.now(tz=timezone.utc).isoformat(),
+        }
 
         save_processed_news(record)
 
