@@ -35,9 +35,9 @@ jobs:
 
       - name: Run EP Signal Engine + Send Morning Digest
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          SUPABASE_URL: ${{ secrets.EP_ALERTS_SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.EP_ALERTS_SUPABASE_KEY }}
+          OPENAI_API_KEY: ${{ secrets.EP_ALERTS_OPENAI_KEYS }}
+          RESEND_API_KEY: ${{ secrets.EP_ALERTS_RESEND_KEY }}
           ALERT_EMAIL: lakshaynarasimhan@gmail.com
         run: python run_digest.py
