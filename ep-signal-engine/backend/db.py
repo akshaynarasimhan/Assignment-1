@@ -92,7 +92,7 @@ def get_all_recent_news(limit: int = 100) -> list[dict]:
 
 
 def get_signals_since(since: datetime) -> list[dict]:
-    """Return all EP signals processed after `since` (UTC datetime)."""
+    """Return all EP signals where published_at OR processed_at is within the window."""
     client = get_client()
     since_str = since.astimezone(timezone.utc).isoformat()
     result = (
@@ -100,8 +100,22 @@ def get_signals_since(since: datetime) -> list[dict]:
         .select("*")
         .eq("is_ep_signal", True)
         .gte("processed_at", since_str)
-        .order("relevance_score", desc=False)   # High < Low alphabetically, we re-sort in mailer
         .order("ticker", desc=False)
         .execute()
     )
-    return result.data or []
+    rows = result.data or []
+    # Secondary filter: if published_at is known, exclude articles older than window
+    filtered = []
+    for row in rows:
+        pub = row.get("published_at")
+        if pub:
+            try:
+                dt = datetime.fromisoformat(pub)
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                if dt < since.astimezone(timezone.utc):
+                    continue
+            except Exception:
+                pass
+        filtered.append(row)
+    return filtered

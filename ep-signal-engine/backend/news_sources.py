@@ -246,12 +246,41 @@ def _match_tickers(text: str, all_tickers: list[str]) -> list[str]:
     return matched
 
 
+CUTOFF_HOURS = 48  # Only process articles published within this window
+
+
+def _is_within_cutoff(pub_date_str: Optional[str]) -> bool:
+    """Return True if article is within the 48h cutoff (or date unknown)."""
+    if not pub_date_str:
+        return True  # no date → include it, let dedup handle repeats
+    try:
+        dt = datetime.fromisoformat(pub_date_str)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return (datetime.now(tz=timezone.utc) - dt) <= timedelta(hours=CUTOFF_HOURS)
+    except Exception:
+        return True
+
+
+def _extract_url(entry) -> Optional[str]:
+    """Extract the best article URL from a feedparser entry."""
+    # Direct link
+    link = getattr(entry, "link", None)
+    if link:
+        return link
+    # Enclosures
+    for enc in getattr(entry, "enclosures", []):
+        if enc.get("href"):
+            return enc["href"]
+    return None
+
+
 def fetch_rss_all(all_tickers: list[str]) -> list[dict]:
     """
     Fetch all RSS feeds and match headlines to tickers.
-    Returns a flat list of news items: {ticker, headline, headline_hash, source, published_at}.
+    Returns a flat list of news items with source_url included.
     """
-    raw_items: list[tuple[str, str, str, Optional[str]]] = []  # (title, link, source, pub_date)
+    raw_items = []  # (title, source_url, source_label, pub_date)
 
     for feed_def in RSS_FEEDS:
         try:
@@ -260,19 +289,24 @@ def fetch_rss_all(all_tickers: list[str]) -> list[dict]:
                 request_headers={"User-Agent": "Mozilla/5.0 (EP Signal Engine)"},
             )
             entries = feed.entries or []
+            skipped = 0
             for entry in entries:
                 title = (getattr(entry, "title", "") or "").strip()
                 if not title:
                     continue
                 pub_date = _parse_pub_date(entry)
-                raw_items.append((title, feed_def["label"], pub_date))
-            logger.info("RSS [%s]: %d articles", feed_def["label"], len(entries))
+                if not _is_within_cutoff(pub_date):
+                    skipped += 1
+                    continue
+                source_url = _extract_url(entry)
+                raw_items.append((title, source_url, feed_def["label"], pub_date))
+            logger.info("RSS [%s]: %d articles (%d skipped >48h)", feed_def["label"], len(entries), skipped)
         except Exception as exc:
             logger.warning("RSS feed failed [%s]: %s", feed_def["label"], exc)
         time.sleep(0.15)  # polite rate limiting
 
     results: list[dict] = []
-    for title, source_label, pub_date in raw_items:
+    for title, source_url, source_label, pub_date in raw_items:
         matched = _match_tickers(title, all_tickers)
         for ticker in matched:
             results.append(
@@ -281,6 +315,7 @@ def fetch_rss_all(all_tickers: list[str]) -> list[dict]:
                     "headline": title,
                     "headline_hash": _headline_hash(ticker, title),
                     "source": source_label,
+                    "source_url": source_url,
                     "published_at": pub_date,
                 }
             )
@@ -290,7 +325,7 @@ def fetch_rss_all(all_tickers: list[str]) -> list[dict]:
 
 
 def fetch_yfinance_for_ticker(ticker: str) -> list[dict]:
-    """Fetch yfinance news for a single ticker (unchanged from original fetcher)."""
+    """Fetch yfinance news for a single ticker, limited to last 48 hours."""
     try:
         stock = yf.Ticker(ticker)
         news_items = stock.news or []
@@ -312,8 +347,18 @@ def fetch_yfinance_for_ticker(ticker: str) -> list[dict]:
                 except Exception:
                     pub_date = None
 
+            if not _is_within_cutoff(pub_date):
+                continue
+
             provider = content.get("provider", {})
             source = provider.get("displayName") if isinstance(provider, dict) else item.get("publisher", "")
+
+            # Extract article URL from yfinance content
+            source_url = (
+                content.get("canonicalUrl", {}).get("url")
+                or content.get("clickThroughUrl", {}).get("url")
+                or item.get("link")
+            )
 
             results.append(
                 {
@@ -321,6 +366,7 @@ def fetch_yfinance_for_ticker(ticker: str) -> list[dict]:
                     "headline": title,
                     "headline_hash": _headline_hash(ticker, title),
                     "source": source or "Yahoo Finance",
+                    "source_url": source_url,
                     "published_at": pub_date,
                 }
             )

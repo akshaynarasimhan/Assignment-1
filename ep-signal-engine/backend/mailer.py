@@ -67,13 +67,23 @@ def _score_badge(score: str) -> str:
     )
 
 
-def _source_tag(source: str) -> str:
+
+def _source_link(source: str, url: str | None) -> str:
     tag = SOURCE_ICONS.get(source, source[:2].upper() if source else "??")
-    return (
+    badge = (
         f'<span style="display:inline-block;padding:2px 7px;border-radius:4px;'
         f'background:#1e293b;color:#94a3b8;font-size:10px;font-weight:600;'
         f'letter-spacing:0.5px;">{tag}</span>'
     )
+    if url:
+        return (
+            f'<a href="{url}" target="_blank" style="text-decoration:none;">'
+            f'{badge}'
+            f'<span style="display:inline-block;margin-left:4px;font-size:10px;'
+            f'color:#f59e0b;vertical-align:middle;" title="Open article">&#8599;</span>'
+            f'</a>'
+        )
+    return badge
 
 
 def _signal_row(s: dict) -> str:
@@ -82,7 +92,15 @@ def _signal_row(s: dict) -> str:
     published = (s.get("published_at") or s.get("processed_at") or "")[:10]
     ticker_bare = s["ticker"].replace(".NS", "").replace(".BO", "")
     source = s.get("source") or ""
+    source_url = s.get("source_url")
     reasoning = s.get("ai_reasoning") or ""
+
+    headline_cell = (
+        f'<a href="{source_url}" target="_blank" style="color:#e2e8f0;text-decoration:none;">'
+        f'{s["headline"]}</a>'
+        if source_url
+        else s["headline"]
+    )
 
     return f"""
 <tr>
@@ -91,7 +109,7 @@ def _signal_row(s: dict) -> str:
              color:#fbbf24;white-space:nowrap;font-size:13px;">{ticker_bare}</td>
   <td style="padding:12px 14px;border-bottom:1px solid #1e293b;
              color:#e2e8f0;line-height:1.55;font-size:13px;">
-    {s['headline']}
+    {headline_cell}
     {"<br><span style='font-size:11px;color:#64748b;font-style:italic;'>"+reasoning+"</span>" if reasoning else ""}
   </td>
   <td style="padding:12px 14px;border-bottom:1px solid #1e293b;white-space:nowrap;">
@@ -100,7 +118,7 @@ def _signal_row(s: dict) -> str:
   <td style="padding:12px 14px;border-bottom:1px solid #1e293b;
              color:#94a3b8;font-size:12px;white-space:nowrap;">{category}</td>
   <td style="padding:12px 14px;border-bottom:1px solid #1e293b;white-space:nowrap;">
-    {_source_tag(source)}
+    {_source_link(source, source_url)}
   </td>
   <td style="padding:12px 14px;border-bottom:1px solid #1e293b;
              color:#64748b;font-size:12px;white-space:nowrap;">{published}</td>
@@ -255,14 +273,14 @@ def _build_html(signals: list[dict], digest_date: str, is_morning: bool = False)
 def send_morning_digest() -> bool:
     """
     Send the daily 8am IST digest.
-    Pulls ALL signals from the last 24 hours regardless of whether they're new.
+    Pulls ALL signals from the last 48 hours regardless of whether they're new.
     Always sends (even if empty — shows "markets are calm" message).
     """
     if not RESEND_API_KEY:
         logger.error("RESEND_API_KEY not set. Cannot send email.")
         return False
 
-    since = datetime.now(tz=timezone.utc) - timedelta(hours=24)
+    since = datetime.now(tz=timezone.utc) - timedelta(hours=48)
     signals = get_signals_since(since)
 
     resend.api_key = RESEND_API_KEY
