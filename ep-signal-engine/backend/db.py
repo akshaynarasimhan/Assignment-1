@@ -43,6 +43,12 @@ def delete_ticker(ticker: str) -> bool:
     return True
 
 
+def backfill_source_url(ticker: str, headline_hash: str, source_url: str) -> None:
+    """Update source_url for an already-processed record that had none."""
+    client = get_client()
+    client.table("processed_news").update({"source_url": source_url}).eq("ticker", ticker).eq("headline_hash", headline_hash).is_("source_url", "null").execute()
+
+
 def is_news_processed(ticker: str, headline_hash: str) -> bool:
     client = get_client()
     result = (
@@ -60,7 +66,7 @@ def save_processed_news(record: dict) -> dict:
     client = get_client()
     result = (
         client.table("processed_news")
-        .upsert(record, on_conflict="ticker,headline_hash")
+        .upsert(record, on_conflict="ticker,headline_hash", ignore_duplicates=False)
         .execute()
     )
     return result.data[0] if result.data else {}

@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 
 from news_sources import fetch_all_news
 from analyzer import analyze_headline
-from db import get_watchlist, is_news_processed, save_processed_news
+from db import get_watchlist, is_news_processed, save_processed_news, backfill_source_url
 
 logging.basicConfig(
     level=logging.INFO,
@@ -40,6 +40,9 @@ def run_engine() -> list[dict]:
         headline_hash = item["headline_hash"]
 
         if is_news_processed(ticker, headline_hash):
+            # If we now have a URL for a previously stored record, backfill it
+            if item.get("source_url"):
+                backfill_source_url(ticker, headline_hash, item["source_url"])
             logger.debug("Already processed: [%s] %s", ticker, item["headline"][:60])
             continue
 
