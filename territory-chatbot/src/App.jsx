@@ -28,7 +28,7 @@ export default function App() {
   return (
     <div className="app-root">
       <PanelGroup direction="horizontal" className="app-panel-group">
-        <Panel defaultSize={18} minSize={15} maxSize={25} className="panel-sidebar">
+        <Panel defaultSize={14} minSize={12} maxSize={18} className="panel-sidebar">
           <Sidebar />
         </Panel>
         <PanelResizeHandle className="resize-handle">
@@ -39,7 +39,7 @@ export default function App() {
             <Topbar />
             <div className="main-body">
               <PanelGroup direction="horizontal" className="content-panel-group">
-                <Panel defaultSize={62} minSize={45} className="panel-content">
+                <Panel defaultSize={55} minSize={38} className="panel-content">
                   <div className="content-scroll">
                     <StepContent />
                   </div>
@@ -47,7 +47,7 @@ export default function App() {
                 <PanelResizeHandle className="resize-handle">
                   <div className="resize-handle-bar" />
                 </PanelResizeHandle>
-                <Panel defaultSize={38} minSize={28} maxSize={50} className="panel-chat">
+                <Panel defaultSize={45} minSize={35} maxSize={55} className="panel-chat">
                   <div className="chat-layout">
                     <div className="chat-header">
                       <span className="chat-header-title">Territory Intelligence</span>
