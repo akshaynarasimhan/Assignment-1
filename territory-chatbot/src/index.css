@@ -73,6 +73,7 @@ input, textarea {
   flex: 1;
   overflow: hidden;
   height: 100%;
+  min-height: 0;
 }
 
 /* ─── Sidebar Panel ──────────────────────────────────────────────────── */
@@ -95,6 +96,7 @@ input, textarea {
 .main-panel {
   flex: 1;
   min-width: 0;
+  min-height: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -389,11 +391,21 @@ input, textarea {
   flex: 1;
   overflow: hidden;
   display: flex;
+  min-height: 0;
+  height: 100%;
 }
 
 .content-panel-group {
   width: 100%;
   height: 100%;
+  min-height: 0;
+}
+
+.panel-content,
+.panel-chat {
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
 }
 
 /* ─── Topbar ─────────────────────────────────────────────────────────── */
