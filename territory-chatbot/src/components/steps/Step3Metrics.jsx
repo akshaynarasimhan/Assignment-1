@@ -6,104 +6,78 @@ import { fetchAEData } from '../../services/territoryApi';
 import { runRules, buildDatasetSummary } from '../../services/ruleEngine';
 import { generateGridSpec } from '../../services/llmService';
 
-function CapacityRenderer({ value, data }) {
-  const delta = data?._capDelta ?? 0;
+// ── Cell renderers ────────────────────────────────────────────────────────
+
+function DeltaBadge({ delta, inverse = false }) {
+  if (!delta) return null;
+  const positive = inverse ? delta < 0 : delta > 0;
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-      {value > 0 ? (
-        <span style={{
-          background: 'rgba(86,211,100,0.15)', color: '#56d364',
-          border: '1px solid rgba(86,211,100,0.3)', borderRadius: 4,
-          padding: '2px 8px', fontSize: 12, fontFamily: 'var(--mono)', fontWeight: 600,
-        }}>+{value}</span>
-      ) : (
-        <span style={{ color: 'var(--text-muted)', fontFamily: 'var(--mono)', fontSize: 12 }}>0</span>
-      )}
-      {delta !== 0 && (
-        <span style={{
-          fontSize: 10, fontFamily: 'var(--mono)', fontWeight: 700,
-          color: delta > 0 ? 'var(--success)' : 'var(--danger)',
-          background: delta > 0 ? 'rgba(63,185,80,0.1)' : 'rgba(248,81,73,0.1)',
-          border: `1px solid ${delta > 0 ? 'rgba(63,185,80,0.25)' : 'rgba(248,81,73,0.25)'}`,
-          borderRadius: 3, padding: '0px 4px',
-        }}>{delta > 0 ? '+' : ''}{delta}</span>
-      )}
+    <span style={{
+      fontSize: 10, fontFamily: 'var(--mono)', fontWeight: 700,
+      color: positive ? 'var(--success)' : 'var(--danger)',
+      background: positive ? 'rgba(63,185,80,0.12)' : 'rgba(248,81,73,0.12)',
+      border: `1px solid ${positive ? 'rgba(63,185,80,0.3)' : 'rgba(248,81,73,0.3)'}`,
+      borderRadius: 3, padding: '0 4px', marginLeft: 4,
+    }}>
+      {delta > 0 ? '+' : ''}{delta}
+    </span>
+  );
+}
+
+function CVRenderer({ value, data }) {
+  return (
+    <span style={{ fontFamily: 'var(--mono)', fontSize: 13 }}>
+      {value?.toLocaleString()}
+      <DeltaBadge delta={data?._cvDelta} />
+    </span>
+  );
+}
+
+function CapacityRenderer({ value, data }) {
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+      {value > 0
+        ? <span style={{ background: 'rgba(86,211,100,0.15)', color: '#56d364', border: '1px solid rgba(86,211,100,0.3)', borderRadius: 4, padding: '2px 8px', fontSize: 12, fontFamily: 'var(--mono)', fontWeight: 600 }}>+{value}</span>
+        : <span style={{ color: 'var(--text-muted)', fontFamily: 'var(--mono)', fontSize: 12 }}>0</span>
+      }
+      <DeltaBadge delta={data?._capDelta} />
     </div>
   );
 }
 
 function ProgressRenderer({ value, data }) {
-  const clamp = Math.min(Math.max(value, 0), 100);
-  const delta = data?._pctDelta ?? 0;
-  let color = '#56d364';
-  if (clamp > 80) color = '#f85149';
-  else if (clamp > 60) color = '#e3b341';
-
+  const clamp = Math.min(Math.max(value ?? 0, 0), 100);
+  const color = clamp > 80 ? '#f85149' : clamp > 60 ? '#e3b341' : '#56d364';
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 8, width: '100%' }}>
-      <div style={{
-        flex: 1, background: 'var(--surface3)', borderRadius: 4, height: 6, overflow: 'hidden',
-      }}>
-        <div style={{
-          width: `${clamp}%`, background: color, height: '100%',
-          borderRadius: 4, transition: 'width 0.4s ease',
-        }} />
+    <div style={{ display: 'flex', alignItems: 'center', gap: 6, width: '100%' }}>
+      <div style={{ flex: 1, background: 'var(--surface3)', borderRadius: 4, height: 6, overflow: 'hidden' }}>
+        <div style={{ width: `${clamp}%`, background: color, height: '100%', borderRadius: 4, transition: 'width 0.4s ease' }} />
       </div>
-      <span style={{ color, fontFamily: 'var(--mono)', fontSize: 11, minWidth: 36, textAlign: 'right' }}>
-        {value}%
-      </span>
-      {delta !== 0 && (
-        <span style={{
-          fontSize: 10, fontFamily: 'var(--mono)', fontWeight: 700,
-          color: delta > 0 ? 'var(--danger)' : 'var(--success)',
-          background: delta > 0 ? 'rgba(248,81,73,0.1)' : 'rgba(63,185,80,0.1)',
-          border: `1px solid ${delta > 0 ? 'rgba(248,81,73,0.25)' : 'rgba(63,185,80,0.25)'}`,
-          borderRadius: 3, padding: '0px 4px',
-        }}>{delta > 0 ? '+' : ''}{delta}%</span>
-      )}
+      <span style={{ color, fontFamily: 'var(--mono)', fontSize: 11, minWidth: 34, textAlign: 'right' }}>{value}%</span>
+      <DeltaBadge delta={data?._pctDelta} inverse={true} />
     </div>
   );
 }
 
-function CVRenderer({ value, data }) {
-  const delta = data?._cvDelta ?? 0;
+function AENameRenderer({ value, data }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-      <span style={{ fontFamily: 'var(--mono)', fontSize: 13 }}>{value?.toLocaleString()}</span>
-      {delta !== 0 && (
-        <span style={{
-          fontSize: 10, fontFamily: 'var(--mono)', fontWeight: 700,
-          color: delta > 0 ? 'var(--success)' : 'var(--danger)',
-          background: delta > 0 ? 'rgba(63,185,80,0.1)' : 'rgba(248,81,73,0.1)',
-          border: `1px solid ${delta > 0 ? 'rgba(63,185,80,0.25)' : 'rgba(248,81,73,0.25)'}`,
-          borderRadius: 3, padding: '0px 4px',
-        }}>{delta > 0 ? '+' : ''}{delta.toLocaleString()}</span>
+      {data?._isSimulated && (
+        <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#79c0ff', display: 'inline-block', flexShrink: 0 }} title="Simulated" />
       )}
+      <span>{value}</span>
     </div>
   );
 }
 
 const COL_DEFS = [
-  {
-    field: 'aeName', headerName: 'AE Name', pinned: 'left', width: 160,
-    cellRenderer: ({ value, data }) => (
-      <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-        {data?._isSimulated && (
-          <span style={{
-            width: 6, height: 6, borderRadius: '50%',
-            background: 'var(--accent2)', display: 'inline-block', flexShrink: 0,
-          }} title="Simulated change" />
-        )}
-        <span>{value}</span>
-      </div>
-    ),
-  },
+  { field: 'aeName', headerName: 'AE Name', pinned: 'left', width: 160, cellRenderer: AENameRenderer },
   { field: 'role', headerName: 'Role', width: 180 },
-  { field: 'cv', headerName: 'CV', width: 120, cellRenderer: CVRenderer },
+  { field: 'cv', headerName: 'CV', width: 130, cellRenderer: CVRenderer },
   { field: 'targetBookingSize', headerName: 'Target Booking KW', width: 160, type: 'numericColumn', valueFormatter: (p) => p.value?.toLocaleString() },
   { field: 'availableCapacity', headerName: 'Available Capacity', width: 155, cellRenderer: CapacityRenderer },
   {
-    field: 'pctTargetFromSizeAchieved', headerName: '% Target Achieved', width: 190,
+    field: 'pctTargetFromSizeAchieved', headerName: '% Target Achieved', width: 200,
     cellRenderer: ProgressRenderer,
     cellClassRules: {
       'row-critical': (p) => p.value > 80,
@@ -117,6 +91,8 @@ const COL_DEFS = [
   { field: 'proxyGraded', headerName: 'Proxy Graded', width: 120, type: 'numericColumn' },
 ];
 
+// ── Component ─────────────────────────────────────────────────────────────
+
 export default function Step3Metrics() {
   const filters = useAppStore((s) => s.filters);
   const manager = useAppStore((s) => s.manager);
@@ -127,19 +103,22 @@ export default function Step3Metrics() {
   const setGridSpec = useAppStore((s) => s.setGridSpec);
   const setIsLoading = useAppStore((s) => s.setIsLoading);
   const isLoading = useAppStore((s) => s.isLoading);
-  const setBaseAEData = useAppStore((s) => s.setBaseAEData);
+  const resetAndLoad = useAppStore((s) => s.resetAndLoad);
+  const dataLoaded = useAppStore((s) => s.dataLoaded);
   const simulatedAEData = useAppStore((s) => s.simulatedAEData);
   const pendingChanges = useAppStore((s) => s.pendingChanges);
 
   const gridRef = useRef(null);
 
-  // Load data on mount
+  // Load AE data — only runs once per manager/filter combo.
+  // If already loaded (navigated back), skip re-fetch to preserve simulation.
   useEffect(() => {
+    if (dataLoaded) return; // simulation is live — don't overwrite
     async function load() {
       setIsLoading(true);
       try {
         const data = await fetchAEData({ ...filters, manager });
-        setBaseAEData(data);
+        resetAndLoad(data);
         const rules = runRules(data, filters);
         const summary = buildDatasetSummary(data, rules);
         const spec = await generateGridSpec(
@@ -157,14 +136,7 @@ export default function Step3Metrics() {
       }
     }
     load();
-  }, [filters, manager]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  // Refresh grid when simulation changes
-  useEffect(() => {
-    if (gridRef.current?.api) {
-      gridRef.current.api.setGridOption('rowData', simulatedAEData);
-    }
-  }, [simulatedAEData]);
+  }, [filters, manager, dataLoaded]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const darkTheme = useMemo(() => themeAlpine.withParams({
     backgroundColor: '#161b22', headerBackgroundColor: '#1c2230',
@@ -184,7 +156,7 @@ export default function Step3Metrics() {
 
   const getRowStyle = useCallback((params) => {
     if (params.data?._isSimulated) {
-      return { background: 'rgba(0,115,171,0.07)', borderLeft: '3px solid rgba(0,115,171,0.5)' };
+      return { background: 'rgba(0,115,171,0.08)', borderLeft: '3px solid #0073ab' };
     }
     return null;
   }, []);
@@ -202,8 +174,8 @@ export default function Step3Metrics() {
         <p className="step-desc">
           Review territory metrics for {manager ?? 'the selected manager'}'s team.
           {pendingChanges.length > 0 && (
-            <span className="alert-inline" style={{ color: 'var(--accent2)', background: 'rgba(121,192,255,0.1)', border: '1px solid rgba(121,192,255,0.25)', fontSize: 11, padding: '2px 8px', borderRadius: 4 }}>
-              ● {pendingChanges.length} live simulation{pendingChanges.length !== 1 ? 's' : ''} active
+            <span style={{ color: '#79c0ff', background: 'rgba(121,192,255,0.1)', border: '1px solid rgba(121,192,255,0.25)', fontSize: 11, padding: '2px 8px', borderRadius: 4, marginLeft: 8 }}>
+              ● {pendingChanges.length} simulation{pendingChanges.length !== 1 ? 's' : ''} active
             </span>
           )}
           {ruleOutput?.flags?.cv_breach && (
@@ -220,8 +192,11 @@ export default function Step3Metrics() {
           <span>Running rule engine analysis…</span>
         </div>
       ) : (
+        /* key={simulatedAEData.length + pendingChanges.length} forces full remount
+           when simulation changes so AG Grid always shows fresh data */
         <div className="ag-grid-wrap" style={{ height: 380, width: '100%' }}>
           <AgGridReact
+            key={`grid-${pendingChanges.length}`}
             ref={gridRef}
             rowData={simulatedAEData}
             columnDefs={COL_DEFS}

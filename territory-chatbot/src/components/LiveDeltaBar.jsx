@@ -66,10 +66,12 @@ export default function LiveDeltaBar() {
   const overloadedSim = simulatedAEData.filter((ae) => ae.pctTargetFromSizeAchieved > 80).length;
 
   function handleCommit() {
+    const count = pendingChanges.length;
+    const cvChange = totalSimCV - totalBaseCV;
     commitSimulation();
     addChatMessage({
       role: 'assistant',
-      text: `Simulation committed. ${pendingChanges.length} account assignment(s) applied permanently to the territory. CV delta: ${totalSimCV - totalBaseCV > 0 ? '+' : ''}${(totalSimCV - totalBaseCV).toLocaleString()}.`,
+      text: `✓ ${count} assignment(s) committed. Territory baseline updated.\nCV change: ${cvChange >= 0 ? '+' : ''}${cvChange.toLocaleString()}  ·  Free capacity: ${totalSimCap > totalBaseCap ? '+' : ''}${totalSimCap - totalBaseCap}  ·  Overloaded AEs: ${overloadedSim} (was ${overloadedBase}).\nStep 3 grid now shows the committed state as the new baseline.`,
       tag: 'hybrid',
     });
   }

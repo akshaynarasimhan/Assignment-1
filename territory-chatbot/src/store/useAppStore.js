@@ -2,29 +2,32 @@ import { create } from 'zustand';
 import { MOCK_AE_DATA, REBALANCE_ACCOUNTS } from '../constants/mockData';
 
 const useAppStore = create((set, get) => ({
-  // ── Workflow state ───────────────────────────────────────────────────────
+  // ── Workflow ──────────────────────────────────────────────────────────────
   step: 1,
   filters: null,
   manager: null,
   mode: null,
   selectedAE: null,
 
-  // ── Chat ─────────────────────────────────────────────────────────────────
+  // ── Chat ──────────────────────────────────────────────────────────────────
   chatHistory: [],
   isLoading: false,
-
-  // ── Grid spec from LLM ───────────────────────────────────────────────────
   gridSpec: null,
 
-  // ── Simulation state ─────────────────────────────────────────────────────
-  assignments: {},           // { [accountId]: aeId }
-  baseAEData: [],            // filtered AE team loaded at Step 3
-  simulatedAEData: [],       // recalculated on every assignment
-  allAEData: MOCK_AE_DATA,   // full 120-rep roster — used for cross-team assignments
-  allAccounts: REBALANCE_ACCOUNTS, // all accounts — used by LLM matcher
-  pendingChanges: [],
+  // ── Simulation ────────────────────────────────────────────────────────────
+  // baseAEData  : snapshot loaded once at Step 3 — NEVER overwritten after initial load
+  // simulatedAEData: live copy recalculated on every assignment change
+  baseAEData: [],
+  simulatedAEData: [],
+  assignments: {},        // { [accountId]: aeId }
+  pendingChanges: [],     // audit log
+  dataLoaded: false,      // guard: prevents re-fetch from resetting simulation
 
-  // ── Setters ──────────────────────────────────────────────────────────────
+  // Full-roster references for cross-team LLM matching
+  allAEData: MOCK_AE_DATA,
+  allAccounts: REBALANCE_ACCOUNTS,
+
+  // ── Setters ───────────────────────────────────────────────────────────────
   setStep: (step) => set({ step }),
   setFilters: (filters) => set({ filters }),
   setManager: (manager) => set({ manager }),
@@ -33,54 +36,69 @@ const useAppStore = create((set, get) => ({
   setGridSpec: (gridSpec) => set({ gridSpec }),
   setIsLoading: (isLoading) => set({ isLoading }),
 
-  setBaseAEData: (data) =>
-    set({ baseAEData: data, simulatedAEData: [...data] }),
+  // Only set base data if not already loaded for this manager/filter combo.
+  // This prevents navigating back to Step 3 from blowing away the simulation.
+  setBaseAEData: (data, force = false) => {
+    const { dataLoaded } = get();
+    if (dataLoaded && !force) return; // guard — don't overwrite during active session
+    set({ baseAEData: data, simulatedAEData: [...data], dataLoaded: true });
+  },
+
+  // Call this when filters/manager change (new workflow run)
+  resetAndLoad: (data) => {
+    set({
+      baseAEData: data,
+      simulatedAEData: [...data],
+      assignments: {},
+      pendingChanges: [],
+      dataLoaded: true,
+    });
+  },
 
   // ── Assignment actions ────────────────────────────────────────────────────
   assignAccount: (account, toAEId) => {
     const { assignments, baseAEData, pendingChanges } = get();
     const fromAEId = assignments[account.id] ?? null;
-    if (fromAEId === toAEId) return;
 
     const newAssignments = { ...assignments, [account.id]: toAEId };
     const newSimulated = recalculate(baseAEData, newAssignments);
 
     const existing = pendingChanges.findIndex((c) => c.accountId === account.id);
-    let newChanges = [...pendingChanges];
-    if (existing >= 0) {
-      newChanges[existing] = { accountId: account.id, fromAEId, toAEId, account };
-    } else {
-      newChanges.push({ accountId: account.id, fromAEId, toAEId, account });
-    }
+    const newChanges = [...pendingChanges];
+    const entry = { accountId: account.id, fromAEId, toAEId, account };
+    if (existing >= 0) newChanges[existing] = entry;
+    else newChanges.push(entry);
 
     set({ assignments: newAssignments, simulatedAEData: newSimulated, pendingChanges: newChanges });
   },
 
   unassignAccount: (accountId) => {
-    const { assignments, baseAEData } = get();
+    const { assignments, baseAEData, pendingChanges } = get();
     const newAssignments = { ...assignments };
     delete newAssignments[accountId];
     const newSimulated = recalculate(baseAEData, newAssignments);
     set({
       assignments: newAssignments,
       simulatedAEData: newSimulated,
-      pendingChanges: get().pendingChanges.filter((c) => c.accountId !== accountId),
+      pendingChanges: pendingChanges.filter((c) => c.accountId !== accountId),
     });
   },
 
+  // Commit: the simulated state becomes the new baseline
   commitSimulation: () => {
     const { simulatedAEData } = get();
-    set({ baseAEData: simulatedAEData, pendingChanges: [], assignments: {} });
+    // Strip simulation delta markers from committed rows
+    const committed = simulatedAEData.map(({ _isSimulated, _cvDelta, _capDelta, _pctDelta, ...ae }) => ae);
+    set({ baseAEData: committed, simulatedAEData: committed, pendingChanges: [], assignments: {} });
   },
 
   resetSimulation: () => {
     const { baseAEData } = get();
-    set({ simulatedAEData: baseAEData, assignments: {}, pendingChanges: [] });
+    set({ simulatedAEData: [...baseAEData], assignments: {}, pendingChanges: [] });
   },
 
-  // ── Chat ─────────────────────────────────────────────────────────────────
-  addChatMessage: (message) =>
-    set((state) => ({ chatHistory: [...state.chatHistory, message] })),
+  // ── Chat ──────────────────────────────────────────────────────────────────
+  addChatMessage: (msg) => set((s) => ({ chatHistory: [...s.chatHistory, msg] })),
   clearChatHistory: () => set({ chatHistory: [] }),
 
   proceedToNextStep: () => {
@@ -88,36 +106,31 @@ const useAppStore = create((set, get) => ({
     if (step < 5) set({ step: step + 1 });
   },
 
-  reset: () =>
-    set({
-      step: 1, filters: null, manager: null, mode: null, selectedAE: null,
-      chatHistory: [], gridSpec: null, isLoading: false,
-      assignments: {}, baseAEData: [], simulatedAEData: [], pendingChanges: [],
-    }),
+  reset: () => set({
+    step: 1, filters: null, manager: null, mode: null, selectedAE: null,
+    chatHistory: [], gridSpec: null, isLoading: false,
+    baseAEData: [], simulatedAEData: [], assignments: {}, pendingChanges: [], dataLoaded: false,
+  }),
 }));
 
-// ── Simulation engine (pure function) ─────────────────────────────────────
-// Moves account CV from original AE owner to destination AE.
-// Works across the FULL roster, not just the filtered team.
+// ── Simulation engine ─────────────────────────────────────────────────────
+// Transfers CV from original AE to destination AE for every assignment.
 function recalculate(baseAEData, assignments) {
-  const cvDeltas = {};      // { aeId: deltaCV }
-  const capDeltas = {};     // { aeId: deltaCapacity }
+  const cvDeltas = {};
+  const capDeltas = {};
 
   Object.entries(assignments).forEach(([accountId, toAEId]) => {
-    // Look up account real CV from the full accounts list
     const account = REBALANCE_ACCOUNTS.find((a) => a.id === accountId);
-    // Use account CV scaled to thousands to match AE cv units, or 200 flat
     const cvValue = account ? Math.round(account.cv / 1000) : 200;
 
-    // The original AE listed on the account loses CV
-    const originalAEName = account?.aeName;
-    const fromAE = MOCK_AE_DATA.find((ae) => ae.aeName === originalAEName);
+    // Deduct from original owner
+    const fromAE = MOCK_AE_DATA.find((ae) => ae.aeName === account?.aeName);
     if (fromAE && fromAE.id !== toAEId) {
       cvDeltas[fromAE.id] = (cvDeltas[fromAE.id] ?? 0) - cvValue;
-      capDeltas[fromAE.id] = (capDeltas[fromAE.id] ?? 0) + 1; // freed a slot
+      capDeltas[fromAE.id] = (capDeltas[fromAE.id] ?? 0) + 1;
     }
 
-    // Destination AE gains CV and uses a capacity slot
+    // Add to destination
     cvDeltas[toAEId] = (cvDeltas[toAEId] ?? 0) + cvValue;
     capDeltas[toAEId] = (capDeltas[toAEId] ?? 0) - 1;
   });
@@ -127,12 +140,10 @@ function recalculate(baseAEData, assignments) {
     const capDelta = capDeltas[ae.id] ?? 0;
     const newCV = Math.max(0, ae.cv + cvDelta);
     const newCap = Math.max(0, ae.availableCapacity + capDelta);
-    const newPct = ae.targetBookingSize > 0
-      ? Math.min(100, Math.round((newCV / ae.targetBookingSize) * 100))
-      : ae.pctTargetFromSizeAchieved;
     const origPct = ae.targetBookingSize > 0
-      ? Math.round((ae.cv / ae.targetBookingSize) * 100)
-      : ae.pctTargetFromSizeAchieved;
+      ? Math.round((ae.cv / ae.targetBookingSize) * 100) : ae.pctTargetFromSizeAchieved;
+    const newPct = ae.targetBookingSize > 0
+      ? Math.min(100, Math.round((newCV / ae.targetBookingSize) * 100)) : origPct;
 
     return {
       ...ae,
