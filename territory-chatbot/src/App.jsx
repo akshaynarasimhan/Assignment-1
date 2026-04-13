@@ -1,5 +1,5 @@
 import React from 'react';
-import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
+import { Panel, Group as PanelGroup, Separator as PanelResizeHandle } from 'react-resizable-panels';
 import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
 import ChatMessages from './components/ChatMessages';

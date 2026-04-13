@@ -3,7 +3,6 @@ import useAppStore from '../../store/useAppStore';
 import { MOCK_AE_DATA } from '../../constants/mockData';
 
 export default function Step4Collapse() {
-  const filters = useAppStore((s) => s.filters);
   const manager = useAppStore((s) => s.manager);
   const mode = useAppStore((s) => s.mode);
   const selectedAE = useAppStore((s) => s.selectedAE);
