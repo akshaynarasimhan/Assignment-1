@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import useAppStore from '../store/useAppStore';
 import { runRules, buildDatasetSummary } from '../services/ruleEngine';
 import { generateGridSpec, parseAssignmentIntent } from '../services/llmService';
-import { fetchAEData, fetchRebalanceAccounts } from '../services/territoryApi';
+import { fetchAEData } from '../services/territoryApi';
 
 const ASSIGNMENT_KEYWORDS = ['assign', 'move', 'give', 'transfer', 'remove', 'unassign', 'reverse'];
 
@@ -15,7 +15,8 @@ export default function ChatBar() {
   const step = useAppStore((s) => s.step);
   const filters = useAppStore((s) => s.filters);
   const manager = useAppStore((s) => s.manager);
-  const simulatedAEData = useAppStore((s) => s.simulatedAEData);
+  const allAEData = useAppStore((s) => s.allAEData);
+  const allAccounts = useAppStore((s) => s.allAccounts);
   const assignAccount = useAppStore((s) => s.assignAccount);
   const unassignAccount = useAppStore((s) => s.unassignAccount);
   const addChatMessage = useAppStore((s) => s.addChatMessage);
@@ -70,11 +71,11 @@ export default function ChatBar() {
   }
 
   async function handleAssignmentPrompt(prompt) {
-    const accounts = await fetchRebalanceAccounts(null);
-    const intent = await parseAssignmentIntent(prompt, simulatedAEData, accounts);
+    // Use full roster + all accounts so cross-team moves always resolve
+    const intent = await parseAssignmentIntent(prompt, allAEData, allAccounts);
 
     if (!intent) {
-      addChatMessage({ role: 'assistant', text: 'Could not parse that instruction. Try: *"Assign Nexgen to Quinn Patel"*', tag: 'rule' });
+      addChatMessage({ role: 'assistant', text: 'Could not parse that instruction. Try: "Move Nexgen to Quinn Patel"', tag: 'rule' });
       return;
     }
 
@@ -83,27 +84,33 @@ export default function ChatBar() {
     if (intent.intent === 'assign' && intent.actions?.length) {
       intent.actions.forEach((action) => {
         if (!action.company || !action.toAE) return;
-        const account = accounts.find((a) =>
-          a.company.toLowerCase().includes(action.company.toLowerCase()) ||
-          action.company.toLowerCase().includes(a.company.toLowerCase().split(' ')[0])
-        );
-        const ae = simulatedAEData.find((a) =>
-          a.aeName.toLowerCase().includes(action.toAE.toLowerCase()) ||
-          action.toAE.toLowerCase().includes(a.aeName.toLowerCase().split(' ')[0])
-        );
+
+        // Fuzzy match account against full account list
+        const account = allAccounts.find((a) => {
+          const co = a.company.toLowerCase();
+          const q = action.company.toLowerCase();
+          return co.includes(q) || q.includes(co.split(' ')[0]);
+        });
+
+        // Fuzzy match AE against full 120-rep roster
+        const ae = allAEData.find((a) => {
+          const name = a.aeName.toLowerCase();
+          const q = action.toAE.toLowerCase();
+          return name.includes(q) || q.includes(name.split(' ')[0]) || q.includes(name.split(' ')[1] ?? '___');
+        });
+
         if (account && ae) {
           assignAccount(account, ae.id);
           addChatMessage({
             role: 'assistant',
-            text: `✓ **${account.company}** assigned to **${ae.aeName}**. CV and capacity metrics updated live in the grid.`,
+            text: `✓ **${account.company}** moved to **${ae.aeName}** (${ae.role}).\nCV transferred: ~${Math.round(account.cv / 1000)}k. Metrics updated live in the Step 3 grid.`,
             tag: 'hybrid',
           });
         } else {
-          addChatMessage({
-            role: 'assistant',
-            text: `Could not find ${!account ? `account "${action.company}"` : `AE "${action.toAE}"`} in the current dataset.`,
-            tag: 'rule',
-          });
+          const missing = !account
+            ? `Could not find account matching "${action.company}".`
+            : `Could not find AE matching "${action.toAE}". Try using first or last name.`;
+          addChatMessage({ role: 'assistant', text: missing, tag: 'rule' });
         }
       });
     }
@@ -111,13 +118,18 @@ export default function ChatBar() {
     if (intent.intent === 'unassign' && intent.actions?.length) {
       intent.actions.forEach((action) => {
         if (!action.company) return;
-        const account = accounts.find((a) =>
+        const account = allAccounts.find((a) =>
           a.company.toLowerCase().includes(action.company.toLowerCase())
         );
         if (account) {
           unassignAccount(account.id);
+          addChatMessage({ role: 'assistant', text: `✓ Assignment of **${account.company}** reversed. Metrics restored.`, tag: 'rule' });
         }
       });
+    }
+
+    if (intent.intent === 'query') {
+      // Already shown the narrative — nothing more to do
     }
   }
 

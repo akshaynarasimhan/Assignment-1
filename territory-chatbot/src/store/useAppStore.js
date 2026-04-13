@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { MOCK_AE_DATA, REBALANCE_ACCOUNTS } from '../constants/mockData';
 
 const useAppStore = create((set, get) => ({
   // ── Workflow state ───────────────────────────────────────────────────────
@@ -16,13 +17,11 @@ const useAppStore = create((set, get) => ({
   gridSpec: null,
 
   // ── Simulation state ─────────────────────────────────────────────────────
-  // assignments: { [accountId]: aeId }  — which AE each account is assigned to
-  assignments: {},
-  // baseAEData: the original unmodified AE array loaded at Step 3
-  baseAEData: [],
-  // simulatedAEData: recalculated after every assignment change
-  simulatedAEData: [],
-  // pendingChanges: array of { accountId, fromAE, toAE, account } for audit log
+  assignments: {},           // { [accountId]: aeId }
+  baseAEData: [],            // filtered AE team loaded at Step 3
+  simulatedAEData: [],       // recalculated on every assignment
+  allAEData: MOCK_AE_DATA,   // full 120-rep roster — used for cross-team assignments
+  allAccounts: REBALANCE_ACCOUNTS, // all accounts — used by LLM matcher
   pendingChanges: [],
 
   // ── Setters ──────────────────────────────────────────────────────────────
@@ -35,7 +34,7 @@ const useAppStore = create((set, get) => ({
   setIsLoading: (isLoading) => set({ isLoading }),
 
   setBaseAEData: (data) =>
-    set({ baseAEData: data, simulatedAEData: data }),
+    set({ baseAEData: data, simulatedAEData: [...data] }),
 
   // ── Assignment actions ────────────────────────────────────────────────────
   assignAccount: (account, toAEId) => {
@@ -98,39 +97,52 @@ const useAppStore = create((set, get) => ({
 }));
 
 // ── Simulation engine (pure function) ─────────────────────────────────────
-// For each assignment, transfer account CV to new AE and recalculate metrics.
+// Moves account CV from original AE owner to destination AE.
+// Works across the FULL roster, not just the filtered team.
 function recalculate(baseAEData, assignments) {
-  // Build CV delta map: { aeId: deltaCV }
-  const cvDeltas = {};
-  const capacityDeltas = {};
+  const cvDeltas = {};      // { aeId: deltaCV }
+  const capDeltas = {};     // { aeId: deltaCapacity }
 
   Object.entries(assignments).forEach(([accountId, toAEId]) => {
-    // Each assigned account adds a fixed CV contribution (account sizeM * 100k)
-    // and consumes 1 capacity slot on the receiving AE
-    if (!cvDeltas[toAEId]) cvDeltas[toAEId] = 0;
-    if (!capacityDeltas[toAEId]) capacityDeltas[toAEId] = 0;
-    cvDeltas[toAEId] += 150; // approximate CV gain per account assignment
-    capacityDeltas[toAEId] -= 1;
+    // Look up account real CV from the full accounts list
+    const account = REBALANCE_ACCOUNTS.find((a) => a.id === accountId);
+    // Use account CV scaled to thousands to match AE cv units, or 200 flat
+    const cvValue = account ? Math.round(account.cv / 1000) : 200;
+
+    // The original AE listed on the account loses CV
+    const originalAEName = account?.aeName;
+    const fromAE = MOCK_AE_DATA.find((ae) => ae.aeName === originalAEName);
+    if (fromAE && fromAE.id !== toAEId) {
+      cvDeltas[fromAE.id] = (cvDeltas[fromAE.id] ?? 0) - cvValue;
+      capDeltas[fromAE.id] = (capDeltas[fromAE.id] ?? 0) + 1; // freed a slot
+    }
+
+    // Destination AE gains CV and uses a capacity slot
+    cvDeltas[toAEId] = (cvDeltas[toAEId] ?? 0) + cvValue;
+    capDeltas[toAEId] = (capDeltas[toAEId] ?? 0) - 1;
   });
 
   return baseAEData.map((ae) => {
     const cvDelta = cvDeltas[ae.id] ?? 0;
-    const capDelta = capacityDeltas[ae.id] ?? 0;
+    const capDelta = capDeltas[ae.id] ?? 0;
     const newCV = Math.max(0, ae.cv + cvDelta);
-    const newCapacity = Math.max(0, ae.availableCapacity + capDelta);
+    const newCap = Math.max(0, ae.availableCapacity + capDelta);
     const newPct = ae.targetBookingSize > 0
       ? Math.min(100, Math.round((newCV / ae.targetBookingSize) * 100))
+      : ae.pctTargetFromSizeAchieved;
+    const origPct = ae.targetBookingSize > 0
+      ? Math.round((ae.cv / ae.targetBookingSize) * 100)
       : ae.pctTargetFromSizeAchieved;
 
     return {
       ...ae,
       cv: newCV,
-      availableCapacity: newCapacity,
+      availableCapacity: newCap,
       pctTargetFromSizeAchieved: newPct,
       _isSimulated: cvDelta !== 0 || capDelta !== 0,
       _cvDelta: cvDelta,
       _capDelta: capDelta,
-      _pctDelta: newPct - ae.pctTargetFromSizeAchieved,
+      _pctDelta: newPct - origPct,
     };
   });
 }

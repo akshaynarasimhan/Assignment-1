@@ -144,30 +144,51 @@ function getMockGridSpec(userPrompt, ruleOutput) {
 
 function getMockAssignmentIntent(userPrompt, aeData, accounts) {
   const lower = userPrompt.toLowerCase();
-  // Simple keyword matching for fallback
-  const matchedAE = aeData.find((ae) => lower.includes(ae.aeName.toLowerCase().split(' ')[0].toLowerCase()));
-  const matchedAccount = accounts.find((a) => lower.includes(a.company.toLowerCase().split(' ')[0].toLowerCase()));
 
-  if ((lower.includes('assign') || lower.includes('move') || lower.includes('give')) && matchedAE && matchedAccount) {
+  // Match any word in the prompt against AE names (first OR last name)
+  const matchedAE = aeData.find((ae) => {
+    const parts = ae.aeName.toLowerCase().split(' ');
+    return parts.some((p) => p.length > 2 && lower.includes(p));
+  });
+
+  // Match any word in the prompt against account company names
+  const matchedAccount = accounts.find((a) => {
+    const words = a.company.toLowerCase().split(' ');
+    return words.some((w) => w.length > 3 && lower.includes(w));
+  });
+
+  const isAssign = ['assign', 'move', 'give', 'transfer', 'send'].some((kw) => lower.includes(kw));
+  const isUnassign = ['remove', 'unassign', 'reverse', 'undo'].some((kw) => lower.includes(kw));
+
+  if (isAssign && matchedAE && matchedAccount) {
     return {
       intent: 'assign',
       actions: [{ company: matchedAccount.company, toAE: matchedAE.aeName, fromAE: null }],
-      narrative: `Understood. Assigning **${matchedAccount.company}** to **${matchedAE.aeName}**. Metrics updating live.`,
+      narrative: `Moving **${matchedAccount.company}** to **${matchedAE.aeName}**. Updating metrics live now.`,
       tag: 'hybrid',
     };
   }
-  if (lower.includes('remove') || lower.includes('unassign') || lower.includes('reverse')) {
+  if (isUnassign && matchedAccount) {
     return {
       intent: 'unassign',
-      actions: [{ company: matchedAccount?.company ?? null, toAE: null, fromAE: null }],
-      narrative: `Understood. Reversing the assignment${matchedAccount ? ` of **${matchedAccount.company}**` : ''}. Metrics restored.`,
+      actions: [{ company: matchedAccount.company, toAE: null, fromAE: null }],
+      narrative: `Reversing assignment of **${matchedAccount.company}**. Metrics restored.`,
       tag: 'rule',
+    };
+  }
+  if (isAssign && (!matchedAE || !matchedAccount)) {
+    const missing = !matchedAccount ? 'account name' : 'AE name';
+    return {
+      intent: 'query',
+      actions: [],
+      narrative: `I couldn't match the ${missing} in your message. Available accounts: ${accounts.map((a) => a.company).join(', ')}. Try: "Move Nexgen to Quinn Patel".`,
+      tag: 'llm',
     };
   }
   return {
     intent: 'query',
     actions: [],
-    narrative: `I can help you assign accounts. Try saying something like: *"Assign Nexgen Systems to Quinn Patel"* or *"Move Arcturus to Taylor Singh"*.`,
+    narrative: `I can assign accounts between AEs. Examples:\n• "Move Nexgen Systems to Quinn Patel"\n• "Assign Arcturus to Taylor Singh"\n• "Remove Luminary from current AE"`,
     tag: 'llm',
   };
 }
