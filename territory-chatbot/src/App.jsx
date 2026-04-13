@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Panel, Group as PanelGroup, Separator as PanelResizeHandle } from 'react-resizable-panels';
 import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
@@ -25,21 +25,32 @@ function StepContent() {
 }
 
 export default function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+
   return (
     <div className="app-root">
-      <PanelGroup direction="horizontal" className="app-panel-group">
-        <Panel defaultSize={14} minSize={12} maxSize={18} className="panel-sidebar">
+      {/* Sidebar toggle button — always visible */}
+      <button
+        className="sidebar-toggle"
+        onClick={() => setSidebarOpen((v) => !v)}
+        title={sidebarOpen ? 'Hide sidebar' : 'Show sidebar'}
+      >
+        {sidebarOpen ? '◀' : '▶'}
+      </button>
+
+      <div className="app-panels">
+        {/* Sidebar — hidden via CSS when collapsed */}
+        <div className={`sidebar-panel ${sidebarOpen ? 'sidebar-panel--open' : 'sidebar-panel--closed'}`}>
           <Sidebar />
-        </Panel>
-        <PanelResizeHandle className="resize-handle">
-          <div className="resize-handle-bar" />
-        </PanelResizeHandle>
-        <Panel className="panel-main">
+        </div>
+
+        {/* Main area — always fills remaining space */}
+        <div className="main-panel">
           <div className="main-layout">
             <Topbar />
             <div className="main-body">
               <PanelGroup direction="horizontal" className="content-panel-group">
-                <Panel defaultSize={55} minSize={38} className="panel-content">
+                <Panel defaultSize={52} minSize={35} className="panel-content">
                   <div className="content-scroll">
                     <StepContent />
                   </div>
@@ -47,7 +58,7 @@ export default function App() {
                 <PanelResizeHandle className="resize-handle">
                   <div className="resize-handle-bar" />
                 </PanelResizeHandle>
-                <Panel defaultSize={45} minSize={35} maxSize={55} className="panel-chat">
+                <Panel defaultSize={48} minSize={36} maxSize={60} className="panel-chat">
                   <div className="chat-layout">
                     <div className="chat-header">
                       <span className="chat-header-title">Territory Intelligence</span>
@@ -62,8 +73,8 @@ export default function App() {
               </PanelGroup>
             </div>
           </div>
-        </Panel>
-      </PanelGroup>
+        </div>
+      </div>
     </div>
   );
 }
