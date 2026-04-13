@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
-const MODEL = 'claude-sonnet-4-20250514';
+const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
+const MODEL = 'gpt-4o';
 
 const SYSTEM_PROMPT = `You are a territory intelligence assistant for Gartner. You receive rule engine output and a user query. Return ONLY valid JSON matching this exact schema — no preamble, no markdown:
 {
@@ -21,9 +21,9 @@ const SYSTEM_PROMPT = `You are a territory intelligence assistant for Gartner. Y
  * @returns {object|null} parsed JSON grid spec or null on failure
  */
 export async function generateGridSpec(userPrompt, ruleOutput, datasetSummary) {
-  const apiKey = process.env.REACT_APP_ANTHROPIC_API_KEY;
+  const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
   if (!apiKey) {
-    console.error('[LLM] No API key configured. Set REACT_APP_ANTHROPIC_API_KEY in .env');
+    console.warn('[LLM] No API key found. Set REACT_APP_OPENAI_API_KEY in .env — using mock response.');
     return getMockGridSpec(userPrompt, ruleOutput);
   }
 
@@ -54,23 +54,25 @@ USER QUERY: ${userPrompt}
 
   try {
     const response = await axios.post(
-      ANTHROPIC_API_URL,
+      OPENAI_API_URL,
       {
         model: MODEL,
         max_tokens: 1024,
-        system: SYSTEM_PROMPT,
-        messages: [{ role: 'user', content: contextBlock }],
+        response_format: { type: 'json_object' },
+        messages: [
+          { role: 'system', content: SYSTEM_PROMPT },
+          { role: 'user', content: contextBlock },
+        ],
       },
       {
         headers: {
-          'x-api-key': apiKey,
-          'anthropic-version': '2023-06-01',
-          'content-type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
         },
       }
     );
 
-    const rawText = response.data?.content?.[0]?.text ?? '';
+    const rawText = response.data?.choices?.[0]?.message?.content ?? '';
     try {
       return JSON.parse(rawText);
     } catch (parseErr) {
@@ -78,7 +80,7 @@ USER QUERY: ${userPrompt}
       return null;
     }
   } catch (err) {
-    console.error('[LLM] API call failed:', err.response?.data ?? err.message);
+    console.error('[LLM] OpenAI API call failed:', err.response?.data ?? err.message);
     return getMockGridSpec(userPrompt, ruleOutput);
   }
 }
