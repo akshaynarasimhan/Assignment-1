@@ -1,0 +1,25 @@
+sm_name,sm_type,ae_id,ae_name,role,aibd,geo_terr,region,cv,target_booking_size_kw,available_capacity,pct_target_from_size_achieved,proxy_bu_review,proxy_bu_review_2,proxy_size_discount,proxy_graded
+Rachel Monroe,AE SM,AE-001,Jordan Blake,AE II – Enterprise GTS,AI,Enterprise,North America - East,2400,2800,1,55,78,81,72,76
+Rachel Monroe,AE SM,AE-002,Priya Kapoor,AE I – Enterprise GTS,AI,Enterprise,North America - East,1950,2500,2,62,70,74,65,70
+Rachel Monroe,AE SM,AE-003,Marcus Webb,AE III – Enterprise GTS,AI,Enterprise,North America - East,3100,3400,0,88,55,58,50,55
+Rachel Monroe,AE SM,AE-004,Sofia Delgado,AE II – Enterprise GTS,AI,Enterprise,North America - East,2700,3000,1,72,82,85,78,82
+David Osei,AE SM,AE-005,Avery Chen,AE I – Commercial GTS,AI,Commercial,North America - East,950,1200,0,86,60,63,55,60
+David Osei,AE SM,AE-006,Riley Okafor,AE II – Commercial GTS,AI,Commercial,North America - East,1600,2000,2,58,75,78,70,75
+David Osei,AE SM,AE-007,Jamie Park,AE III – Commercial GTS,AI,Commercial,North America - East,2100,2400,1,65,68,71,64,68
+David Osei,AE SM,AE-008,Natasha Iyer,AE II – Commercial GTS,AI,Commercial,North America - East,1800,2200,3,45,88,91,83,88
+Laura Petersen,AE SM,AE-009,Quinn Patel,AE I – SMB GTS,AI,SMB,North America - East,680,900,4,45,84,87,79,84
+Laura Petersen,AE SM,AE-010,Sam Torres,AE II – SMB GTS,AI,SMB,North America - East,1100,1300,1,58,72,75,68,72
+Laura Petersen,AE SM,AE-011,Casey Navarro,AE I – SMB GTS,AI,SMB,North America - East,750,1000,2,52,79,82,74,79
+Laura Petersen,AE SM,AE-012,Morgan Kim,AE II – SMB GTS,AI,SMB,North America - East,960,1100,0,91,58,61,54,58
+Carlos Vega,BD SM,BD-001,Taylor Singh,BD II – Enterprise GBS,BD,Enterprise,North America - East,3200,3500,3,72,90,93,86,90
+Carlos Vega,BD SM,BD-002,Leila Osman,BD I – Enterprise GBS,BD,Enterprise,North America - East,2600,2900,1,66,77,80,73,77
+Carlos Vega,BD SM,BD-003,Noah Christensen,BD III – Enterprise GBS,BD,Enterprise,North America - East,4100,4400,0,93,61,64,57,61
+Carlos Vega,BD SM,BD-004,Mei Lin,BD II – Enterprise GBS,BD,Enterprise,North America - East,2900,3200,2,78,85,88,81,85
+Amara Diallo,BD SM,BD-005,Ethan Brandt,BD II – Commercial GBS,BD,Commercial,North America - East,1700,2000,1,60,73,76,69,73
+Amara Diallo,BD SM,BD-006,Hana Fujimoto,BD I – Commercial GBS,BD,Commercial,North America - East,1200,1500,3,52,86,89,82,86
+Amara Diallo,BD SM,BD-007,Luke Ferreira,BD II – Commercial GBS,BD,Commercial,North America - East,2000,2300,0,84,64,67,60,64
+Amara Diallo,BD SM,BD-008,Nia Okonkwo,BD III – Commercial GBS,BD,Commercial,North America - East,2500,2700,2,69,80,83,76,80
+James Whitfield,BD SM,BD-009,Ryan Cho,BD I – SMB GBS,BD,SMB,North America - East,580,800,5,48,88,91,84,88
+James Whitfield,BD SM,BD-010,Ana Reyes,BD II – SMB GBS,BD,SMB,North America - East,900,1100,2,55,76,79,72,76
+James Whitfield,BD SM,BD-011,Kai Nakamura,BD I – SMB GBS,BD,SMB,North America - East,650,900,3,50,83,86,79,83
+James Whitfield,BD SM,BD-012,Fatima Hassan,BD II – SMB GBS,BD,SMB,North America - East,1050,1200,0,94,59,62,55,59
