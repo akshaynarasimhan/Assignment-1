@@ -63,78 +63,82 @@ input, textarea {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  background: var(--bg);
 }
 
-.app-panels {
+/* Shell = full-height horizontal flex */
+.app-shell {
   display: flex;
-  flex: 1;
+  height: 100vh;
+  width: 100%;
   overflow: hidden;
-  height: 100%;
-  min-height: 0;
 }
 
-/* ─── Sidebar Panel ──────────────────────────────────────────────────── */
-.sidebar-panel {
-  height: 100%;
+/* ─── Sidebar drawer ─────────────────────────────────────────────────── */
+.sidebar-drawer {
+  width: 0;
   flex-shrink: 0;
   overflow: hidden;
-  transition: width 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 0.2s ease;
+  height: 100%;
 }
 
-.sidebar-panel--open {
-  width: 210px;
+.sidebar-drawer--open {
+  width: 200px;
 }
 
-.sidebar-panel--closed {
-  width: 0;
-}
-
-/* ─── Main Panel ─────────────────────────────────────────────────────── */
-.main-panel {
+/* ─── Centre column (topbar + scrollable content) ────────────────────── */
+.centre-col {
   flex: 1;
   min-width: 0;
-  min-height: 0;
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
   overflow: hidden;
 }
 
-/* ─── Sidebar Toggle Button ──────────────────────────────────────────── */
-.sidebar-toggle {
-  position: fixed;
-  top: 14px;
-  left: 10px;
-  z-index: 200;
-  width: 24px;
-  height: 24px;
-  border-radius: 5px;
+/* ─── Chat drawer (fixed 340px, always right) ────────────────────────── */
+.chat-drawer {
+  width: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: width 0.2s ease;
+  height: 100%;
+  border-left: 1px solid var(--border);
+}
+
+.chat-drawer--open {
+  width: 340px;
+}
+
+/* ─── Panel toggle buttons in topbar ─────────────────────────────────── */
+.panel-toggle-btn {
   background: var(--surface3);
   border: 1px solid var(--border);
   color: var(--text-muted);
-  font-size: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 5px;
+  padding: 4px 8px;
+  font-size: 12px;
   cursor: pointer;
   transition: all 0.15s;
-  padding: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.sidebar-toggle:hover {
+.panel-toggle-btn:hover {
   background: var(--gartner);
   color: white;
   border-color: var(--gartner);
 }
 
-/* Legacy panel group class (keep for resize handle usage inside content area) */
-.app-panel-group {
-  width: 100%;
-  height: 100%;
+.panel-toggle-btn--chat {
+  font-size: 11px;
 }
+
+/* Legacy — keep for any remaining references */
+.app-panel-group { width: 100%; height: 100%; }
+.app-panels { display: flex; flex: 1; overflow: hidden; height: 100%; min-height: 0; }
+.main-panel { flex: 1; min-width: 0; min-height: 0; height: 100%; display: flex; flex-direction: column; overflow: hidden; }
 
 /* ─── Resize Handle ──────────────────────────────────────────────────── */
 .resize-handle {
@@ -372,7 +376,7 @@ input, textarea {
   text-align: center;
 }
 
-/* ─── Main Panel ─────────────────────────────────────────────────────── */
+/* ─── Main Panel (legacy + centre-col child layout) ─────────────────── */
 .panel-main {
   height: 100%;
   overflow: hidden;
@@ -393,6 +397,16 @@ input, textarea {
   display: flex;
   min-height: 0;
   height: 100%;
+}
+
+/* centre-col direct children */
+.centre-col > .topbar {
+  flex-shrink: 0;
+}
+
+.centre-col > .content-scroll {
+  flex: 1;
+  min-height: 0;
 }
 
 .content-panel-group {
@@ -517,13 +531,22 @@ input, textarea {
 /* ─── Content Area ───────────────────────────────────────────────────── */
 .panel-content {
   height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.panel-chat {
+  height: 100%;
+  min-height: 0;
   overflow: hidden;
 }
 
 .content-scroll {
-  height: 100%;
+  flex: 1;
+  min-height: 0;
   overflow-y: auto;
   padding: 24px;
+  height: 100%;
 }
 
 .content-scroll::-webkit-scrollbar { width: 5px; }

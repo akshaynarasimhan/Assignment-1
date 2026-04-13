@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Panel, Group as PanelGroup, Separator as PanelResizeHandle } from 'react-resizable-panels';
 import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
 import ChatMessages from './components/ChatMessages';
@@ -26,54 +25,44 @@ function StepContent() {
 
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [chatOpen, setChatOpen] = useState(true);
 
   return (
     <div className="app-root">
-      {/* Sidebar toggle button — always visible */}
-      <button
-        className="sidebar-toggle"
-        onClick={() => setSidebarOpen((v) => !v)}
-        title={sidebarOpen ? 'Hide sidebar' : 'Show sidebar'}
-      >
-        {sidebarOpen ? '◀' : '▶'}
-      </button>
+      <div className="app-shell">
 
-      <div className="app-panels">
-        {/* Sidebar — hidden via CSS when collapsed */}
-        <div className={`sidebar-panel ${sidebarOpen ? 'sidebar-panel--open' : 'sidebar-panel--closed'}`}>
+        {/* ── Sidebar ───────────────────────────────────────────── */}
+        <div className={`sidebar-drawer ${sidebarOpen ? 'sidebar-drawer--open' : ''}`}>
           <Sidebar />
         </div>
 
-        {/* Main area — always fills remaining space */}
-        <div className="main-panel">
-          <div className="main-layout">
-            <Topbar />
-            <div className="main-body">
-              <PanelGroup direction="horizontal" className="content-panel-group">
-                <Panel defaultSize={52} minSize={35} className="panel-content">
-                  <div className="content-scroll">
-                    <StepContent />
-                  </div>
-                </Panel>
-                <PanelResizeHandle className="resize-handle">
-                  <div className="resize-handle-bar" />
-                </PanelResizeHandle>
-                <Panel defaultSize={48} minSize={36} maxSize={60} className="panel-chat">
-                  <div className="chat-layout">
-                    <div className="chat-header">
-                      <span className="chat-header-title">Territory Intelligence</span>
-                      <span className="chat-header-sub">LLM + Rule Engine</span>
-                    </div>
-                    <div className="chat-messages-wrap">
-                      <ChatMessages />
-                    </div>
-                    <ChatBar />
-                  </div>
-                </Panel>
-              </PanelGroup>
-            </div>
+        {/* ── Centre: topbar + content ──────────────────────────── */}
+        <div className="centre-col">
+          <Topbar
+            sidebarOpen={sidebarOpen}
+            onToggleSidebar={() => setSidebarOpen((v) => !v)}
+            chatOpen={chatOpen}
+            onToggleChat={() => setChatOpen((v) => !v)}
+          />
+          <div className="content-scroll">
+            <StepContent />
           </div>
         </div>
+
+        {/* ── Chat panel ────────────────────────────────────────── */}
+        <div className={`chat-drawer ${chatOpen ? 'chat-drawer--open' : ''}`}>
+          <div className="chat-layout">
+            <div className="chat-header">
+              <span className="chat-header-title">Territory Intelligence</span>
+              <span className="chat-header-sub">LLM + Rule Engine</span>
+            </div>
+            <div className="chat-messages-wrap">
+              <ChatMessages />
+            </div>
+            <ChatBar />
+          </div>
+        </div>
+
       </div>
     </div>
   );
