@@ -1,9 +1,9 @@
 name: EP Signal Morning Digest
 
 on:
-  # 08:00 AM IST = 02:30 UTC
+  # 08:30 PM IST = 15:00 UTC
   schedule:
-    - cron: '30 2 * * *'
+    - cron: '0 15 * * *'
 
   # Allow manual trigger from GitHub Actions UI
   workflow_dispatch:

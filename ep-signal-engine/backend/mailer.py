@@ -148,7 +148,7 @@ def _build_html(signals: list[dict], digest_date: str, is_morning: bool = False)
 
     rows_html = "".join(_signal_row(s) for s in ordered) if ordered else _no_signals_row()
 
-    digest_label = "Morning Digest" if is_morning else "Signal Alert"
+    digest_label = "Evening Digest" if is_morning else "Signal Alert"
     sources_used = sorted({s.get("source", "") for s in signals if s.get("source")})
     sources_str  = " &bull; ".join(sources_used) if sources_used else "ET &bull; MC &bull; Yahoo"
 
@@ -255,7 +255,7 @@ def _build_html(signals: list[dict], digest_date: str, is_morning: bool = False)
   <tr><td style="background:#060d18;padding:20px 40px;border-top:1px solid #1e293b;">
     <div style="font-size:11px;color:#334155;text-align:center;">
       EP Signal Engine &bull; Powered by Economic Times + Moneycontrol + Yahoo Finance + OpenAI
-      &bull; Delivered daily at 8:00 AM IST
+      &bull; Delivered daily at 8:30 PM IST
     </div>
   </td></tr>
 
@@ -286,15 +286,15 @@ def send_morning_digest() -> bool:
     resend.api_key = RESEND_API_KEY
 
     ist_now = datetime.now(tz=timezone.utc) + timedelta(hours=5, minutes=30)
-    digest_date = ist_now.strftime("%A, %B %d, %Y — 8:00 AM IST")
+    digest_date = ist_now.strftime("%A, %B %d, %Y — 8:30 PM IST")
 
     high_count = sum(1 for s in signals if s.get("relevance_score") == "High")
     if high_count > 0:
-        subject = f"\U0001f6a8 {high_count} HIGH Impact EP Signal(s) — Morning Digest {ist_now.strftime('%d %b %Y')}"
+        subject = f"\U0001f6a8 {high_count} HIGH Impact EP Signal(s) — Evening Digest {ist_now.strftime('%d %b %Y')}"
     elif signals:
-        subject = f"\u26a1 EP Morning Digest — {len(signals)} Signal(s) | {ist_now.strftime('%d %b %Y')}"
+        subject = f"\u26a1 EP Evening Digest — {len(signals)} Signal(s) | {ist_now.strftime('%d %b %Y')}"
     else:
-        subject = f"\U0001f4c5 EP Morning Digest — No Signals | {ist_now.strftime('%d %b %Y')}"
+        subject = f"\U0001f4c5 EP Evening Digest — No Signals | {ist_now.strftime('%d %b %Y')}"
 
     html_body = _build_html(signals, digest_date, is_morning=True)
 
