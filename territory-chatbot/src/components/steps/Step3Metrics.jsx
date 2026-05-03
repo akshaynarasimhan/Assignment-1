@@ -117,9 +117,11 @@ export default function Step3Metrics() {
     async function load() {
       setIsLoading(true);
       try {
-        const data = await fetchAEData({ ...filters, manager });
+        // Fetch ALL reps for this manager — Step 1 scope filters are
+        // only for narrowing the manager list, not for filtering their team.
+        const data = await fetchAEData({ manager });
         resetAndLoad(data);
-        const rules = runRules(data, filters);
+        const rules = runRules(data, null);
         const summary = buildDatasetSummary(data, rules);
         const spec = await generateGridSpec(
           'Provide an initial territory overview highlighting capacity and CV risks.',
@@ -163,8 +165,8 @@ export default function Step3Metrics() {
 
   const ruleOutput = useMemo(() => {
     if (!simulatedAEData.length) return null;
-    return runRules(simulatedAEData, filters);
-  }, [simulatedAEData, filters]);
+    return runRules(simulatedAEData, null);
+  }, [simulatedAEData]);
 
   return (
     <div className="step-container">

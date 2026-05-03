@@ -13,7 +13,6 @@ function isAssignmentIntent(text) {
 
 export default function ChatBar() {
   const step = useAppStore((s) => s.step);
-  const filters = useAppStore((s) => s.filters);
   const manager = useAppStore((s) => s.manager);
   const allAEData = useAppStore((s) => s.allAEData);
   const allAccounts = useAppStore((s) => s.allAccounts);
@@ -58,8 +57,8 @@ export default function ChatBar() {
   }
 
   async function handleGridSpecPrompt(prompt) {
-    const aeData = await fetchAEData({ ...filters, manager });
-    const ruleOutput = runRules(aeData, filters);
+    const aeData = await fetchAEData({ manager });
+    const ruleOutput = runRules(aeData, null);
     const summary = buildDatasetSummary(aeData, ruleOutput);
     const spec = await generateGridSpec(prompt, ruleOutput, summary);
     if (spec) {
