@@ -111,21 +111,51 @@ async def search_linkedin_people(
     function_hint: Optional[str] = None,
 ) -> list[dict]:
     """
-    Constructs targeted LinkedIn people searches via DuckDuckGo.
-    seniority_hint is now the FULL title term (e.g. "Chief People Officer"),
-    not a generic label — so function_hint is usually None.
+    Three-strategy search (all run, results merged):
+
+    S1 — LinkedIn direct: CHRO India linkedin  (no site: op — works better)
+    S2 — Business news appointments: CHRO India appointed (ET, Mint, BS, MC)
+    S3 — People Matters / HR Katha / VCCircle leadership news
     """
-    parts = ["site:linkedin.com/in"]
-    if company:
-        parts.append(f'"{company}"')
-    parts.append(f'"{country}"')
-    if seniority_hint:
-        parts.append(f'"{seniority_hint}"')
-    if function_hint:
-        parts.append(f'"{function_hint}"')
-    query = " ".join(parts)
-    logger.info("DDG LinkedIn query: %s", query)
-    return await search_ddg(query, max_results=15)
+    all_results: list[dict] = []
+    seen_urls: set[str] = set()
+
+    def _merge(new: list[dict]):
+        for r in new:
+            u = r.get("url", "")
+            if u and u not in seen_urls:
+                seen_urls.add(u)
+                all_results.append(r)
+
+    title_part = seniority_hint or ""
+    company_part = f'"{company}"' if company else ""
+
+    # S1: LinkedIn profile search (plain — no site: op, DDG indexes more this way)
+    s1_parts = [p for p in [title_part, country, "linkedin", company_part] if p]
+    _merge(await _ddg_query(s1_parts, max_results=8))
+
+    # S2: Appointment news on major Indian business outlets
+    s2_parts = [p for p in [title_part, country, company_part,
+                             "(appointed OR joins OR named OR promoted OR elevated)",
+                             "(site:economictimes.com OR site:livemint.com OR "
+                             "site:business-standard.com OR site:moneycontrol.com OR "
+                             "site:peoplematters.in OR site:vccircle.com)"] if p]
+    _merge(await _ddg_query(s2_parts, max_results=8))
+
+    # S3: Press releases and company newsrooms
+    s3_parts = [p for p in [title_part, country, company_part,
+                             "(appointed OR joins OR named)",
+                             "(site:prnewswire.com OR site:businesswire.com OR "
+                             "site:thehindu.com OR site:financialexpress.com)"] if p]
+    _merge(await _ddg_query(s3_parts, max_results=6))
+
+    return all_results
+
+
+async def _ddg_query(parts: list[str], max_results: int = 10) -> list[dict]:
+    query = " ".join(p for p in parts if p)
+    logger.info("DDG query: %s", query)
+    return await search_ddg(query, max_results=max_results)
 
 
 async def search_linkedin_company_leaders(

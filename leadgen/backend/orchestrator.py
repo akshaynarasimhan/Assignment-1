@@ -236,62 +236,80 @@ _ALL_SVP_EVP_TERMS   = [t for terms in _SVP_EVP_BY_FUNCTION.values() for t in te
 _ALL_HEAD_TERMS      = [t for terms in _HEAD_BY_FUNCTION.values() for t in terms]
 
 
-def _build_queries(seniority: Optional[str], function: Optional[str]) -> list[tuple[str, str]]:
+def _build_query_batches(seniority: Optional[str], function: Optional[str]) -> list[tuple[str, str]]:
     """
-    Returns list of (search_term, label) pairs to run through DDG.
-    search_term  — the exact title string to quote in the query
-    label        — human-readable description for the progress message
+    Returns list of (or_query_string, label) tuples.
+    Each tuple becomes ONE DDG search using an OR expression like:
+      CHRO OR "Chief People Officer" OR "Chief Talent Officer"
+    Batching multiple title synonyms into one query gives far better DDG results
+    than firing separate queries per term.
+    Max ~5 terms per OR batch to avoid query truncation.
     """
-    queries: list[tuple[str, str]] = []
-
-    def _add(terms: list[str], label: str):
+    def _or(terms: list[str]) -> str:
+        # Short acronyms quoted, multi-word titles unquoted for broader match
+        parts = []
         for t in terms:
-            queries.append((t, label))
+            parts.append(f'"{t}"' if len(t.split()) <= 2 else t)
+        return " OR ".join(parts)
 
-    # ── Both seniority AND function selected ─────────────────────────────────
+    def _batch(terms: list[str], size: int = 4) -> list[list[str]]:
+        return [terms[i:i+size] for i in range(0, len(terms), size)]
+
+    batches: list[tuple[str, str]] = []
+
+    def _add_batches(terms: list[str], label: str):
+        for chunk in _batch(terms, 4):
+            batches.append((_or(chunk), label))
+
+    # ── Both seniority AND function ───────────────────────────────────────────
     if seniority and function:
         if seniority == "C-Suite":
-            _add(_CSUITE_BY_FUNCTION.get(function, []), f"C-Suite · {function}")
+            _add_batches(_CSUITE_BY_FUNCTION.get(function, []), f"C-Suite · {function}")
         elif seniority == "President/MD":
-            _add(_PRESIDENT_MD_TERMS, f"President/MD · {function}")
+            _add_batches(_PRESIDENT_MD_TERMS, f"President/MD · {function}")
         elif seniority == "SVP/EVP":
-            _add(_SVP_EVP_BY_FUNCTION.get(function, []), f"SVP/EVP · {function}")
+            _add_batches(_SVP_EVP_BY_FUNCTION.get(function, []), f"SVP/EVP · {function}")
         elif seniority == "Head-Level":
-            _add(_HEAD_BY_FUNCTION.get(function, []), f"Head-Level · {function}")
+            _add_batches(_HEAD_BY_FUNCTION.get(function, []), f"Head-Level · {function}")
         elif seniority == "Founder":
-            _add(_FOUNDER_TERMS, f"Founder · {function}")
-        return queries
+            _add_batches(_FOUNDER_TERMS, f"Founder · {function}")
+        return batches
 
-    # ── Only seniority selected ───────────────────────────────────────────────
+    # ── Only seniority ────────────────────────────────────────────────────────
     if seniority and not function:
         if seniority == "C-Suite":
-            _add(_ALL_CSUITE_TERMS, "C-Suite")
+            # Group by function so each batch stays semantically coherent
+            for fn, terms in _CSUITE_BY_FUNCTION.items():
+                _add_batches(terms, f"C-Suite · {fn}")
         elif seniority == "President/MD":
-            _add(_PRESIDENT_MD_TERMS, "President/MD")
+            _add_batches(_PRESIDENT_MD_TERMS, "President/MD")
         elif seniority == "SVP/EVP":
-            _add(_ALL_SVP_EVP_TERMS, "SVP/EVP")
+            for fn, terms in _SVP_EVP_BY_FUNCTION.items():
+                _add_batches(terms, f"SVP/EVP · {fn}")
         elif seniority == "Head-Level":
-            _add(_ALL_HEAD_TERMS, "Head-Level")
+            for fn, terms in _HEAD_BY_FUNCTION.items():
+                _add_batches(terms, f"Head · {fn}")
         elif seniority == "Founder":
-            _add(_FOUNDER_TERMS, "Founder")
-        return queries
+            _add_batches(_FOUNDER_TERMS, "Founder")
+        return batches
 
-    # ── Only function selected ────────────────────────────────────────────────
+    # ── Only function ─────────────────────────────────────────────────────────
     if function and not seniority:
-        _add(_CSUITE_BY_FUNCTION.get(function, []), f"C-Suite · {function}")
-        _add(_SVP_EVP_BY_FUNCTION.get(function, []), f"SVP/EVP · {function}")
-        _add(_HEAD_BY_FUNCTION.get(function, []), f"Head · {function}")
-        _add(_PRESIDENT_MD_TERMS, "President/MD")
-        return queries
+        _add_batches(_CSUITE_BY_FUNCTION.get(function, []), f"C-Suite · {function}")
+        _add_batches(_SVP_EVP_BY_FUNCTION.get(function, []), f"SVP/EVP · {function}")
+        _add_batches(_HEAD_BY_FUNCTION.get(function, []), f"Head · {function}")
+        _add_batches(_PRESIDENT_MD_TERMS, f"President/MD · {function}")
+        _add_batches(_FOUNDER_TERMS, f"Founder · {function}")
+        return batches
 
-    # ── No filter — broad sweep (cap to avoid hammering DDG) ─────────────────
-    for fn in list(_CSUITE_BY_FUNCTION.keys()):
-        _add(_CSUITE_BY_FUNCTION[fn][:2], f"C-Suite · {fn}")
-    _add(_PRESIDENT_MD_TERMS, "President/MD")
-    for fn in list(_HEAD_BY_FUNCTION.keys()):
-        _add(_HEAD_BY_FUNCTION[fn][:1], f"Head · {fn}")
-    _add(_FOUNDER_TERMS, "Founder")
-    return queries
+    # ── No filter — broad sweep capped at ~20 batches ─────────────────────────
+    for fn, terms in _CSUITE_BY_FUNCTION.items():
+        batches.append((_or(terms[:4]), f"C-Suite · {fn}"))
+    batches.append((_or(_PRESIDENT_MD_TERMS), "President/MD"))
+    for fn, terms in _HEAD_BY_FUNCTION.items():
+        batches.append((_or(terms[:3]), f"Head · {fn}"))
+    batches.append((_or(_FOUNDER_TERMS), "Founder"))
+    return batches
 
 
 async def open_search(
@@ -304,23 +322,23 @@ async def open_search(
     seen_names: set[str] = set()
     total_found = 0
 
-    all_queries = _build_queries(seniority, function)
-    total_queries = len(all_queries)
+    all_batches = _build_query_batches(seniority, function)
+    total_batches = len(all_batches)
 
     yield ProgressEvent(
         type="progress",
-        message=f"Built {total_queries} targeted search queries…",
+        message=f"Built {total_batches} search queries…",
         percent=2,
     )
 
-    for q_idx, (search_term, label) in enumerate(all_queries):
+    for q_idx, (or_query, label) in enumerate(all_batches):
         if total_found >= max_results:
             break
 
-        pct = 5 + int(88 * q_idx / max(total_queries, 1))
+        pct = 5 + int(88 * q_idx / max(total_batches, 1))
         yield ProgressEvent(
             type="progress",
-            message=f"[{q_idx+1}/{total_queries}] Searching: \"{search_term}\" in {country}…",
+            message=f"[{q_idx+1}/{total_batches}] {label} in {country}…",
             percent=pct,
         )
 
@@ -328,12 +346,12 @@ async def open_search(
             ddg_results = await search_linkedin_people(
                 company="",
                 country=country,
-                seniority_hint=search_term,
-                function_hint=None,   # term already encodes function
+                seniority_hint=or_query,
+                function_hint=None,
             )
             leads = parse_linkedin_results(ddg_results, country=country)
         except Exception as e:
-            yield ProgressEvent(type="error", message=f"Search error for \"{search_term}\": {e}")
+            yield ProgressEvent(type="error", message=f"Search error [{label}]: {e}")
             leads = []
 
         # SerpAPI supplement
@@ -341,22 +359,31 @@ async def open_search(
             try:
                 serp_leads = await serpapi_source.open_search(
                     country=country,
-                    seniority_hint=search_term,
+                    seniority_hint=or_query,
                     function_hint=None,
                 )
                 leads += serp_leads
             except Exception as e:
                 yield ProgressEvent(type="error", message=f"SerpAPI error: {e}")
 
+        batch_new = 0
         for lead in leads:
             key = lead.get("name", "").lower()
             if not key or key in seen_names:
                 continue
             seen_names.add(key)
             total_found += 1
+            batch_new += 1
             yield ProgressEvent(type="result", data=lead)
             if total_found >= max_results:
                 break
+
+        if batch_new > 0:
+            yield ProgressEvent(
+                type="progress",
+                message=f"  → {batch_new} new leader(s) found",
+                percent=pct,
+            )
 
     yield ProgressEvent(
         type="done",
