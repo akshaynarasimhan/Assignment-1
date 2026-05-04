@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lead Generation Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body>
+
+<!-- ── Header ─────────────────────────────────────────────────────────────── -->
+<header class="app-header">
+  <div class="logo">⚡ LeadGen</div>
+  <div class="tagline">Senior Business Leaders · India · Zero Cloud Cost</div>
+  <div class="status-dot" id="status-dot"></div>
+</header>
+
+<!-- ── Main ───────────────────────────────────────────────────────────────── -->
+<main class="main-container">
+
+  <!-- Source status card -->
+  <div class="card" style="margin-bottom:16px;">
+    <div class="card-title">🔌 Active Data Sources</div>
+    <div class="config-grid" id="source-status-grid">
+      <div class="config-item"><div class="ci-dot inactive"></div><div class="ci-name">Loading…</div></div>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="open">🔍 Open Search</button>
+    <button class="tab-btn" data-tab="company">🏢 Company Search</button>
+    <button class="tab-btn" data-tab="bulk">📋 Bulk Upload</button>
+  </div>
+
+  <!-- ── TAB 1: Open Search ──────────────────────────────────────────────── -->
+  <div class="tab-panel active" id="panel-open">
+
+    <div class="card">
+      <div class="card-title">🔍 Search Senior Leaders by Function &amp; Seniority</div>
+      <form id="open-search-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Country</label>
+            <select id="open-country">
+              <option value="India" selected>India</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Seniority</label>
+            <select id="open-seniority">
+              <option value="">All Seniority Levels</option>
+              <option value="C-Suite">C-Suite</option>
+              <option value="President/MD">President / MD</option>
+              <option value="SVP/EVP">SVP / EVP</option>
+              <option value="Head-Level">Head-Level</option>
+              <option value="Founder">Founder / Owner</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Business Function</label>
+            <select id="open-function">
+              <option value="">All Functions</option>
+              <option>Sales &amp; Revenue</option>
+              <option>Marketing &amp; Brand</option>
+              <option>Technology &amp; Engineering</option>
+              <option>Finance &amp; Accounting</option>
+              <option>Human Resources &amp; People</option>
+              <option>Operations &amp; Strategy</option>
+              <option>Product Management</option>
+              <option>Supply Chain, Logistics &amp; Procurement</option>
+              <option>Analytics, Data &amp; BI</option>
+              <option>Legal &amp; Compliance</option>
+              <option>Customer Success &amp; Support</option>
+              <option>Corporate Affairs &amp; Communications</option>
+            </select>
+          </div>
+          <div class="form-group" style="max-width:100px;">
+            <label>Max Results</label>
+            <input type="text" id="open-max" value="50" />
+          </div>
+          <div class="form-group" style="justify-content:flex-end;">
+            <label>&nbsp;</label>
+            <button type="submit" class="btn btn-primary" id="open-search-btn">
+              <span>Search</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-section" id="open-progress-section">
+      <div class="card">
+        <div class="progress-wrap"><div class="progress-bar" id="open-progress-bar"></div></div>
+        <div class="progress-log" id="open-log"></div>
+        <div class="error-banner" id="open-error"></div>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="results-section" id="open-results-section">
+      <div class="card">
+        <div class="results-header">
+          <div class="results-count" id="open-count">Found <span>0</span> leaders</div>
+          <div class="btn-group" style="margin-top:0;">
+            <button class="btn btn-secondary" id="open-export-csv">⬇ CSV</button>
+            <button class="btn btn-success" id="open-export-xlsx">⬇ Excel</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table><tbody id="open-tbody"></tbody></table>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /panel-open -->
+
+
+  <!-- ── TAB 2: Company Search ───────────────────────────────────────────── -->
+  <div class="tab-panel" id="panel-company">
+
+    <div class="card">
+      <div class="card-title">🏢 Find All Senior Leaders at a Company</div>
+      <form id="company-search-form">
+        <div class="form-row">
+          <div class="form-group" style="flex:2; min-width:200px;">
+            <label>Company Name *</label>
+            <input type="text" id="company-name" placeholder="e.g. Tata Consultancy Services" required />
+          </div>
+          <div class="form-group" style="flex:1.5;">
+            <label>Domain (optional)</label>
+            <input type="text" id="company-domain" placeholder="e.g. tcs.com" />
+          </div>
+          <div class="form-group" style="flex:2;">
+            <label>Leadership Page URL (optional)</label>
+            <input type="url" id="company-leadership-url" placeholder="https://example.com/leadership" />
+          </div>
+          <div class="form-group" style="max-width:100px;">
+            <label>Max</label>
+            <input type="text" id="company-max" value="100" />
+          </div>
+          <div class="form-group" style="justify-content:flex-end;">
+            <label>&nbsp;</label>
+            <button type="submit" class="btn btn-primary" id="company-search-btn">
+              <span>Search</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-section" id="company-progress-section">
+      <div class="card">
+        <div class="progress-wrap"><div class="progress-bar" id="company-progress-bar"></div></div>
+        <div class="progress-log" id="company-log"></div>
+        <div class="error-banner" id="company-error"></div>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="results-section" id="company-results-section">
+      <div class="card">
+        <div class="results-header">
+          <div class="results-count" id="company-count">Found <span>0</span> leaders</div>
+          <div class="btn-group" style="margin-top:0;">
+            <button class="btn btn-secondary" id="company-export-csv">⬇ CSV</button>
+            <button class="btn btn-success" id="company-export-xlsx">⬇ Excel</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table><tbody id="company-tbody"></tbody></table>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /panel-company -->
+
+
+  <!-- ── TAB 3: Bulk Upload ──────────────────────────────────────────────── -->
+  <div class="tab-panel" id="panel-bulk">
+
+    <div class="card">
+      <div class="card-title">📋 Bulk Company Upload</div>
+      <p style="color:var(--muted); font-size:13px; margin-bottom:16px;">
+        Upload an Excel (.xlsx) or CSV file with a list of companies.
+        Expected columns: <strong>Company Name</strong> (required),
+        <strong>Domain</strong> (optional), <strong>Leadership URL</strong> (optional).<br/>
+        Messy column names like <code>company_name</code>, <code>org</code>, <code>firm</code> are all accepted.
+      </p>
+
+      <div class="upload-area" id="upload-area">
+        <div class="upload-icon">📂</div>
+        <p><strong>Click to browse</strong> or drag &amp; drop your file here</p>
+        <p style="margin-top:6px; font-size:12px;">Supported: .xlsx, .csv</p>
+        <p id="uploaded-filename" style="margin-top:10px; color:var(--accent); font-weight:600;"></p>
+      </div>
+      <input type="file" id="file-input" accept=".xlsx,.csv" />
+
+      <div class="btn-group">
+        <button class="btn btn-primary" id="bulk-search-btn" disabled>
+          ▶ Start Processing
+        </button>
+      </div>
+    </div>
+
+    <!-- Company status table -->
+    <div class="card" id="bulk-status-card" style="display:none;">
+      <div class="card-title">Company Processing Status</div>
+      <div class="table-wrap">
+        <table class="bulk-status-table">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Status</th>
+              <th>Leaders Found</th>
+            </tr>
+          </thead>
+          <tbody id="bulk-status-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-section" id="bulk-progress-section">
+      <div class="card">
+        <div class="progress-wrap"><div class="progress-bar" id="bulk-progress-bar"></div></div>
+        <div class="progress-log" id="bulk-log"></div>
+        <div class="error-banner" id="bulk-error"></div>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div class="results-section" id="bulk-results-section">
+      <div class="card">
+        <div class="results-header">
+          <div class="results-count" id="bulk-count">Found <span>0</span> leaders</div>
+          <div class="btn-group" style="margin-top:0;">
+            <button class="btn btn-secondary" id="bulk-export-csv">⬇ CSV</button>
+            <button class="btn btn-success" id="bulk-export-xlsx">⬇ Excel</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table><tbody id="bulk-tbody"></tbody></table>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /panel-bulk -->
+
+</main>
+
+<script src="/static/js/app.js"></script>
+<script>
+  // Show bulk status card when processing starts
+  document.getElementById('bulk-search-btn').addEventListener('click', function() {
+    document.getElementById('bulk-status-card').style.display = 'block';
+  }, { once: false });
+</script>
+</body>
+</html>

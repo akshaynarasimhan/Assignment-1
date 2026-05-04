@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+
+# Secrets
+.env
+
+# Data (local SQLite — never commit real lead data)
+data/leads.db
+data/leads.db-shm
+data/leads.db-wal
+
+# OS
+.DS_Store
+Thumbs.db
