@@ -7,6 +7,9 @@ REM ═════════════════════════�
 
 title Lead Generation Engine
 
+REM ── CRITICAL: always run from the folder where this .bat file lives ──────────
+cd /d "%~dp0"
+
 echo.
 echo  ======================================================
 echo   LeadGen Engine — Starting up...
