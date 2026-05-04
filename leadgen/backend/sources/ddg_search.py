@@ -112,9 +112,13 @@ async def search_linkedin_people(
 ) -> list[dict]:
     """
     Constructs targeted LinkedIn people searches via DuckDuckGo.
-    Returns raw DDG result dicts — caller parses name/title from snippets.
+    seniority_hint is now the FULL title term (e.g. "Chief People Officer"),
+    not a generic label — so function_hint is usually None.
     """
-    parts = [f'site:linkedin.com/in "{company}"', f'"{country}"']
+    parts = ["site:linkedin.com/in"]
+    if company:
+        parts.append(f'"{company}"')
+    parts.append(f'"{country}"')
     if seniority_hint:
         parts.append(f'"{seniority_hint}"')
     if function_hint:
@@ -130,11 +134,18 @@ async def search_linkedin_company_leaders(
     extra_terms: str = "",
 ) -> list[dict]:
     """
-    Searches for a company's leadership team page or LinkedIn company page.
+    Searches for ALL senior titles at a company — broad OR query covering
+    every C-Suite acronym plus MD, President, Founder, Head of.
     """
+    title_or = (
+        'CEO OR CFO OR CTO OR COO OR CMO OR CHRO OR CPO OR CDO OR CRO OR CIO OR CISO OR CLO '
+        'OR "Chief People Officer" OR "Chief Revenue Officer" OR "Chief Technology Officer" '
+        'OR "Chief Financial Officer" OR "Chief Marketing Officer" OR "Chief Human Resources Officer" '
+        'OR "Managing Director" OR President OR Founder OR "Co-Founder" OR "Head of"'
+    )
     query = (
         f'site:linkedin.com/in "{company}" '
-        f'(CEO OR CFO OR CTO OR COO OR "Managing Director" OR President OR Founder) '
+        f'({title_or}) '
         f'"{country}" {extra_terms}'
     )
     logger.info("DDG company leaders query: %s", query)

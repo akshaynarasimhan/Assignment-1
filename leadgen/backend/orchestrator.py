@@ -173,29 +173,125 @@ async def company_search(
 
 
 # ─── Open Search ──────────────────────────────────────────────────────────────
+#
+# Each cell = exact title keywords to use when (seniority, function) are BOTH
+# selected.  When only seniority is selected, use the flat seniority list.
+# When only function is selected, use the flat function list.
+# When neither is selected, iterate over all cells.
+#
+# This eliminates the broken cross-product approach (CEO × HR = wrong).
 
-_SENIORITY_SEARCH_TERMS = {
-    "C-Suite": ["CEO", "CFO", "CTO", "COO", "CMO", "Chief Executive"],
-    "President/MD": ["President", "Managing Director"],
-    "SVP/EVP": ["SVP", "EVP", "Senior Vice President"],
-    "Head-Level": ["Head of"],
-    "Founder": ["Founder", "Co-Founder"],
+_CSUITE_BY_FUNCTION: dict[str, list[str]] = {
+    "Sales & Revenue":                          ["Chief Revenue Officer", "CRO", "Chief Sales Officer", "Chief Commercial Officer", "Chief Growth Officer"],
+    "Marketing & Brand":                        ["Chief Marketing Officer", "CMO", "Chief Brand Officer", "Chief Digital Officer"],
+    "Technology & Engineering":                 ["Chief Technology Officer", "CTO", "Chief Information Officer", "CIO", "Chief Digital Officer", "Chief AI Officer", "Chief Data Officer"],
+    "Finance & Accounting":                     ["Chief Financial Officer", "CFO", "Chief Accounting Officer", "Chief Investment Officer"],
+    "Human Resources & People":                 ["Chief Human Resources Officer", "CHRO", "Chief People Officer", "Chief Talent Officer", "Chief HR Officer"],
+    "Operations & Strategy":                    ["Chief Operating Officer", "COO", "Chief Strategy Officer", "Chief Transformation Officer", "Chief of Staff"],
+    "Product Management":                       ["Chief Product Officer", "CPO", "Chief Experience Officer"],
+    "Supply Chain, Logistics & Procurement":    ["Chief Supply Chain Officer", "Chief Procurement Officer", "Chief Logistics Officer"],
+    "Analytics, Data & BI":                     ["Chief Data Officer", "CDO", "Chief Analytics Officer", "Chief AI Officer", "Chief Insights Officer"],
+    "Legal & Compliance":                       ["Chief Legal Officer", "CLO", "Chief Compliance Officer", "General Counsel", "Chief Risk Officer"],
+    "Customer Success & Support":               ["Chief Customer Officer", "CCO", "Chief Experience Officer", "Chief Client Officer"],
+    "Corporate Affairs & Communications":       ["Chief Communications Officer", "Chief Corporate Affairs Officer", "Chief Sustainability Officer", "Chief Public Affairs Officer"],
 }
 
-_FUNCTION_SEARCH_TERMS = {
-    "Sales & Revenue": ["Sales", "Revenue", "Business Development"],
-    "Marketing & Brand": ["Marketing", "Brand"],
-    "Technology & Engineering": ["Technology", "Engineering", "CTO"],
-    "Finance & Accounting": ["Finance", "CFO"],
-    "Human Resources & People": ["HR", "Human Resources", "People"],
-    "Operations & Strategy": ["Operations", "Strategy", "COO"],
-    "Product Management": ["Product"],
-    "Supply Chain, Logistics & Procurement": ["Supply Chain", "Logistics"],
-    "Analytics, Data & BI": ["Analytics", "Data", "BI"],
-    "Legal & Compliance": ["Legal", "Compliance", "General Counsel"],
-    "Customer Success & Support": ["Customer Success"],
-    "Corporate Affairs & Communications": ["Corporate Affairs", "Communications"],
+_PRESIDENT_MD_TERMS = ["President", "Managing Director", "MD"]
+
+_SVP_EVP_BY_FUNCTION: dict[str, list[str]] = {
+    "Sales & Revenue":                          ["SVP Sales", "EVP Sales", "SVP Revenue", "Senior Vice President Sales"],
+    "Marketing & Brand":                        ["SVP Marketing", "EVP Marketing", "Senior Vice President Marketing"],
+    "Technology & Engineering":                 ["SVP Engineering", "EVP Engineering", "SVP Technology", "Senior Vice President Technology"],
+    "Finance & Accounting":                     ["SVP Finance", "EVP Finance", "Senior Vice President Finance"],
+    "Human Resources & People":                 ["SVP HR", "EVP HR", "SVP People", "Senior Vice President Human Resources"],
+    "Operations & Strategy":                    ["SVP Operations", "EVP Operations", "SVP Strategy", "Senior Vice President Operations"],
+    "Product Management":                       ["SVP Product", "EVP Product", "Senior Vice President Product"],
+    "Supply Chain, Logistics & Procurement":    ["SVP Supply Chain", "EVP Procurement", "Senior Vice President Logistics"],
+    "Analytics, Data & BI":                     ["SVP Analytics", "EVP Data", "Senior Vice President Analytics"],
+    "Legal & Compliance":                       ["SVP Legal", "EVP Legal", "SVP Compliance", "Senior Vice President Legal"],
+    "Customer Success & Support":               ["SVP Customer Success", "EVP Customer Experience", "Senior Vice President Customer"],
+    "Corporate Affairs & Communications":       ["SVP Communications", "EVP Corporate Affairs", "Senior Vice President Communications"],
 }
+
+_HEAD_BY_FUNCTION: dict[str, list[str]] = {
+    "Sales & Revenue":                          ["Head of Sales", "Head of Revenue", "Head of Business Development", "Head of Commercial"],
+    "Marketing & Brand":                        ["Head of Marketing", "Head of Brand", "Head of Digital Marketing", "Head of Growth"],
+    "Technology & Engineering":                 ["Head of Engineering", "Head of Technology", "Head of IT", "Head of Infrastructure", "Head of Platform"],
+    "Finance & Accounting":                     ["Head of Finance", "Head of Accounting", "Head of Treasury", "Head of Tax"],
+    "Human Resources & People":                 ["Head of HR", "Head of Human Resources", "Head of People", "Head of Talent"],
+    "Operations & Strategy":                    ["Head of Operations", "Head of Strategy", "Head of Transformation"],
+    "Product Management":                       ["Head of Product", "Head of Product Management"],
+    "Supply Chain, Logistics & Procurement":    ["Head of Supply Chain", "Head of Procurement", "Head of Logistics"],
+    "Analytics, Data & BI":                     ["Head of Analytics", "Head of Data", "Head of Business Intelligence"],
+    "Legal & Compliance":                       ["Head of Legal", "Head of Compliance", "General Counsel", "Head of Risk"],
+    "Customer Success & Support":               ["Head of Customer Success", "Head of Customer Experience", "Head of Support"],
+    "Corporate Affairs & Communications":       ["Head of Communications", "Head of Corporate Affairs", "Head of Public Relations"],
+}
+
+_FOUNDER_TERMS = ["Founder", "Co-Founder", "Owner"]
+
+# Flat fallback lists when no function is selected
+_ALL_CSUITE_TERMS    = [t for terms in _CSUITE_BY_FUNCTION.values() for t in terms]
+_ALL_SVP_EVP_TERMS   = [t for terms in _SVP_EVP_BY_FUNCTION.values() for t in terms]
+_ALL_HEAD_TERMS      = [t for terms in _HEAD_BY_FUNCTION.values() for t in terms]
+
+
+def _build_queries(seniority: Optional[str], function: Optional[str]) -> list[tuple[str, str]]:
+    """
+    Returns list of (search_term, label) pairs to run through DDG.
+    search_term  — the exact title string to quote in the query
+    label        — human-readable description for the progress message
+    """
+    queries: list[tuple[str, str]] = []
+
+    def _add(terms: list[str], label: str):
+        for t in terms:
+            queries.append((t, label))
+
+    # ── Both seniority AND function selected ─────────────────────────────────
+    if seniority and function:
+        if seniority == "C-Suite":
+            _add(_CSUITE_BY_FUNCTION.get(function, []), f"C-Suite · {function}")
+        elif seniority == "President/MD":
+            _add(_PRESIDENT_MD_TERMS, f"President/MD · {function}")
+        elif seniority == "SVP/EVP":
+            _add(_SVP_EVP_BY_FUNCTION.get(function, []), f"SVP/EVP · {function}")
+        elif seniority == "Head-Level":
+            _add(_HEAD_BY_FUNCTION.get(function, []), f"Head-Level · {function}")
+        elif seniority == "Founder":
+            _add(_FOUNDER_TERMS, f"Founder · {function}")
+        return queries
+
+    # ── Only seniority selected ───────────────────────────────────────────────
+    if seniority and not function:
+        if seniority == "C-Suite":
+            _add(_ALL_CSUITE_TERMS, "C-Suite")
+        elif seniority == "President/MD":
+            _add(_PRESIDENT_MD_TERMS, "President/MD")
+        elif seniority == "SVP/EVP":
+            _add(_ALL_SVP_EVP_TERMS, "SVP/EVP")
+        elif seniority == "Head-Level":
+            _add(_ALL_HEAD_TERMS, "Head-Level")
+        elif seniority == "Founder":
+            _add(_FOUNDER_TERMS, "Founder")
+        return queries
+
+    # ── Only function selected ────────────────────────────────────────────────
+    if function and not seniority:
+        _add(_CSUITE_BY_FUNCTION.get(function, []), f"C-Suite · {function}")
+        _add(_SVP_EVP_BY_FUNCTION.get(function, []), f"SVP/EVP · {function}")
+        _add(_HEAD_BY_FUNCTION.get(function, []), f"Head · {function}")
+        _add(_PRESIDENT_MD_TERMS, "President/MD")
+        return queries
+
+    # ── No filter — broad sweep (cap to avoid hammering DDG) ─────────────────
+    for fn in list(_CSUITE_BY_FUNCTION.keys()):
+        _add(_CSUITE_BY_FUNCTION[fn][:2], f"C-Suite · {fn}")
+    _add(_PRESIDENT_MD_TERMS, "President/MD")
+    for fn in list(_HEAD_BY_FUNCTION.keys()):
+        _add(_HEAD_BY_FUNCTION[fn][:1], f"Head · {fn}")
+    _add(_FOUNDER_TERMS, "Founder")
+    return queries
 
 
 async def open_search(
@@ -208,67 +304,59 @@ async def open_search(
     seen_names: set[str] = set()
     total_found = 0
 
-    seniority_terms = _SENIORITY_SEARCH_TERMS.get(seniority, list(_SENIORITY_SEARCH_TERMS.keys())) if seniority else [
-        t for terms in _SENIORITY_SEARCH_TERMS.values() for t in terms
-    ]
-    function_terms = _FUNCTION_SEARCH_TERMS.get(function, [None]) if function else [None]
+    all_queries = _build_queries(seniority, function)
+    total_queries = len(all_queries)
 
-    queries_total = min(len(seniority_terms) * len(function_terms), 10)
-    queries_done = 0
+    yield ProgressEvent(
+        type="progress",
+        message=f"Built {total_queries} targeted search queries…",
+        percent=2,
+    )
 
-    for s_term in seniority_terms[:5]:
-        for f_term in (function_terms[:2] if function_terms[0] else [None]):
-            pct = 5 + int(85 * queries_done / max(queries_total, 1))
-            yield ProgressEvent(
-                type="progress",
-                message=f"Searching: {s_term}{' + ' + f_term if f_term else ''} in {country}…",
-                percent=pct,
-            )
-
-            try:
-                ddg_results = await search_linkedin_people(
-                    company="",
-                    country=country,
-                    seniority_hint=s_term,
-                    function_hint=f_term,
-                )
-                leads = parse_linkedin_results(ddg_results, country=country)
-            except Exception as e:
-                yield ProgressEvent(type="error", message=f"Search error: {e}")
-                leads = []
-
-            # SerpAPI supplement
-            if serpapi_source.is_available() and total_found < max_results:
-                try:
-                    serp_leads = await serpapi_source.open_search(
-                        country=country,
-                        seniority_hint=s_term,
-                        function_hint=f_term,
-                    )
-                    leads += serp_leads
-                except Exception as e:
-                    yield ProgressEvent(type="error", message=f"SerpAPI error: {e}")
-
-            for lead in leads:
-                key = lead.get("name", "").lower()
-                if not key or key in seen_names:
-                    continue
-                seen_names.add(key)
-                total_found += 1
-                yield ProgressEvent(type="result", data=lead)
-                if total_found >= max_results:
-                    break
-
-            queries_done += 1
-            if total_found >= max_results:
-                break
-
+    for q_idx, (search_term, label) in enumerate(all_queries):
         if total_found >= max_results:
             break
 
-    yield ProgressEvent(type="progress", message="Saving to database…", percent=95)
-    all_raw = []  # results already emitted as SSE, just save them
-    # We'll save them from the API handler which collects SSE results
+        pct = 5 + int(88 * q_idx / max(total_queries, 1))
+        yield ProgressEvent(
+            type="progress",
+            message=f"[{q_idx+1}/{total_queries}] Searching: \"{search_term}\" in {country}…",
+            percent=pct,
+        )
+
+        try:
+            ddg_results = await search_linkedin_people(
+                company="",
+                country=country,
+                seniority_hint=search_term,
+                function_hint=None,   # term already encodes function
+            )
+            leads = parse_linkedin_results(ddg_results, country=country)
+        except Exception as e:
+            yield ProgressEvent(type="error", message=f"Search error for \"{search_term}\": {e}")
+            leads = []
+
+        # SerpAPI supplement
+        if serpapi_source.is_available() and total_found < max_results:
+            try:
+                serp_leads = await serpapi_source.open_search(
+                    country=country,
+                    seniority_hint=search_term,
+                    function_hint=None,
+                )
+                leads += serp_leads
+            except Exception as e:
+                yield ProgressEvent(type="error", message=f"SerpAPI error: {e}")
+
+        for lead in leads:
+            key = lead.get("name", "").lower()
+            if not key or key in seen_names:
+                continue
+            seen_names.add(key)
+            total_found += 1
+            yield ProgressEvent(type="result", data=lead)
+            if total_found >= max_results:
+                break
 
     yield ProgressEvent(
         type="done",
