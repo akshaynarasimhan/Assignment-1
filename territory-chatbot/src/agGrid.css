@@ -1,0 +1,130 @@
+/* ─── AG Grid Alpine Dark Theme Overrides ─────────────────────────────── */
+
+.ag-theme-alpine-dark {
+  --ag-background-color: #161b22;
+  --ag-header-background-color: #1c2230;
+  --ag-odd-row-background-color: #192130;
+  --ag-row-hover-color: rgba(0, 115, 171, 0.12);
+  --ag-selected-row-background-color: rgba(0, 115, 171, 0.2);
+  --ag-border-color: #30363d;
+  --ag-header-foreground-color: #8b949e;
+  --ag-foreground-color: #e6edf3;
+  --ag-secondary-foreground-color: #8b949e;
+  --ag-input-focus-border-color: #0073ab;
+  --ag-range-selection-border-color: #0073ab;
+  --ag-range-selection-background-color: rgba(0, 115, 171, 0.12);
+  --ag-cell-horizontal-border: 1px solid rgba(48, 54, 61, 0.5);
+  --ag-font-family: 'DM Sans', sans-serif;
+  --ag-font-size: 13px;
+  --ag-row-height: 52px;
+  --ag-header-height: 40px;
+  --ag-status-bar-background-color: #1c2230;
+}
+
+.ag-theme-alpine-dark .ag-header {
+  border-bottom: 1px solid #30363d;
+}
+
+.ag-theme-alpine-dark .ag-header-cell {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #8b949e;
+}
+
+.ag-theme-alpine-dark .ag-cell {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.ag-theme-alpine-dark .ag-row {
+  border-bottom: 1px solid rgba(48, 54, 61, 0.6);
+  transition: background-color 0.1s;
+}
+
+.ag-theme-alpine-dark .ag-status-bar {
+  border-top: 1px solid #30363d;
+  font-size: 11px;
+  color: #8b949e;
+  font-family: 'DM Mono', monospace;
+}
+
+.ag-theme-alpine-dark .ag-paging-panel {
+  border-top: 1px solid #30363d;
+}
+
+/* Row classification overrides */
+.ag-theme-alpine-dark .row-critical {
+  background-color: rgba(248, 81, 73, 0.06) !important;
+}
+
+.ag-theme-alpine-dark .row-warning {
+  background-color: rgba(227, 179, 65, 0.05) !important;
+}
+
+.ag-theme-alpine-dark .row-good {
+  background-color: transparent !important;
+}
+
+/* Filter / Column menu */
+.ag-theme-alpine-dark .ag-popup {
+  background-color: #1c2230;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.ag-theme-alpine-dark .ag-filter {
+  background-color: #1c2230;
+}
+
+.ag-theme-alpine-dark .ag-input-field-input {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  color: #e6edf3;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+/* Pinned columns */
+.ag-theme-alpine-dark .ag-pinned-left-cols-container {
+  border-right: 1px solid #30363d;
+}
+
+.ag-theme-alpine-dark .ag-pinned-left-header {
+  border-right: 1px solid #30363d;
+}
+
+/* Range selection */
+.ag-theme-alpine-dark .ag-cell-range-selected-1:not(.ag-cell-focus) {
+  background-color: rgba(0, 115, 171, 0.12) !important;
+}
+
+/* Tooltip */
+.ag-theme-alpine-dark .ag-tooltip {
+  background-color: #1c2230;
+  border: 1px solid #30363d;
+  color: #e6edf3;
+  font-size: 12px;
+  border-radius: 4px;
+  padding: 6px 10px;
+  max-width: 300px;
+  word-break: break-word;
+}
+
+/* Scrollbars */
+.ag-theme-alpine-dark ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.ag-theme-alpine-dark ::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 3px;
+}
+
+.ag-theme-alpine-dark ::-webkit-scrollbar-track {
+  background: transparent;
+}
